@@ -124,6 +124,7 @@
 							<li>CSS</li>
 							<li>Javascript</li>
 							<li>JQuery</li>
+							<li>PHP</li>
 						</ul>				
 					</div>	
 
@@ -161,7 +162,7 @@
 				    <div class="xp__container-left--content">
 				    	<div class="xp__container-left--date">Jul. 2015</div>
 				    	<div class="xp__container-left--dot"></div>
-				      <h2>Started work at Servier</h2>
+				      <h2><i class="icon icon-bag"></i> Started work at Servier</h2>
 				      <div>Pharmaceutical Company, HCMC, Vietnam</div>
 				      <div>Project Leader - General Management Department</div>
 				      <div>18 months</div>
@@ -178,7 +179,7 @@
 				    <div class="xp__container-right--content">
 					  	<div class="xp__container-right--date">Sept. 2014</div>
 					  	<div class="xp__container-right--dot"></div>
-				      <h2>Graduated from the Institute of Business Administration</h2>
+				      <h2><i class="icon icon-study"></i> Graduated from the Institute of Business Administration</h2>
 				      <div>Montpellier, France</div>
 				      <div>MBA, major in Marketing</div>
 				    </div>
@@ -188,7 +189,7 @@
 				    <div class="xp__container-left--content">
 				    	<div class="xp__container-left--date">Apr. 2014</div>
 				    	<div class="xp__container-left--dot"></div>
-				      <h2>Started work at Piere Fabre</h2>
+				      <h2><i class="icon icon-bag"></i> Started work at Piere Fabre</h2>
 				      <div>Pharmaceutical Company, Castres, France</div>
 				      <div>Product Manager, Marketing Department, Smoking Cessation Team</div>
 				      <div>6 months</div>
@@ -204,7 +205,7 @@
 				    <div class="xp__container-right--content">
 					    <div class="xp__container-right--date">Sept. 2012</div>
 					    <div class="xp__container-right--dot"></div>
-				      <h2>Graduated from the Faculty of Medecine</h2>
+				      <h2><i class="icon icon-study"></i> Graduated from the Faculty of Medecine</h2>
 				      <div>Montpellier, France</div>
 				      <div>Master's degree in Clinical Trials</div>
 				    </div>
@@ -214,7 +215,7 @@
 				    <div class="xp__container-left--content">
 					    <div class="xp__container-left--date">Apr. 2012</div>
 					    <div class="xp__container-left--dot"></div>
-				      <h2>Started work at CDL Pharma</h2>
+				      <h2><i class="icon icon-bag"></i> Started work at CDL Pharma</h2>
 				      <div>CRO, Marseille, France</div>
 				      <div>Clinical Research Coordinator, Project Management Department</div>
 				      <div>6 months</div>
@@ -230,7 +231,7 @@
 				    <div class="xp__container-right--content">
 					    <div class="xp__container-right--date">Oct. 2011</div>
 					    <div class="xp__container-right--dot"></div>
-				      <h2>Started work at CHU Montpellier</h2>
+				      <h2><i class="icon icon-bag"></i> Started work at CHU Montpellier</h2>
 				      <div>Hospital, Montpellier, France</div>
 				      <div>Clinical Trial Associate</div>
 				      <div>6 months</div>
@@ -252,7 +253,7 @@
 				    <div class="xp__container-left--content">
 					    <div class="xp__container-left--date">Sept. 2011</div>
 					    <div class="xp__container-left--dot"></div>
-				      <h2>Graduated from Nice Sophia Antipolis University</h2>
+				      <h2><i class="icon icon-study"></i> Graduated from Nice Sophia Antipolis University</h2>
 				      <div>Nice, France</div>
 				      <div>Bachelor's degree in Biology</div>
 				    </div>
@@ -262,7 +263,7 @@
 				    <div class="xp__container-right--content">
 					    <div class="xp__container-right--date">Jan. 2011</div>
 					    <div class="xp__container-right--dot"></div>
-				      <h2>Started work at INSERM</h2>
+				      <h2><i class="icon icon-bag"></i> Started work at INSERM</h2>
 				      <div>Research Laboratories, Nice, France</div>
 				      <div>Intern in genetics research, diabetology & obesity department</div>
 				      <div>6 months</div>
@@ -282,7 +283,7 @@
 							<i class="icon icon-phone icon-contact"></i>
 							<i class="icon icon-ink-pen icon-contact"></i>
 							<a href="mailto:helene.andre.06@gmail.com" target="_top"><i class="icon icon-email icon-contact"></i></a>
-							<i class="icon icon-github icon-contact"></i>
+							<a href="https://github.com/helene-andre" target="_blank"><i class="icon icon-github icon-contact"></i></a>
 							<a href="https://codepen.io/Helene-Andre/" target="_blank"><i class="icon icon-codepen icon-contact"></i></a>
 							<a href="https://www.linkedin.com/in/helene-andre/" target="_blank"><i class="icon icon-linkedin icon-contact"></i></a> 
 						</div>
@@ -291,10 +292,10 @@
 
 				<div class="contact__right-block">
 					<form class="contact-form" action="contact.php" method="post">
-							<input class="contact__form--element" type="text" name="name" placeholder="Name" autocomplete="off" ><br/>				
-							<input class="contact__form--element" type="text" name="email" placeholder="Email" autocomplete="off"><br/>
-							<input  class="contact__form--element"type="text" name="subject" placeholder="Subject" autocomplete="off"><br/>	
-							<textarea class="contact__form--element" name="message" placeholder="Message" rows="6" cols="80"></textarea>		
+							<input class="contact__form--element" type="text" name="name" placeholder="Name" autocomplete="off" required="required"><br/>				
+							<input class="contact__form--element" type="email" name="email" placeholder="Email" autocomplete="off" required="required"><br/>
+							<input  class="contact__form--element"type="text" name="subject" placeholder="Subject" autocomplete="off" required="required"><br/>	
+							<textarea class="contact__form--element" name="message" placeholder="Message" rows="6" cols="80" required="required"></textarea>		
 							<input class="contact__form--element" id="send-button" type="submit" value="Send">		
 					</form>					
 				</div>				
