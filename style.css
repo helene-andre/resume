@@ -600,7 +600,7 @@ section {
 /**=============================experience==============================**/
 .xp {
   background-color: #eee;
-  height: 250vh;
+  height: 300vh;
 }
 
 .xp::after {
@@ -622,10 +622,9 @@ section {
 }
 
 .xp__timeline {
-	height: 85em;
+	height: 130em;
 	width: 50em;
 	background-color: transparent;
-  padding-top: 4em;
   padding-bottom: 11em;
 	position: absolute;
 	left: 50%;
@@ -637,7 +636,7 @@ section {
 
 .xp__timeline::before {
 	content: '';
-	height: 90em; 
+	height: 130em; 
 	width: 0.2em;
 	background-color: #e0e0e0;
 	position: absolute;
@@ -651,7 +650,7 @@ section {
   width: 100%;
   background-color: transparent;
   position: relative;
-  padding-bottom: 10em;
+  padding-bottom: 20em;
 }
 
 .xp__container-left--content {
