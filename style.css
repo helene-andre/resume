@@ -34,7 +34,7 @@ li {
 }
 /**=====================================================================**/
 
-/**============================font-family==============================**/
+/**=========================== font-family =============================**/
 @font-face {
   font-family: lemon-milk;
   src: url(fonts/lemon_milk/LemonMilk.otf);
@@ -252,7 +252,7 @@ section {
 }
 /**=====================================================================**/
 
-/**================================home=================================**/
+/**=============================== home ================================**/
 .home {
   background: url(pictures/pictures-background/home-background.png);
   background-repeat: no-repeat;
@@ -342,20 +342,6 @@ section {
 
 .home__button:hover {
 	border-color: #ffe082;
-}
-
-.home__button--picture {
-  height: 100%;
-  width: 100%;
-  border-radius: 10em;
-  background-size: cover;
-  background-position: center;
-  transition: all 0.5s ease;
-  position: relative;
-}
-
-.home__button:hover .home__button--picture {
-  transform: scale(1.1);
 }
 
 .home__button--text {
@@ -461,8 +447,8 @@ section {
 
 .home-contact-block::before {
   content: url('pictures/pictures-home/contact.png');
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -473,7 +459,7 @@ section {
   transform: scale(1.1);
 }
 /**=====================================================================**/
-/**===========================about-me===============================**/
+/**========================== about-me ==============================**/
 .about-me {
 	padding-left: 15%;
 	padding-right: 15%;
@@ -529,11 +515,10 @@ section {
 }
 /**=====================================================================**/
 
-/**=============================projects================================**/
+/**============================ projects ===============================**/
 .projects {
   background-color: #fad272;
 }
-
 
 .projects::before {
   content: "";
@@ -551,9 +536,59 @@ section {
 	top: 65px;
 	right: 15%;
 }
+
+.projects__block {
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.projects__element {
+  height: 16em;
+  width: 16em;
+  margin: 1em;
+  background-color: grey;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.projects__element:hover {
+  opacity: 0.6;
+}
+
+.projects__element--picture {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects__element--picture:hover {
+  transform: scale(1.1);
+}
+
+.projects__element--text {
+  height: 1em;
+  width: 18em;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 /**=====================================================================**/
 
-/**==============================skills=================================**/
+/**============================= skills ================================**/
 .skills {
 	background-color: #4fc3f7;
 }
@@ -576,8 +611,8 @@ section {
 }
 
 .skills__block {
-  height: 10em; 
-  width: 60%; 
+  height: 16em;
+  width: 70%;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -597,7 +632,7 @@ section {
 }
 /**=====================================================================**/
 
-/**=============================experience==============================**/
+/**============================ experience =============================**/
 .xp {
   background-color: #eee;
   height: 300vh;
@@ -797,7 +832,7 @@ section {
 
 /**=====================================================================**/
 
-/**===============================contact===============================**/
+/**============================== contact ==============================**/
 .contact {
 	background-color: #FFAB91;
 }
@@ -903,9 +938,8 @@ input {
 } 
 /**=====================================================================**/
 
-/**========================= scroll transistion ========================**/
-
-.sub-section {
+/**========================= scroll animation ==========================**/
+.section-wrapper {
   position: relative;
   top: 0%;
   left: 0%;
@@ -926,4 +960,3 @@ input {
   transform: translateY(0em);
 }
 /**=====================================================================**/
-
