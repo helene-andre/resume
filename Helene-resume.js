@@ -17,10 +17,10 @@ $(document).ready(function() {
       let scroll = $(document).scrollTop()
   
       if (scroll > $(section).offset().top - $(window).height() + 200) {  
-        $(section).children('.sub-section').addClass('scroll')
+        $(section).children('.section-wrapper').addClass('scroll')
       }
       else {
-        $(section).children('.sub-section').removeClass('scroll')
+        $(section).children('.section-wrapper').removeClass('scroll')
       }
     })
   }
