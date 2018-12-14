@@ -19,7 +19,6 @@ h1 {
 h2 {
   font-size: 1.5em;
   font-family: lemon-milk-light;
-  color: #4fc3f7;
   margin-bottom: 10px;
   position: relative;
   z-index: 1; 
@@ -128,9 +127,6 @@ li {
 .icon-sport:before {
   content: "\72";
 }
-.icon-laptop:before {
-  content: "\73";
-}
 .icon-management:before {
   content: "\78";
 }
@@ -148,6 +144,9 @@ li {
 }
 .icon-cooking:before {
   content: "\70";
+}
+.icon-laptop:before {
+  content: "\69";
 }
 /**=====================================================================**/
 
@@ -439,7 +438,7 @@ section {
 .about-me__job-title {
 	position: absolute;
 	top: 40%;
-	color: #7c796f;
+	color: #757575;
 	font-family: lemon-milk-light-italic, arial;
 	font-size: 2em;
 }
@@ -552,7 +551,8 @@ section {
 
 /**============================= skills ================================**/
 .skills {
-	background-color: #4fc3f7;
+  background-color: white;
+  height: 150vh;
 }
 
 .skills::after {
@@ -567,30 +567,68 @@ section {
 }
 
 .skills__title {
-	color: white;
+	color: #fad272;
 	top: 65px;
 	left: 15%;
 }
 
 .skills__block {
-  height: 16em;
+  height: auto;
   width: 70%;
   position: absolute;
-  top: 35%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  text-align: center;
+  display: block;
+  color: #757575;
 }
 
-.skills__h2 {
-  color: white;
+.skills__block div {
+  height: 15em;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.skills__icon {
-  font-size: 3em;
+.skills__block h2 {
+ color: #fad272;
+}
+
+.skills__computer {
+  text-align: left;
+}
+
+.skills__computer::before {
+  content: '\69';
+  right: 100%;
+}
+
+.skills__management {
+  text-align: right;
+}
+
+.skills__management::before {
+  content: '\78';
+  left: 100%;
+}
+
+.skills__languages {
+  text-align: left;
+}
+
+.skills__languages::before {
+  content: '\6f';
+  right: 100%;
+}
+
+.skills__computer::before, .skills__management::before, .skills__languages::before {
+  font-family: 'helene-resume';
+  position: absolute;
+  bottom: 18%;
+  font-size: 13em;
+  color: black;
+  margin: 4%;
 }
 /**=====================================================================**/
 

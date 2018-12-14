@@ -71,9 +71,6 @@
 .icon-sport:before {
   content: "\72";
 }
-.icon-laptop:before {
-  content: "\73";
-}
 .icon-management:before {
   content: "\78";
 }
@@ -91,4 +88,7 @@
 }
 .icon-cooking:before {
   content: "\70";
+}
+.icon-laptop:before {
+  content: "\69";
 }
