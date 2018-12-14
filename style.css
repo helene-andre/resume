@@ -344,11 +344,12 @@ section {
 
 .home__button--text {
   position: absolute;
-  top: 50%;
+  top: 67%;
   left: 50%;
   transform: translateX(-50%);
   height: 45%;
   width: 80%;
+  line-height: 23px;
 }
 
 .home-about-me-block {
