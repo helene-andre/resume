@@ -56,35 +56,14 @@
 .icon-phone:before {
   content: "\66";
 }
-.icon-ink-pen:before {
+.icon-address:before {
   content: "\67";
 }
 .icon-pastry:before {
   content: "\68";
 }
-.icon-hotdog:before {
-  content: "\69";
-}
-.icon-bomb:before {
-  content: "\6a";
-}
-.icon-brush:before {
-  content: "\6b";
-}
-.icon-coffee:before {
-  content: "\6c";
-}
-.icon-desktop:before {
-  content: "\6d";
-}
-.icon-bubble-comment:before {
-  content: "\6e";
-}
 .icon-languages:before {
   content: "\6f";
-}
-.icon-cocktail:before {
-  content: "\70";
 }
 .icon-music:before {
   content: "\71";
@@ -95,39 +74,21 @@
 .icon-laptop:before {
   content: "\73";
 }
-.icon-home-house:before {
-  content: "\74";
-}
-.icon-work:before {
-  content: "\77";
-}
-.icon-streamline-suitcase-travel:before {
-  content: "\78";
-}
-.icon-cooking:before {
-  content: "\76";
-}
 .icon-management:before {
-  content: "\79";
+  content: "\78";
 }
 .icon-hobbies:before {
-  content: "\76";
-}
-.icon-bag-shopping-streamline:before {
-  content: "\77";
-}
-.icon-book-read-streamline:before {
-  content: "\78";
-}
-.icon-cook-pan-pot-streamline:before {
   content: "\79";
 }
-.icon-crop-streamline:before {
+.icon-file-attached:before {
   content: "\7a";
 }
-.icon-link-streamline:before {
-  content: "\41";
-}
 .icon-study:before {
+  content: "\6a";
+}
+.icon-work:before {
   content: "\42";
+}
+.icon-cooking:before {
+  content: "\70";
 }
