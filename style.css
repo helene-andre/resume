@@ -157,7 +157,7 @@ li {
   height: 9em;
   width: 1em;
   position: fixed;
-  bottom: 4%;
+  bottom: 7%;
   right: 2%;
   z-index: 10;
 }
@@ -175,7 +175,7 @@ li {
 .side-menu__element--circle {
   height: 12px;
   width: 12px;
-  position: absolute;
+  position: relative;
   top: 0%;
   left: 0%;
   margin-bottom: 15px;
@@ -201,6 +201,8 @@ li {
 
 .side-menu__element--circle:hover, .active {
   opacity: 1;
+  background-color: #ffe082;
+  box-shadow: 1px 2px 20px grey;
 }
 
 .side-menu__element--circle:hover .side-menu__element--text {
@@ -919,6 +921,7 @@ input {
   opacity: 0;
   transform: translateY(2em);
   transition: all 1s ease-out;
+  transition-delay: 0.2s;
 }
 
 .scroll {
