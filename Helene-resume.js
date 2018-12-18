@@ -1,12 +1,3 @@
-// =================================== side menu animation =================================== //
-let onClickSideMenu = function() {
-  $('.side-menu__element--circle').click(function () {
-      $(this).addClass('active')
-      $('.side-menu__element--circle').not(this).removeClass('active')
-  })
-}
-// =========================================================================================== //
-  
 // ======================================== scroll down ====================================== //
 let onScroll = function() {
   let sections = $('section')
@@ -42,7 +33,7 @@ let onClick = function() {
     )
   })  
 
-  $('.side-menu__element--circle').click(function(e)  {      
+  $('.side-menu__circle').click(function(e)  {      
     let position = $($(this).attr('href')).offset().top
     $('html').animate(
       { scrollTop: position },
