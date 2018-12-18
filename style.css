@@ -250,7 +250,7 @@ section {
 }
 
 .icon {
-	transition: all 0.2s ease-in-out;	
+	transition: all 0.3s ease-in-out;	
 }
 
 .icon:hover {
@@ -840,11 +840,10 @@ section {
 	color: white;
 	margin-top: 1em;
   letter-spacing: 5px;
-	transition: all 0.3s ease-in-out;
 }
 
 .icon-contact:hover {
-	color: grey;
+	color: #757575;
 }
 
 .contact__right-block {
@@ -884,19 +883,26 @@ input {
 }
 
 #send-button {
-  width: 3em;
+  width: 4em;
   text-align: center;
   font-size: 1em;
   font-family: 'Roboto', arial;
   color: white;
-  background-color: black;
+  background-color: transparent;
   position: absolute;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 7px;
   right: 0%;
   top: 102%;
+  opacity: 0.9;
+  transition: all 0.3s ease-in-out;
 }
 
 #send-button:hover {
-	cursor: pointer;
+  cursor: pointer;
+  opacity: 1;
+  color: #757575;
 } 
 /**=====================================================================**/
 
