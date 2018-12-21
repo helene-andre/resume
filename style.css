@@ -627,7 +627,7 @@ section {
 /**============================ experience =============================**/
 .xp {
   background-color: #ffe082;
-  height: 300vh;
+  height: 350vh;
 }
 
 .xp::after {
@@ -661,14 +661,14 @@ section {
 }
 
 .xp__timeline::before {
-	content: '';
-	height: 130em; 
-	width: 0.2em;
-	background-color: white;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%); 
+  content: '';
+  height: 163em;
+  width: 0.2em;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: -1%;
+  transform: translateX(-50%);
 }
 
 .xp__container-left, .xp__container-right {
@@ -796,12 +796,12 @@ section {
 
 /**============================== contact ==============================**/
 .contact {
-	background-color: #FFAB91;
+  background-color: #FFAB91;
 }
 
 .contact-info__wrapper {
   width: 25%;
-  height: 18em;
+  height: 25em;
   position: absolute;
   right: 50%;
   top: 50%;
@@ -812,12 +812,12 @@ section {
 
 .contact-info {
   width: 20em;
-  height: 15em;	
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	line-height: 200%;
+  height: 15em;
+  position: absolute;
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 360%;
 }
 
 .contact-info__title {
@@ -848,7 +848,7 @@ section {
 
 .contact-form__wrapper {
   width: 25%;
-  height: 18em;
+  height: 30em;
   position: absolute;
   margin: 10px;
   padding: 1em;
@@ -858,24 +858,23 @@ section {
 }
 
 .contact-form {
-  border: none;
-  width: 20em;
-  height: 15em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  height: 2.5em;
+  width: 24em;
+  margin-bottom: 3em;
+  position: relative;
 }
 
-.contact-form__element {
-	float: right;
-  width: 98%;
+.contact-form__field {
+  width: 94%;
   outline: none;
   border: none;
-  margin-bottom: 1%;
-  padding: 2%; 
   font-family: 'Roboto', arial;
   font-size: 1.1em;
+  padding: 4%;
+}
+
+textarea {
+  resize: none;
 }
 
 input {
@@ -892,9 +891,9 @@ input {
   position: absolute;
   border: 1px solid white;
   border-radius: 3px;
-  padding: 7px;
-  right: 0%;
-  top: 102%;
+  padding: 3px 7px;
+  right: 4%;
+  bottom: 6%;
   opacity: 0.9;
   transition: all 0.3s ease-in-out;
 }
@@ -904,6 +903,20 @@ input {
   opacity: 1;
   color: #757575;
 } 
+
+.contact-form__error-message { 
+  font-style: italic;
+  position: relative;
+  top: 5%;
+  opacity: 0;
+  z-index: -1;
+}
+
+.show-error-message {
+  opacity: 1; 
+  z-index: 1;
+}
+
 /**=====================================================================**/
 
 /**========================= scroll animation ==========================**/

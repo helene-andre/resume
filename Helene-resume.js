@@ -14,7 +14,6 @@ let onScroll = function() {
   
     $('section').each(function(i) {
       if (($(this).offset().top - $(window).height() + 200) <= scroll) {
-        console.log('test')
           $('.side-menu a.active').removeClass('active')
           $('.side-menu a').eq(i).addClass('active')
       }
@@ -25,7 +24,7 @@ let onScroll = function() {
   
 // ====================================== scroll to on click ================================= //  
 let onClick = function() {
-  $('.home__button').click(function(e)  {      
+  $('.home__button').click(function(e) {      
     let position = $($(this).attr('href')).offset().top
     $('html').animate(
       { scrollTop: position },
@@ -33,7 +32,7 @@ let onClick = function() {
     )
   })  
 
-  $('.side-menu__circle').click(function(e)  {      
+  $('.side-menu__circle').click(function(e) {      
     let position = $($(this).attr('href')).offset().top
     $('html').animate(
       { scrollTop: position },
@@ -41,12 +40,30 @@ let onClick = function() {
     )
   }) 
 }
+
+// ===================================== form validation ===================================== //
+
+let formValidation = function() {
+  $('.contact-form__wrapper').submit(function(e) {
+    
+    let fields = $('.contact-form__field')
+    let formErrors = 0
+    
+    fields.each(function(i) {
+      $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
+      formErrors += $(fields[i]).val().length ? 0 : 1    
+    })
+
+    return !formErrors
+  })  
+}
+
 // =========================================================================================== //
   
-$(document).ready(function(){
+$(document).ready(function() {
   onScroll()
   onClick()
-  onClickSideMenu()
+  formValidation()
 })
 
 $(window).scroll(onScroll)
