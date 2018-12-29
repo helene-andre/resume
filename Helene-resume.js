@@ -44,18 +44,40 @@ let onClick = function() {
 // ===================================== form validation ===================================== //
 
 let formValidation = function() {
-  $('.contact-form__wrapper').submit(function(e) {
+  $.ajax({
+    type: 'POST',
+    url: 'contact.php',
+    success: function() {
+      $('.contact-form__wrapper').submit(function(e) {
     
-    let fields = $('.contact-form__field')
-    let formErrors = 0
+        let fields = $('.contact-form__field')
+        let formErrors = 0
+        
+        fields.each(function(i) {
+          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
+          formErrors += $(fields[i]).val().length ? 0 : 1    
+        })
     
-    fields.each(function(i) {
-      $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
-      formErrors += $(fields[i]).val().length ? 0 : 1    
-    })
+        return !formErrors
+      })  
+    }
+  })
+  return false
 
-    return !formErrors
-  })  
+
+
+  // $('.contact-form__wrapper').submit(function(e) {
+    
+  //   let fields = $('.contact-form__field')
+  //   let formErrors = 0
+    
+  //   fields.each(function(i) {
+  //     $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
+  //     formErrors += $(fields[i]).val().length ? 0 : 1    
+  //   })
+
+  //   return !formErrors
+  // })  
 }
 
 // =========================================================================================== //
