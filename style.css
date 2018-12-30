@@ -796,7 +796,8 @@ section {
 
 /**============================== contact ==============================**/
 .contact {
-  background-color: #FFAB91;
+  background-color: white;
+  height: 90vh;
 }
 
 .contact-info__wrapper {
@@ -822,22 +823,23 @@ section {
 
 .contact-info__title {
 	position: relative;
-	color: white;
+	color: #4fc3f7;
 	margin-top: 0.1em;
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
 }
 
 .contact-info__name {
 	position: relative;
 	font-family: 'Roboto', arial;
-	color: white;
+	color: #4fc3f7;
   letter-spacing: 1px;
 }
 
 .contact-info__icons-wrapper {
 	font-size: 2em;
 	height: 38px;
-	color: white;
+	color: #4fc3f7;
 	margin-top: 1em;
   letter-spacing: 5px;
 }
@@ -866,6 +868,7 @@ section {
 
 .contact-form__field {
   width: 94%;
+  background-color: #f5f5f5;
   outline: none;
   border: none;
   font-family: 'Roboto', arial;
@@ -886,10 +889,10 @@ input {
   text-align: center;
   font-size: 1em;
   font-family: 'Roboto', arial;
-  color: white;
+  color: #4fc3f7;
   background-color: transparent;
   position: absolute;
-  border: 1px solid white;
+  border: 1px solid #4fc3f7;
   border-radius: 3px;
   padding: 3px 7px;
   right: 4%;
@@ -917,6 +920,22 @@ input {
   z-index: 1;
 }
 
+.container svg {
+  display: block;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+#clouds {
+  position: absolute;
+  bottom: 100%; 
+}
+
+#clouds path {
+  fill: white;
+  stroke: white;
+}
 /**=====================================================================**/
 
 /**========================= scroll animation ==========================**/
