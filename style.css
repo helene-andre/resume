@@ -186,6 +186,7 @@ li {
   transition: all 0.3s ease-in-out;
   opacity: 0;
   transform: translateX(1em);
+  z-index: -5;
 }
 
 .side-menu__circle:hover, .active {

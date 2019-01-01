@@ -62,9 +62,8 @@ let formValidation = function() {
       })  
     }
   })
+
   return false
-
-
 
   // $('.contact-form__wrapper').submit(function(e) {
     
