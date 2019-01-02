@@ -21,7 +21,7 @@ let onScroll = function() {
   })
 }
 // =========================================================================================== //
-  
+
 // ====================================== scroll to on click ================================= //  
 let onClick = function() {
   $('.home__button').click(function(e) {      
@@ -41,8 +41,32 @@ let onClick = function() {
   }) 
 }
 
-// ===================================== form validation ===================================== //
+// ================================= projects slide animation =============================== //  
+let slides = []
+let currentSlideIndex = 0
 
+function initSlideRotation () {
+	slides = $('.projects__slides-wrapper').children()
+	currentSlideIndex = slides.length - 1
+	slides[currentSlideIndex].className = 'active'
+}
+
+function changeSlide () {
+	console.log(slides, currentSlideIndex)
+	let currentSlide = $(slides[currentSlideIndex])
+	
+	currentSlide.addClass('active fade-out')
+
+	currentSlideIndex = (slides.length + (currentSlideIndex - 1)) % slides.length
+	currentSlide.addClass('active')
+	
+	setTimeout(function(){
+		currentSlide.removeClass('active fade-out')
+	}, 2000)
+}
+// =========================================================================================== //
+
+// ===================================== form validation ===================================== //
 let formValidation = function() {
   $.ajax({
     type: 'POST',
@@ -62,29 +86,24 @@ let formValidation = function() {
       })  
     }
   })
-
   return false
-
-  // $('.contact-form__wrapper').submit(function(e) {
-    
-  //   let fields = $('.contact-form__field')
-  //   let formErrors = 0
-    
-  //   fields.each(function(i) {
-  //     $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
-  //     formErrors += $(fields[i]).val().length ? 0 : 1    
-  //   })
-
-  //   return !formErrors
-  // })  
 }
 
 // =========================================================================================== //
-  
+
+
+
+
+
 $(document).ready(function() {
   onScroll()
   onClick()
   formValidation()
 })
+
+window.onload = function () {
+	initSlideRotation()
+	setInterval(changeSlide, 2000)
+}
 
 $(window).scroll(onScroll)
