@@ -40,8 +40,9 @@ let onClick = function() {
     )
   }) 
 }
+// =========================================================================================== //
 
-// ================================= projects slide animation =============================== //  
+// ================================= projects slideshow animation ============================= //  
 let slides = []
 let currentSlideIndex = 0
 
@@ -62,7 +63,7 @@ function changeSlide () {
 	
 	setTimeout(function(){
 		currentSlide.removeClass('active fade-out')
-	}, 2000)
+	}, 3000)
 }
 // =========================================================================================== //
 
@@ -103,7 +104,7 @@ $(document).ready(function() {
 
 window.onload = function () {
 	initSlideRotation()
-	setInterval(changeSlide, 2000)
+	setInterval(changeSlide, 3000)
 }
 
 $(window).scroll(onScroll)

@@ -150,12 +150,11 @@ li {
 /**=====================================================================**/
 
 /**============================= side menu =============================**/
-
 .side-menu {
-  height: 9em;
+  height: 16em;
   width: 1em;
   position: fixed;
-  bottom: 7%;
+  bottom: 2%;
   right: 2%;
   z-index: 10;
 }
@@ -166,38 +165,40 @@ li {
   left: 0%;
   height: 12px;
   width: 12px;
+  padding: 2px;
   display: block;
   margin-bottom: 15px;
   border-radius: 1em;
-  box-shadow: 1px 1px 12px grey;
+  box-shadow: 0px 0px 7px rgba(128,128,128, 0.5);
   opacity: 0.7;
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
 
 .side-menu__text {
-  width: 5em;
+  width: 8em;
   color: grey;
   text-align: right;
   position: absolute;
-  right: 130%;
-  top: -10%;
+  right: 190%;
+  top: 0%;
   text-align: right;
   transition: all 0.3s ease-in-out;
   opacity: 0;
+  visibility: hidden;
   transform: translateX(1em);
-  z-index: -5;
 }
 
 .side-menu__circle:hover, .active {
   opacity: 1;
   background-color: #ffe082;
-  box-shadow: 1px 2px 20px grey;
+  box-shadow: 1px 1px 7px rgba(128,128,128, 0.5);
 }
 
 .side-menu__circle:hover .side-menu__text {
   opacity: 0.7;
   transform: translateX(0em);
+  visibility: visible;
 }
 /**=============================== section =============================**/
 section {
@@ -212,8 +213,7 @@ section {
   background: url(pictures/pictures-background/home-background.png);
   background-repeat: no-repeat;
 	background-size: cover;
-	background-position: right;
-  opacity: 1;
+	background-position: right top;
 }
 
 .home::after {
@@ -248,6 +248,14 @@ section {
   position: relative;
   margin-bottom: 10px;
   font-size: 1.9em;
+}
+
+.icon-phone, .icon-email, .icon-location {
+  height: 15px;
+  width: 15px;
+  top: 2px;
+  display: inline-block;
+  position: relative;
 }
 
 .icon {
@@ -310,7 +318,7 @@ section {
 .home-about-me-block {
 	height: 6.5em;
   width: 6.5em;
-  top: 30%;
+  top: 28%;
 	left: 22%;
 }
 
@@ -324,15 +332,11 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.home-about-me-block:hover:before {
-  transform: scale(1.1);
-}
-
 .home-projects-block {
 	height: 9em;
   width: 9em;
-  top:45%;
-	left: 45%;
+  top: 40%;
+  left: 42%;
 }
 
 .home-projects-block::before {
@@ -345,36 +349,11 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.home-projects-block:hover:before {
-  transform: scale(1.1);
-}
-
-.home-xp-block {
-	height: 5em;
-  width: 5em;
-  top: 65%;
-	left: 30%;
-}
-
-.home-xp-block::before {
-  content: url('pictures/pictures-home/xp.png');
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  transition: all 0.3s ease-in-out;
-}
-
-.home-xp-block:hover:before {
-  transform: scale(1.1);
-}
-
 .home-skills-block {
 	height: 7em;
   width: 7em;
-  top: 80%;
-	left: 55%;  
+  top: 72%;
+  left: 52%;
 }
 
 .home-skills-block::before {
@@ -387,15 +366,52 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.home-skills-block:hover:before {
-  transform: scale(1.1);
+.home-xp-block {
+	height: 5em;
+  width: 5em;
+  top: 59%;
+  left: 21%;
+}
+
+.home-xp-block::before {
+  content: url('pictures/pictures-home/xp.png');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-hobbies-block {
+  height: 6em;
+  width: 6em;
+  top: 82%;
+  left: 33%;
+  font-size: 1.5em;
+}
+
+.home-hobbies-block::before {
+  content: url('pictures/pictures-home/hobbies.png');
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-hobbies-block .home__button--text {
+  font-size: 16px;
+  position: absolute;
+  top: 22%;
 }
 
 .home-contact-block {
   height: 7em;
   width: 7em;
-  top: 59%;
-  left: 67%;
+  top: 49%;
+  left: 66%;
   font-size: 1.5em;
 }
 
@@ -409,11 +425,11 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.home-contact-block:hover:before {
+.home-about-me-block:hover:before, .home-projects-block:hover:before, .home-skills-block:hover:before, .home-xp-block:hover:before, .home-hobbies-block:hover:before, .home-contact-block:hover:before {
   transform: scale(1.1);
 }
 /**=====================================================================**/
-/**========================== about-me ==============================**/
+/**============================= about-me ==============================**/
 .about-me {
 	padding-left: 15%;
 	padding-right: 15%;
@@ -638,9 +654,9 @@ section {
 .skills__computer::before, .skills__management::before, .skills__languages::before {
   font-family: 'helene-resume';
   position: absolute;
-  bottom: 18%;
+  bottom: 16%;
   font-size: 13em;
-  color: black;
+  color: #757575;
   margin: 4%;
 }
 /**=====================================================================**/
@@ -648,7 +664,7 @@ section {
 /**============================ experience =============================**/
 .xp {
   background-color: #ffe082;
-  height: 350vh;
+  height: 280vh;
 }
 
 .xp::after {
@@ -683,7 +699,7 @@ section {
 
 .xp__timeline::before {
   content: '';
-  height: 163em;
+  height: 124em;
   width: 0.2em;
   background-color: white;
   position: absolute;
@@ -697,8 +713,12 @@ section {
   width: 100%;
   background-color: transparent;
   position: relative;
-  padding-bottom: 20em;
+  padding-bottom: 15em;
   color: #757575;
+}
+
+.xp__container-left {
+  text-align: right; 
 }
 
 .xp h2 {
@@ -711,14 +731,14 @@ section {
   float: left;
   background-color: white;
   margin: 5px;
-  padding: 10px;
+  padding: 20px;
   position: absolute; 
   top: 50%;
   transform: translateY(-50%);
 }
 
 .xp__container-left--content {
-  left: -10%;
+  left: -13.3%;
 }
 
 .xp__container-left--content::after, .xp__container-left--content::before {
@@ -776,12 +796,8 @@ section {
   left: 108.2%;
 }
 
-.xp__container-right {
-  text-align: right; 
-}
-
 .xp__container-right--content {
-  right: -10%;
+  right: -13.3%;
 }
 
 .xp__container-right--content::after, .xp__container-right--content::before {
@@ -815,10 +831,51 @@ section {
 
 /**=====================================================================**/
 
+/**======================= sports & interests ==========================**/
+.hobbies {
+  background-color: #4fc3f7;
+  height: 90vh;
+}
+
+.hobbies::after {
+	content: "";
+	position: absolute;
+	top: 0%;
+	left: 15%;
+	height: 0em;
+	width: 0em;
+	border: 2em solid white;
+	border-bottom-color: transparent;
+}
+
+.hobbies__title {
+	color: white;
+	top: 65px;
+	left: 15%;
+}
+
+.hobbies__block {
+  height: auto;
+  width: 70%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  color: #757575;
+}
+
+.hobbies__block h2 {
+ color: white;
+}
+
+/**=====================================================================**/
+
 /**============================== contact ==============================**/
 .contact {
   background-color: white;
-  height: 90vh;
+  height: 70vh;
+  padding-bottom: 4em;
 }
 
 .contact-info__wrapper {
@@ -870,7 +927,7 @@ section {
 }
 
 .contact-form__wrapper {
-  width: 25%;
+  width: 24em;
   height: 30em;
   position: absolute;
   margin: 10px;
@@ -887,22 +944,31 @@ section {
   position: relative;
 }
 
-.contact-form__field {
-  width: 94%;
-  background-color: #f5f5f5;
-  outline: none;
-  border: none;
-  font-family: 'Roboto', arial;
-  font-size: 1.1em;
-  padding: 4%;
-}
-
 textarea {
   resize: none;
 }
 
 input {
 	color: #190e0b;
+}
+input:focus {
+  border-bottom: 2px solid #4fc3f7;
+}
+
+.contact-form__field {
+  width: 94%;
+  background-color: #f5f5f5;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  font-family: 'Roboto', arial;
+  font-size: 1.1em;
+  padding: 4%;
+}
+
+.contact-form__field:focus {
+  border-bottom-color: #4fc3f7;
 }
 
 #send-button {
@@ -913,12 +979,13 @@ input {
   color: #4fc3f7;
   background-color: transparent;
   position: absolute;
+  right: 2%;
+  bottom: 6%;
   border: 1px solid #4fc3f7;
   border-radius: 3px;
   padding: 3px 7px;
-  right: 4%;
-  bottom: 6%;
   opacity: 0.9;
+  outline: none; 
   transition: all 0.3s ease-in-out;
 }
 
@@ -926,12 +993,14 @@ input {
   cursor: pointer;
   opacity: 1;
   color: #757575;
+  border: 1px solid #757575;
 } 
 
 .contact-form__error-message { 
   font-style: italic;
   position: relative;
   top: 5%;
+  color: #e03333; 
   opacity: 0;
   z-index: -1;
 }
@@ -968,8 +1037,7 @@ svg:not(:root) {
   width: 100%;
   opacity: 0;
   transform: translateY(2em);
-  transition: all 1s ease-out;
-  transition-delay: 0.2s;
+  transition: all 1s ease-out 0.5s;
 }
 
 .scroll {
