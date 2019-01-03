@@ -323,7 +323,7 @@ section {
 }
 
 .home-about-me-block::before {
-  content: url('pictures/pictures-home/Helene-Andre-picture-mini.png');
+  content: url('pictures/pictures-home/helene-andre-picture-mini.png');
   height: 100%;
   width: 100%;
   position: absolute;
@@ -488,6 +488,7 @@ section {
 /**============================ projects ===============================**/
 .projects {
   background-color: #ffe082;
+  height: 80vh;
 }
 
 .projects::before {
@@ -508,74 +509,48 @@ section {
 }
 
 .projects__slides-wrapper {
-  height: 56%;
+  height: auto;
   width: 70%;
   position: absolute;
-  top: 30%;
+  top: 38%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .projects__slide {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
+  height: 220px;
+  width: 220px;
+  margin: 10px;
+  font-size: 20px; 
+  overflow:hidden;
+  cursor: pointer;
 }
 
 .projects__slide--picture {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 0%;
+  height: 220px;
+  width: 220px;
+  transition: all 0.3s ease-in-out;
 }
 
 .projects__slide--caption {
+  height: 20px;
+  width: 220px;
+  position: relative;
+  bottom: 103%;
   color: white;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px; 
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.projects__dots-wrapper {
-  height: 2em;
-  width: 7em;
-  position: absolute;
-  top: 87%;
-  left: 50%;
-  transform: translateX(-50%);
+.projects__slide:hover div {
+  opacity: 0.9;
+  background-color: rgba(255,224,130, 0.5);
 }
-
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 5px 6px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.projects__slides-wrapper div {
-	transition: opacity 1s ease-in-out;
-	opacity: 0;
-	z-index: 0;
-}
-
-.projects__slides-wrapper .fade-out {
-	opacity: 0;
-}
-
-.projects__slides-wrapper .active {
-  opacity: 1; 
-  z-index: 1;
-}
-
-
 /**=====================================================================**/
 
 /**============================= skills ================================**/

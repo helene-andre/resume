@@ -43,28 +43,28 @@ let onClick = function() {
 // =========================================================================================== //
 
 // ================================= projects slideshow animation ============================= //  
-let slides = []
-let currentSlideIndex = 0
+// let slides = []
+// let currentSlideIndex = 0
 
-function initSlideRotation () {
-	slides = $('.projects__slides-wrapper').children()
-	currentSlideIndex = slides.length - 1
-	slides[currentSlideIndex].className = 'active'
-}
+// function initSlideRotation () {
+// 	slides = $('.projects__slides-wrapper').children()
+// 	currentSlideIndex = slides.length - 1
+// 	slides[currentSlideIndex].className = 'active'
+// }
 
-function changeSlide () {
-	console.log(slides, currentSlideIndex)
-	let currentSlide = $(slides[currentSlideIndex])
+// function changeSlide () {
+// 	console.log(slides, currentSlideIndex)
+// 	let currentSlide = $(slides[currentSlideIndex])
 	
-	currentSlide.addClass('active fade-out')
+// 	currentSlide.addClass('active fade-out')
 
-	currentSlideIndex = (slides.length + (currentSlideIndex - 1)) % slides.length
-	currentSlide.addClass('active')
+// 	currentSlideIndex = (slides.length + (currentSlideIndex - 1)) % slides.length
+// 	currentSlide.addClass('active')
 	
-	setTimeout(function(){
-		currentSlide.removeClass('active fade-out')
-	}, 3000)
-}
+// 	setTimeout(function(){
+// 		currentSlide.removeClass('active fade-out')
+// 	}, 3000)
+// }
 // =========================================================================================== //
 
 // ===================================== form validation ===================================== //
@@ -89,7 +89,6 @@ let formValidation = function() {
   })
   return false
 }
-
 // =========================================================================================== //
 
 
