@@ -250,7 +250,7 @@ section {
   font-size: 1.9em;
 }
 
-.icon-phone, .icon-email, .icon-location {
+.icon-home {
   height: 15px;
   width: 15px;
   top: 2px;
@@ -508,7 +508,7 @@ section {
 	right: 15%;
 }
 
-.projects__slides-wrapper {
+.projects__wrapper {
   height: auto;
   width: 70%;
   position: absolute;
@@ -519,38 +519,47 @@ section {
   justify-content: center;
 }
 
-.projects__slide {
+.projects__wrapper a {
+  display: inline-block;
+}
+
+.projects__element {
   height: 220px;
   width: 220px;
   margin: 10px;
   font-size: 20px; 
-  overflow:hidden;
   cursor: pointer;
 }
 
-.projects__slide--picture {
-  height: 220px;
-  width: 220px;
-  transition: all 0.3s ease-in-out;
-}
-
-.projects__slide--caption {
-  height: 20px;
-  width: 220px;
-  position: relative;
-  bottom: 103%;
+.projects__element--text {
   color: white;
+  background-color:rgba(255,224,130, 0.5);
+  position: absolute;
+  top: 4%;
+  width: 220px;
+  height: 220px;
+  line-height: 220px;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px; 
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
+  opacity: 0; 
 }
 
-.projects__slide:hover div {
-  opacity: 0.9;
-  background-color: rgba(255,224,130, 0.5);
+.projects__element .projects__element--text {
+  opacity: 1;
 }
+
+.cat::before {
+  content: url('pictures/pictures-projects/cat-project.png');
+} 
+
+.eye::before {
+  content: url('pictures/pictures-projects/eye-project.png');
+} 
+
+.html-memento::before {
+  content: url('pictures/pictures-projects/html-project.png');
+} 
+  /* background-color: rgba(255,224,130, 0.5); */
+
 /**=====================================================================**/
 
 /**============================= skills ================================**/
@@ -935,10 +944,10 @@ input:focus {
   background-color: #f5f5f5;
   outline: none;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: 0.3s;
   font-family: 'Roboto', arial;
-  font-size: 1.1em;
+  font-size: 14px;
   padding: 4%;
 }
 
@@ -973,8 +982,8 @@ input:focus {
 
 .contact-form__error-message { 
   font-style: italic;
-  position: relative;
-  top: 5%;
+  font-size: 12px; 
+  padding-top: 2px; 
   color: #e03333; 
   opacity: 0;
   z-index: -1;
