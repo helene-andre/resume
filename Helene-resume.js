@@ -68,26 +68,48 @@ let onClick = function() {
 // =========================================================================================== //
 
 // ===================================== form validation ===================================== //
-let formValidation = function() {
-  $.ajax({
-    type: 'POST',
-    url: 'contact.php',
-    success: function() {
-      $('.contact-form__wrapper').submit(function(e) {
-    
-        let fields = $('.contact-form__field')
-        let formErrors = 0
-        
-        fields.each(function(i) {
-          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
-          formErrors += $(fields[i]).val().length ? 0 : 1    
-        })
-    
-        return !formErrors
-      })  
+let initFormValidation = function() {
+  $('.contact-form__wrapper').submit(function(e) {
+    if ($.trim($('.contact-form__field').val()) === '') {
+      fieldsVlidation()  
+      return false
     }
+    else if ($.trim($('.contact-form__field').val()) !== '') {
+      $.ajax({
+        type: 'POST',
+        url: 'contact.php',
+        data: $('.contact-form__wrapper').serialize(), 
+        success: function(data) {
+          alert(data)
+        }
+      })
+      e.preventDefault()
+    }          
+  })  
+  
+  $('.contact-form__field').keyup(function() {
+    fieldsVlidation()
   })
-  return false
+
+  let fieldsVlidation = function() {
+    let fields = $('.contact-form__field')
+    let formErrors = 0
+    // let nameRegex = '/^[a-z0-9_-]{3,16}$/'
+    if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
+      fields.each(function(i) {
+          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
+          $(fields[i])[$(fields[i]).val().length ? 'removeClass' : 'addClass']('empty-field');
+          $(fields[i])[$(fields[i]).val().length ? 'addClass' : 'removeClass']('correct-field');
+          formErrors += $(fields[i]).val().length ? 0 : 1    
+      })
+      return !formErrors 
+    }
+    else if ($.trim($('.contact-form__field').val()) !== '') {
+      $(fields).removeClass('empty-field')
+      $(fields).addClass('correct-field')
+      $('.contact-form__error-message').removeClass('show-error-message')
+    }
+  }
 }
 // =========================================================================================== //
 
@@ -98,12 +120,12 @@ let formValidation = function() {
 $(document).ready(function() {
   onScroll()
   onClick()
-  formValidation()
+  initFormValidation()
 })
 
 window.onload = function () {
-	initSlideRotation()
-	setInterval(changeSlide, 3000)
+	// initSlideRotation()
+	// setInterval(changeSlide, 3000)
 }
 
 $(window).scroll(onScroll)

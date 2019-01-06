@@ -995,9 +995,6 @@ textarea {
 input {
 	color: #190e0b;
 }
-input:focus {
-  border-bottom: 2px solid #4fc3f7;
-}
 
 .contact-form__field {
   width: 94%;
@@ -1012,7 +1009,7 @@ input:focus {
 }
 
 .contact-form__field:focus {
-  border-bottom-color: #4fc3f7;
+  border-bottom: 2px solid #4fc3f7;
 }
 
 #send-button {
@@ -1052,6 +1049,22 @@ input:focus {
 .show-error-message {
   opacity: 1; 
   z-index: 1;
+}
+
+.empty-field {
+  border-bottom: 2px solid #e03333;
+}
+
+.empty-field:focus {
+  border-bottom: 2px solid #e03333;
+}
+
+.correct-field {
+  border-bottom: 2px solid green;
+}
+
+.correct-field:focus {
+  border-bottom: 2px solid green;
 }
 
 .container svg {
