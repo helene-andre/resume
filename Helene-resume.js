@@ -70,8 +70,8 @@ let onClick = function() {
 // ===================================== form validation ===================================== //
 let initFormValidation = function() {
   $('.contact-form__wrapper').submit(function(e) {
-    if ($.trim($('.contact-form__field').val()) === '') {
-      fieldsVlidation()  
+    if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
+      fieldsValidation()  
       return false
     }
     else if ($.trim($('.contact-form__field').val()) !== '') {
@@ -80,24 +80,28 @@ let initFormValidation = function() {
         url: 'contact.php',
         data: $('.contact-form__wrapper').serialize(), 
         success: function(data) {
-          alert(data)
+          $('.contact__success-message').addClass('show')
+          setTimeout( function () {
+            $('.contact__success-message').removeClass('show')
+          }, 2000)
         }
+
       })
       e.preventDefault()
     }          
   })  
   
   $('.contact-form__field').keyup(function() {
-    fieldsVlidation()
+    fieldsValidation()
   })
 
-  let fieldsVlidation = function() {
+  let fieldsValidation = function() {
     let fields = $('.contact-form__field')
     let formErrors = 0
     // let nameRegex = '/^[a-z0-9_-]{3,16}$/'
     if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
       fields.each(function(i) {
-          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show-error-message');
+          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show');
           $(fields[i])[$(fields[i]).val().length ? 'removeClass' : 'addClass']('empty-field');
           $(fields[i])[$(fields[i]).val().length ? 'addClass' : 'removeClass']('correct-field');
           formErrors += $(fields[i]).val().length ? 0 : 1    
@@ -107,7 +111,7 @@ let initFormValidation = function() {
     else if ($.trim($('.contact-form__field').val()) !== '') {
       $(fields).removeClass('empty-field')
       $(fields).addClass('correct-field')
-      $('.contact-form__error-message').removeClass('show-error-message')
+      $('.contact-form__error-message').removeClass('show')
     }
   }
 }

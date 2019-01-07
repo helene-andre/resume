@@ -86,9 +86,27 @@
 .icon-work:before {
   content: "\42";
 }
-.icon-cooking:before {
-  content: "\70";
-}
 .icon-laptop:before {
   content: "\69";
+}
+.icon-computer-imac:before {
+  content: "\6b";
+}
+.icon-college:before {
+  content: "\6c";
+}
+.icon-airport:before {
+  content: "\6d";
+}
+.icon-briefcase-case-two:before {
+  content: "\6e";
+}
+.icon-plane-airport:before {
+  content: "\70";
+}
+.icon-note-beamed:before {
+  content: "\73";
+}
+.icon-validated:before {
+  content: "\74";
 }
