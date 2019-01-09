@@ -1054,9 +1054,10 @@ input {
   font-style: italic;
   font-size: 12px; 
   padding-top: 2px; 
-  color: #e03333; 
+  color: #e53935; 
   opacity: 0;
   z-index: -1;
+  transition: 0.3s all ease-in-out;
 }
 
 .icon-success {
@@ -1088,7 +1089,7 @@ input {
 }
 
 .contact__failed-message {
-  color: #e03333;
+  color: #e53935;
 }
 
 .contact__success-message--subtext, .contact__failed-message--subtext {
@@ -1103,19 +1104,19 @@ input {
 }
 
 .empty-field {
-  border-bottom: 2px solid #e03333;
+  border-bottom: 2px solid #e53935;
 }
 
 .empty-field:focus {
-  border-bottom: 2px solid #e03333;
+  border-bottom: 2px solid #e53935;
 }
 
 .correct-field {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #81c784;
 }
 
 .correct-field:focus {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #81c784;
 }
 
 .container svg {
