@@ -69,9 +69,18 @@ let onClick = function() {
 
 // ===================================== form validation ===================================== //
 let initFormValidation = function() {
+  let fields = $('.contact-form__field')
+  let formErrors = 0
+
   $('.contact-form__wrapper').submit(function(e) {
     if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
-      fieldsValidation()  
+      fields.each(function(i) {
+        $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show');
+        $(fields[i])[$(fields[i]).val().length ? 'removeClass' : 'addClass']('empty-field');
+        $(fields[i])[$(fields[i]).val().length ? 'addClass' : 'removeClass']('correct-field');
+        formErrors += $(fields[i]).val().length ? 0 : 1    
+      return formErrors
+      })
       return false
     }
     else if ($.trim($('.contact-form__field').val()) !== '') {
@@ -88,33 +97,131 @@ let initFormValidation = function() {
 
       })
       e.preventDefault()
-    }          
-  })  
-  
-  $('.contact-form__field').keyup(function() {
-    fieldsValidation()
-  })
-
-  let fieldsValidation = function() {
-    let fields = $('.contact-form__field')
-    let formErrors = 0
-    // let nameRegex = '/^[a-z0-9_-]{3,16}$/'
-    if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
-      fields.each(function(i) {
-          $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show');
-          $(fields[i])[$(fields[i]).val().length ? 'removeClass' : 'addClass']('empty-field');
-          $(fields[i])[$(fields[i]).val().length ? 'addClass' : 'removeClass']('correct-field');
-          formErrors += $(fields[i]).val().length ? 0 : 1    
-      })
-      return !formErrors 
-    }
-    else if ($.trim($('.contact-form__field').val()) !== '') {
       $(fields).removeClass('empty-field')
       $(fields).addClass('correct-field')
       $('.contact-form__error-message').removeClass('show')
-    }
+    }          
+  })  
+ 
+
+$('#name').keyup(function() {
+  if ($.trim($('#name').val()) === '') {
+    $('#name').next('.contact-form__error-message').addClass('show')
+    $('#name').addClass('empty-field')
+    $('#name').removeClass('correct-field')
   }
+  else if ($.trim($('#name').val()) !== '') {
+    $('#name').removeClass('empty-field')
+    $('#name').addClass('correct-field')
+    $('#message').next('.contact-form__error-message').removeClass('show')
+  }
+})
+
+$('#email').keyup(function() {
+  if ($.trim($('#email').val()) === '') {
+    $('#email').next('.contact-form__error-message').addClass('show')
+    $('#email').addClass('empty-field')
+    $('#email').removeClass('correct-field')
+  }
+  else if ($.trim($('#email').val()) !== '') {
+    $('#email').removeClass('empty-field')
+    $('#email').addClass('correct-field')
+    $('#message').next('.contact-form__error-message').removeClass('show')
+  }
+})
+
+$('#subject').keyup(function() {
+  if ($.trim($('#subject').val()) === '') {
+    $('#subject').next('.contact-form__error-message').addClass('show')
+    $('#subject').addClass('empty-field')
+    $('#subject').removeClass('correct-field')
+  }
+  else if ($.trim($('#subject').val()) !== '') {
+    $('#subject').removeClass('empty-field')
+    $('#subject').addClass('correct-field')
+    $('#message').next('.contact-form__error-message').removeClass('show')
+  }
+})
+
+$('#message').keyup(function() {
+  if ($.trim($('#message').val()) === '') {
+    $('#message').next('.contact-form__error-message').addClass('show')
+    $('#message').addClass('empty-field')
+    $('#message').removeClass('correct-field')
+  }
+  else if ($.trim($('#message').val()) !== '') {
+    $('#message').removeClass('empty-field')
+    $('#message').addClass('correct-field')
+    $('#message').next('.contact-form__error-message').removeClass('show')
+  }
+})
+  
+
+//   let fieldsValidation = function() {
+//     // let nameRegex = '/^[a-z0-9_-]{3,16}$/'
+    
+//     fields.each(function(i) {
+      // if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
+      //       $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val() ? 'removeClass' : 'addClass']('show');
+      //       $(fields[i])[$(fields[i]).val() ? 'removeClass' : 'addClass']('empty-field');
+      //       $(fields[i])[$(fields[i]).val() ? 'addClass' : 'removeClass']('correct-field');
+      // }
+//       else if ($.trim($(fields).val()) !== '') {
+//         $(fields).removeClass('empty-field')
+//         $(fields).addClass('correct-field')
+//         $('.contact-form__error-message').removeClass('show')
+//       }
+//     })
+//   }
 }
+
+// let initFormValidation = function() {
+//   $('.contact-form__wrapper').submit(function(e) {
+//     if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
+//       fieldsValidation()  
+//       return false
+//     }
+//     else if ($.trim($('.contact-form__field').val()) !== '') {
+//       $.ajax({
+//         type: 'POST',
+//         url: 'contact.php',
+//         data: $('.contact-form__wrapper').serialize(), 
+//         success: function(data) {
+//           $('.contact__success-message').addClass('show')
+//           setTimeout( function () {
+//             $('.contact__success-message').removeClass('show')
+//           }, 2000)
+//         }
+
+//       })
+//       e.preventDefault()
+//     }          
+//   })  
+  
+//   $('.contact-form__field').keyup(function() {
+//     fieldsValidation()
+//   })
+
+//   let fieldsValidation = function() {
+//     let fields = $('.contact-form__field')
+//     let formErrors = 0
+//     // let nameRegex = '/^[a-z0-9_-]{3,16}$/'
+//     if ($.trim($('#name').val()) === '' || $.trim($('#email').val()) === '' || $.trim($('#subject').val()) === '' || $.trim($('#message').val()) === '') {
+//       fields.each(function(i) {
+//           $(fields[i]).next('.contact-form__error-message')[$(fields[i]).val().length ? 'removeClass' : 'addClass']('show');
+//           $(fields[i])[$(fields[i]).val().length ? 'removeClass' : 'addClass']('empty-field');
+//           $(fields[i])[$(fields[i]).val().length ? 'addClass' : 'removeClass']('correct-field');
+      //     formErrors += $(fields[i]).val().length ? 0 : 1    
+      // })
+      // return !formErrors 
+//     }
+//     else if ($.trim($('.contact-form__field').val()) !== '') {
+//       $(fields).removeClass('empty-field')
+//       $(fields).addClass('correct-field')
+//       $('.contact-form__error-message').removeClass('show')
+//     }
+//   }
+// }
 // =========================================================================================== //
 
 
