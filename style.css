@@ -76,6 +76,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -88,6 +89,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -140,6 +142,9 @@ li {
 }
 .icon-graduation:before {
   content: "\6a";
+}
+.icon-management:before {
+  content: "\6b";
 }
 /**=====================================================================**/
 
@@ -616,7 +621,7 @@ section {
 }
 
 .skills__management::before {
-  content: '\78';
+  content: '\6b';
   left: 100%;
 }
 
