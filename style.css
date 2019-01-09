@@ -146,6 +146,9 @@ li {
 .icon-management:before {
   content: "\6b";
 }
+.icon-blocked:before {
+  content: "\6d";
+}
 /**=====================================================================**/
 
 /**============================= side menu =============================**/
@@ -1060,10 +1063,9 @@ input {
   font-size: 100px; 
 }
 
-.contact__success-message {
+.contact__success-message, .contact__failed-message {
   height: 45%;
   width: 100%;
-  color: #66bb6a;
   font-size: 25px;
   background-color: rgba(255,255,255, 0.8);
   text-align: center;
@@ -1081,11 +1083,18 @@ input {
   transition: 0.3s all ease-in-out;
 }
 
-.contact__success-message--subtext {
+.contact__success-message {
+  color: #66bb6a;
+}
+
+.contact__failed-message {
+  color: #e03333;
+}
+
+.contact__success-message--subtext, .contact__failed-message--subtext {
   color: #757575; 
   font-size: 13px; 
   margin-top: 15px;
-
 }
 
 .show {

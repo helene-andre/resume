@@ -49,12 +49,10 @@ let initFormValidation = function() {
 
   form.submit(function(e) {
     let formErrors = 0
-    
     fields.each(function(i) {
       validateField(fields[i])
       formErrors += $(fields[i]).val().length ? 0 : 1 
     })
-    
     // If no error, send form via ajax.
     if (!formErrors) {
       $.ajax({
@@ -62,11 +60,19 @@ let initFormValidation = function() {
         url: 'contact.php',
         data: form.serialize(), 
         success: function(data) {
-          $('.contact__success-message').addClass('show')
+          if (data === 'ok') {
+            $('.contact__success-message').addClass('show')
+            setTimeout( function () {
+              $('.contact__success-message').removeClass('show')
+            }, 2000)
+          }  
+        },  
+        error: function(jqXHR, textStatus, errorThrown) {
+          $('.contact__failed-message').addClass('show')
           setTimeout( function () {
-            $('.contact__success-message').removeClass('show')
-          }, 2000)
-        }
+            $('.contact__failed-message').removeClass('show')
+          }, 4000)
+        }  
       })
       e.preventDefault()
       $(fields).removeClass('correct-field')
@@ -74,7 +80,6 @@ let initFormValidation = function() {
     } 
     return false
   })  
-  
   // Validate fields on keyup.
   fields.on('keyup', function() {
     validateField(this)

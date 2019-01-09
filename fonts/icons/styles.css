@@ -89,3 +89,6 @@
 .icon-management:before {
   content: "\6b";
 }
+.icon-blocked:before {
+  content: "\6d";
+}
