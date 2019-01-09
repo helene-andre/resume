@@ -61,5 +61,5 @@
  
 //   mail($to, $email_subject, $email_body);
 
-// echo "<div>'Your message has been sent, thank you!'</div>";
+echo "ok";
 ?>
