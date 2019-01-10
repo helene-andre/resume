@@ -174,7 +174,7 @@ li {
   box-shadow: 0px 0px 7px rgba(128,128,128, 0.5);
   opacity: 0.7;
   background-color: white;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .side-menu__text {
@@ -185,7 +185,7 @@ li {
   right: 190%;
   top: 0%;
   text-align: right;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
   transform: translateX(1em);
@@ -206,7 +206,7 @@ li {
 section {
   position: relative;
   height: 100vh;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 /**=====================================================================**/
 
@@ -261,7 +261,7 @@ section {
 }
 
 .icon {
-	transition: all 0.3s ease-in-out;	
+	transition: 0.3s ease-in-out;	
 }
 
 .icon:hover {
@@ -299,7 +299,7 @@ section {
   top: 50%; 
   left: 50%;
   transform: translate(-50%,-50%);
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   overflow:hidden;
 }
 
@@ -331,7 +331,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-projects-block {
@@ -348,7 +348,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-skills-block {
@@ -365,7 +365,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-xp-block {
@@ -382,7 +382,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-hobbies-block {
@@ -400,7 +400,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-hobbies-block .home__button--text {
@@ -424,7 +424,7 @@ section {
   position: absolute;
   top: 0%;
   left: 0%;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .home-about-me-block:hover:before, .home-projects-block:hover:before, .home-skills-block:hover:before, .home-xp-block:hover:before, .home-hobbies-block:hover:before, .home-contact-block:hover:before {
@@ -874,7 +874,7 @@ section {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin: 40px;
+  margin-right: 81px;
 }
 
 .hobbies__element--icon:hover ~ div {
@@ -891,8 +891,6 @@ section {
   text-align: left;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid rgba(128,128,128, 0.1);
-  border-radius: 4px;
   font-size: 13px;
   position: absolute;
   opacity: 0;
@@ -909,22 +907,11 @@ section {
   content: "";
   height: 0px; 
   width: 0px; 
-  border: 5px solid transparent; 
+  border: 10px solid transparent; 
   border-bottom-color: white;
   position: absolute;
   bottom: 100%;
-  left: 26%;
-}
-
-.hobbies__element--text::before {
-  content: "";
-  height: 0px; 
-  width: 0px; 
-  border: 6px solid transparent; 
-  border-bottom-color: rgba(128,128,128, 0.2);
-  position: absolute;
-  bottom: 100%;
-  left: 25.8%;
+  left: 15%;
 }
 /**=====================================================================**/
 
@@ -1015,7 +1002,7 @@ input {
   outline: none;
   border: none;
   border-bottom: 1px solid transparent;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
   font-family: 'Roboto', arial;
   font-size: 14px;
   padding: 4%;
@@ -1040,7 +1027,7 @@ input {
   padding: 3px 7px;
   opacity: 0.9;
   outline: none; 
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 #send-button:hover {
@@ -1057,17 +1044,17 @@ input {
   color: #e53935; 
   opacity: 0;
   z-index: -1;
-  transition: 0.3s all ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .icon-success {
-  font-size: 100px; 
+  font-size: 75px; 
 }
 
 .contact__success-message, .contact__failed-message {
   height: 45%;
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
   background-color: rgba(255,255,255, 0.8);
   text-align: center;
   padding-top: 150px;
@@ -1081,7 +1068,7 @@ input {
   transform: translate(-50%, -50%);
   opacity: 0;
   z-index: -1;
-  transition: 0.3s all ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .contact__success-message {
@@ -1096,6 +1083,18 @@ input {
   color: #757575; 
   font-size: 13px; 
   margin-top: 15px;
+}
+
+.icon-blocked:hover {
+  color: #e53935;
+}
+
+.icon-success:hover {
+  color: #66bb6a;
+}
+
+.icon-blocked {
+  font-size: 75px;
 }
 
 .show {
@@ -1146,7 +1145,7 @@ svg:not(:root) {
   width: 100%;
   opacity: 0;
   transform: translateY(2em);
-  transition: all 1s ease-out 0.5s;
+  transition: 1s ease-out 0.5s;
 }
 
 .scroll {
