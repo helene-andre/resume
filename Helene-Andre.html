@@ -135,14 +135,14 @@
 				<h1 class="xp__title">EXPERIENCE</h1>
 				<div class="xp__timeline">
 			    <div class="xp__container-left">
-				    <div class="xp__container-left--content">
+				    <div class="xp__container-left--text">
 				      <div class="xp__container-left--date">Jul. 2015</div>
 				      <div class="xp__container-left--dot"></div>
 				      <h2>Started work at Servier</h2>
 				      <div>Pharmaceutical Company, HCMC, Vietnam</div>
 				      <div>Project Leader - General Management Department</div>
 				      <div>18 months</div>
-				      <ul class="content__details">
+				      <ul class="text__details">
 				      	<li>Led and supported the successful relocation of the company: 750 sqm, 60 collaborators</li>
 				      	<li>Marketed 7 pharmaceutical products in the field of diabetes, hypertension & mental health: 5 products in 2015, 7 products in 2016 (turnover growth: + 22% volume for the top 5 products in 2016)</li>
 				      	<li>Led & coordinated marketing activities related to a website to raise patients’ awareness to hypertension: http://ngaydautien.vn, +65,000 visits in August 2016</li>
@@ -152,7 +152,7 @@
 				  </div>
 
 				  <div class="xp__container-right">
-				    <div class="xp__container-right--content">
+				    <div class="xp__container-right--text">
 					  	<div class="xp__container-right--date">Sept. 2014</div>
 					  	<div class="xp__container-right--dot"></div>
 				      <h2>Graduated from the Institute of Business Administration</h2>
@@ -162,14 +162,14 @@
 				  </div>
 
 				  <div class="xp__container-left">
-				    <div class="xp__container-left--content">
+				    <div class="xp__container-left--text">
 				    	<div class="xp__container-left--date">Apr. 2014</div>
 				    	<div class="xp__container-left--dot"></div>
 				      <h2>Started work at Pierre Fabre</h2>
 				      <div>Pharmaceutical Company, Castres, France</div>
 				      <div>Product Manager, Marketing Department, Smoking Cessation Team</div>
 				      <div>6 months</div>
-			      	<ul class="content__details">
+			      	<ul class="text__details">
 			      		<li>Led the creation and operational launch of the marketing tools for 2 pharmaceutical products including a showcase and animation in more than 1,200 targeted drugstores</li>
 			      		<li>Extracted / analysed relevant market data to seize opportunities & shared the results to the marketing team on a weekly basis</li>
 			      		<li>Participated in public relation programs and provided support to the sales team.</li>
@@ -178,7 +178,7 @@
 				  </div>
 
 				  <div class="xp__container-right">
-				    <div class="xp__container-right--content">
+				    <div class="xp__container-right--text">
 					    <div class="xp__container-right--date">Sept. 2012</div>
 					    <div class="xp__container-right--dot"></div>
 				      <h2>Graduated from the Faculty of Medecine</h2>
@@ -188,14 +188,14 @@
 				  </div>
 
 				  <div class="xp__container-left">
-				    <div class="xp__container-left--content">
+				    <div class="xp__container-left--text">
 					    <div class="xp__container-left--date">Apr. 2012</div>
 					    <div class="xp__container-left--dot"></div>
 				      <h2>Started work at CDL Pharma</h2>
 				      <div>CRO, Marseille, France</div>
 				      <div>Clinical Research Coordinator, Project Management Department</div>
 				      <div>6 months</div>
-				      <ul class="content__details">
+				      <ul class="text__details">
 				      	<li>Monitored national & international clinical trials and coordinated activities </li>
 				      	<li>Wrote business proposals & requests for tenders</li>
 				      	<li>Updated the Trial Master Files and designed operating manuals.</li>
@@ -204,14 +204,14 @@
 				  </div>
 
 				  <div class="xp__container-right">
-				    <div class="xp__container-right--content">
+				    <div class="xp__container-right--text">
 					    <div class="xp__container-right--date">Oct. 2011</div>
 					    <div class="xp__container-right--dot"></div>
 				      <h2>Started work at CHU Montpellier</h2>
 				      <div>Hospital, Montpellier, France</div>
 				      <div>Clinical Trial Associate</div>
 				      <div>6 months</div>
-				      <ul class="content__details">
+				      <ul class="text__details">
 				      	<li>Clinical Trial Associate, Emergency Department</li>
 				      	<li>Monitored clinical trial logistics and coordinated activities</li>
 				      	<li>Conducted a phone survey (+500 calls).</li>
@@ -226,7 +226,7 @@
 				  </div>
 
 				  <div class="xp__container-left">
-				    <div class="xp__container-left--content">
+				    <div class="xp__container-left--text">
 					    <div class="xp__container-left--date">Sept. 2011</div>
 					    <div class="xp__container-left--dot"></div>
 				      <h2>Graduated from Nice Sophia Antipolis University</h2>
@@ -236,7 +236,7 @@
 				  </div>	
 
 				  <div class="xp__container-right">
-				    <div class="xp__container-right--content">
+				    <div class="xp__container-right--text">
 					    <div class="xp__container-right--date">Jan. 2011</div>
 					    <div class="xp__container-right--dot"></div>
 				      <h2>Started work at INSERM</h2>
@@ -332,34 +332,35 @@
 					</div>				
 				</div>
 
-				<form class="contact-form__wrapper" name="contact-form" action="contact.php" method="post">
-					<div class="contact-form">
+				<form class="contact-form__wrapper" action="contact.php" method="post">
+					<div class="contact-form__field-wrapper">
 						<input id="name" class="contact-form__field" type="text" name="name" placeholder="Name" autocomplete="off">				
-						<div class="contact-form__error-message" id="name-error-message">This field is required</div>
+						<div class="invalid-field-message">This field is required</div>
 					</div>
-					<div class="contact-form">
+					<div class="contact-form__field-wrapper">
 						<input id="email" class="contact-form__field" type="email" name="email" placeholder="Email" autocomplete="off">
-						<div class="contact-form__error-message" id="email-error-message">This field is required</div>
+						<div class="invalid-field-message">This field is required</div>
+						<div class="invalid-email-message">Must be a valid email</div>
 					</div>
-					<div class="contact-form">
+					<div class="contact-form__field-wrapper">
 						<input id="subject" class="contact-form__field" type="text" name="subject" placeholder="Subject" autocomplete="off">	
-						<div class="contact-form__error-message" id="subject-error-message">This field is required</div>
+						<div class="invalid-field-message">This field is required</div>
 					</div>
-					<div class="contact-form">
+					<div class="contact-form__field-wrapper">
 						<textarea id="message" class="contact-form__field" name="message" placeholder="Message" rows="6" cols="80"></textarea>		
-						<div class="contact-form__error-message" id="message-error-message">This field is required</div>
+						<div class="invalid-field-message">This field is required</div>
 					</div>
 					<input id="send-button" type="submit" value="Send">		
 				</form>		
 				<div class="contact__success-message">
 					<i class="icon icon-validated icon-success"></i>
 					<div>Thank you!</div>
-					<div class="contact__success-message--subtext">Your message has been sent.</div>
+					<p>Your message has been sent.<p>
 				</div>
 				<div class="contact__failed-message">
 					<i class="icon icon-validated icon-blocked"></i>
 					<div>You message has not been sent.</div>
-					<div class="contact__failed-message--subtext">Check your internet connection</div>
+					<p>Check your internet connection</p>
 				</div>
 			</div>
 		</section>

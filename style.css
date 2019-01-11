@@ -19,10 +19,9 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  font-family: lemon-milk-light;
+  font-family: lemon-milk-light, arial;
   margin-bottom: 10px;
   position: relative;
-  z-index: 1; 
 }
 
 a {
@@ -76,7 +75,6 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,7 +87,6 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -194,7 +191,6 @@ li {
 .side-menu__circle:hover, .active {
   opacity: 1;
   background-color: #ffe082;
-  box-shadow: 1px 1px 7px rgba(128,128,128, 0.5);
 }
 
 .side-menu__circle:hover .side-menu__text {
@@ -427,7 +423,12 @@ section {
   transition: 0.3s ease-in-out;
 }
 
-.home-about-me-block:hover:before, .home-projects-block:hover:before, .home-skills-block:hover:before, .home-xp-block:hover:before, .home-hobbies-block:hover:before, .home-contact-block:hover:before {
+.home-about-me-block:hover:before, 
+.home-projects-block:hover:before, 
+.home-skills-block:hover:before, 
+.home-xp-block:hover:before, 
+.home-hobbies-block:hover:before, 
+.home-contact-block:hover:before {
   transform: scale(1.1);
 }
 /**=====================================================================**/
@@ -637,7 +638,9 @@ section {
   right: 100%;
 }
 
-.skills__computer::before, .skills__management::before, .skills__languages::before {
+.skills__computer::before, 
+.skills__management::before, 
+.skills__languages::before {
   font-family: 'helene-resume';
   position: absolute;
   bottom: 16%;
@@ -694,7 +697,8 @@ section {
   transform: translateX(-50%);
 }
 
-.xp__container-left, .xp__container-right {
+.xp__container-left, 
+.xp__container-right {
   height: auto;
   width: 100%;
   background-color: transparent;
@@ -711,7 +715,8 @@ section {
   color: black;
 }
 
-.xp__container-left--content, .xp__container-right--content {
+.xp__container-left--text, 
+.xp__container-right--text {
   height: auto;
   width: 50%;
   float: left;
@@ -723,32 +728,37 @@ section {
   transform: translateY(-50%);
 }
 
-.xp__container-left--content {
+.xp__container-left--text {
   left: -13.3%;
 }
 
-.xp__container-left--content::after, .xp__container-left--content::before {
+.xp__container-right--text::after, 
+.xp__container-left--text::after {
   content: '';
   height: 0px;
   width: 0px;
+  border: 10px solid transparent;
   position: absolute;
-  left: 100%;
+  right: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.xp__container-left--content::after {
-  border: 10px solid transparent;
+.xp__container-left--text::after {
   border-left-color: white;
+  left: 100%; 
+}
+.xp__container-right--text {
+  right: -13.3%;
 }
 
-.xp__container-left--content::before {
-  border: 11px solid transparent;
-  border-left-color: #e0e0e0;
-  opacity: 0.2;
+.xp__container-right--text::after {
+  
+  border-right-color: white;
 }
 
-.xp__container-left--date, .xp__container-right--date {
+.xp__container-left--date, 
+.xp__container-right--date {
   color: white;
   font-family: lemon-milk;
   font-size: 1.5em; 
@@ -759,14 +769,15 @@ section {
 }
 
 .xp__container-left--date {
-  left: 121%;
+  left: 111%;
 }
 
-.content__details {
-  display: none;
+.xp__container-right--date {
+  right: 111%;
 }
 
-.xp__container-left--dot, .xp__container-right--dot {
+.xp__container-left--dot, 
+.xp__container-right--dot {
   content: '';
   height: 1.3em;
   width: 1.3em;
@@ -782,39 +793,13 @@ section {
   left: 108.2%;
 }
 
-.xp__container-right--content {
-  right: -13.3%;
-}
-
-.xp__container-right--content::after, .xp__container-right--content::before {
-  content: '';
-  height: 0px;
-  width: 0px;
-  position: absolute;
-  right: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.xp__container-right--content::after {
-  border: 10px solid transparent;
-  border-right-color: white;
-}
-
-.xp__container-right--content::before {
-  border: 11px solid transparent;
-  border-right-color: #e0e0e0;
-  opacity: 0.2;
-}
-
 .xp__container-right--dot {
   right: 108.2%;
 }
 
-.xp__container-right--date {
-  right: 121%;
+.text__details {
+  display: none;
 }
-
 /**=====================================================================**/
 
 /**======================= sports & interests ==========================**/
@@ -895,6 +880,25 @@ section {
 }
 /**=====================================================================**/
 
+/**================ div separation hobbies / contact ===================**/
+.container svg {
+  display: block;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+#clouds {
+  position: absolute;
+  bottom: 100%; 
+}
+
+#clouds path {
+  fill: white;
+  stroke: white;
+}
+/**=====================================================================**/
+
 /**============================== contact ==============================**/
 .contact {
   background-color: white;
@@ -952,7 +956,7 @@ section {
 
 .contact-form__wrapper {
   width: 24em;
-  height: 30em;
+  height: 31em;
   position: absolute;
   margin: 10px;
   padding: 1em;
@@ -961,8 +965,7 @@ section {
   transform: translateY(-50%);
 }
 
-.contact-form {
-  height: 2.5em;
+.contact-form__field-wrapper {
   width: 24em;
   margin-bottom: 3em;
   position: relative;
@@ -981,7 +984,7 @@ input {
   background-color: #f5f5f5;
   outline: none;
   border: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: 0.3s ease-in-out;
   font-family: 'Roboto', arial;
   font-size: 14px;
@@ -989,49 +992,50 @@ input {
 }
 
 .contact-form__field:focus {
-  border-bottom: 2px solid #4fc3f7;
+  border-color: #4fc3f7;
 }
 
-#send-button {
-  width: 4em;
-  text-align: center;
-  font-size: 1em;
-  font-family: 'Roboto', arial;
-  color: #4fc3f7;
-  background-color: transparent;
-  position: absolute;
-  right: 2%;
-  bottom: 6%;
-  border: 1px solid #4fc3f7;
-  border-radius: 3px;
-  padding: 3px 7px;
-  opacity: 0.9;
-  outline: none; 
-  transition: 0.3s ease-in-out;
-}
-
-#send-button:hover {
-  cursor: pointer;
-  opacity: 1;
-  color: #757575;
-  border: 1px solid #757575;
-} 
-
-.contact-form__error-message { 
+.invalid-field-message, .invalid-email-message { 
   font-style: italic;
   font-size: 12px; 
   padding-top: 2px; 
   color: #e53935; 
+  position: absolute;
+  top: 100%;
+  margin-top: 3px;
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 
-.icon-success {
-  font-size: 75px; 
+.invalid-field .invalid-field-message,
+.invalid-email .invalid-email-message {
+  opacity: 1; 
+  z-index: 1;
 }
 
-.contact__success-message, .contact__failed-message {
+.invalid-field input, 
+.invalid-email input, 
+.invalid-field textarea,
+.invalid-field input:focus, 
+.invalid-email input:focus, 
+.invalid-field textarea:focus,
+.contact__failed-message, 
+.icon-blocked:hover{
+  border-color: #e53935;
+}
+
+.correct-field input, 
+.correct-field textarea,
+.correct-field input:focus, 
+.correct-field textarea:focus, 
+.contact__success-message,
+.icon-success:hover {
+  border-color: #81c784;
+}
+
+.contact__success-message, 
+.contact__failed-message {
   height: 45%;
   width: 100%;
   font-size: 20px;
@@ -1039,9 +1043,6 @@ input {
   text-align: center;
   padding-top: 150px;
   padding-bottom: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1051,30 +1052,25 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-.contact__success-message {
-  color: #66bb6a;
-}
-
-.contact__failed-message {
-  color: #e53935;
-}
-
-.contact__success-message--subtext, .contact__failed-message--subtext {
+p {
   color: #757575; 
   font-size: 13px; 
   margin-top: 15px;
 }
 
-.icon-blocked:hover {
-  color: #e53935;
-}
-
-.icon-success:hover {
-  color: #66bb6a;
-}
-
-.icon-blocked {
+.icon-blocked,
+.icon-success {
   font-size: 75px;
+}
+
+.icon-success,
+.contact__success-message div {
+  color: #81c784;
+}
+
+.icon-blocked,
+.contact__failed-message div {
+  color: #e53935;
 }
 
 .show {
@@ -1082,41 +1078,30 @@ input {
   z-index: 1;
 }
 
-.empty-field {
-  border-bottom: 2px solid #e53935;
-}
-
-.empty-field:focus {
-  border-bottom: 2px solid #e53935;
-}
-
-.correct-field {
-  border-bottom: 2px solid #81c784;
-}
-
-.correct-field:focus {
-  border-bottom: 2px solid #81c784;
-}
-
-.container svg {
-  display: block;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-
-#clouds {
+#send-button {
+  width: 4em;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Roboto', arial;
+  color: #4fc3f7;
   position: absolute;
-  bottom: 100%; 
+  right: 2%;
+  bottom: 0;
+  border: 1px solid #4fc3f7;
+  padding: 3px 7px;
+  outline: none; 
+  transition: 0.3s ease-in-out;
 }
 
-#clouds path {
-  fill: white;
-  stroke: white;
-}
+#send-button:hover {
+  cursor: pointer;
+  opacity: 1;
+  color: #757575;
+  border-color: #757575;
+} 
 /**=====================================================================**/
 
-/**========================= scroll animation ==========================**/
+/**========================= onScroll animation ========================**/
 .section-wrapper {
   position: relative;
   top: 0%;
@@ -1138,3 +1123,4 @@ svg:not(:root) {
   transform: translateY(0em);
 }
 /**=====================================================================**/
+

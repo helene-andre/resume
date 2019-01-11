@@ -23,7 +23,7 @@ let onScroll = function() {
 // =========================================================================================== //
 
 // ====================================== scroll to on click ================================= //  
-let onClick = function() {
+let initOnClick = function() {
   $('.home__button').click(function(e) {      
     let position = $($(this).attr('href')).offset().top
     $('html').animate(
@@ -50,8 +50,7 @@ let initFormValidation = function() {
   form.submit(function(e) {
     let formErrors = 0
     fields.each(function(i) {
-      validateField(fields[i])
-      formErrors += $(fields[i]).val().length ? 0 : 1 
+      formErrors += validateField(fields[i]) ? 0 : 1 
     })
     // If no error, send form via ajax.
     if (!formErrors) {
@@ -61,22 +60,20 @@ let initFormValidation = function() {
         data: form.serialize(), 
         success: function(data) {
           if (data === 'ok') {
+            $(fields)
+              .removeClass('correct-field')
+              .val('')
+
             $('.contact__success-message').addClass('show')
-            setTimeout( function () {
-              $('.contact__success-message').removeClass('show')
-            }, 2000)
-          }  
+            setTimeout(function() {$('.contact__success-message').removeClass('show')}, 3000);
+          }
         },  
-        error: function(jqXHR, textStatus, errorThrown) {
+        error: function() {
           $('.contact__failed-message').addClass('show')
-          setTimeout( function () {
-            $('.contact__failed-message').removeClass('show')
-          }, 4000)
+          setTimeout(function() {$('.contact__failed-message').removeClass('show')}, 4000);
         }  
       })
       e.preventDefault()
-      $(fields).removeClass('correct-field')
-      $(fields).val('') 
     } 
     return false
   })  
@@ -88,24 +85,37 @@ let initFormValidation = function() {
 
 // ================================== validate form fields =================================== //
 function validateField (field) {
-  if ($.trim($(field).val()) === '') {
-    $(field).next('.contact-form__error-message').addClass('show')
-    $(field).addClass('empty-field')
-    $(field).removeClass('correct-field')
+  fieldWrapper = $(field).parent()
+  let fieldValue = $.trim($(field).val())
+
+
+  if (!fieldValue) {
+    fieldWrapper
+      .addClass('invalid-field')
+      .removeClass('correct-field invalid-email')
+    return false 
   }
-  else if ($.trim($(field).val()) !== '') {
-    $(field).removeClass('empty-field')
-    $(field).addClass('correct-field')
-    $(field).next('.contact-form__error-message').removeClass('show')
+
+  // If field is email.
+  else if (field.id === 'email' && !/^.+@.+\.[a-zA-Z]{2,}$/.test(fieldValue)) {
+    fieldWrapper
+      .removeClass('invalid-field correct-field')
+      .addClass('invalid-email')
+    return false 
   }
-  return false
+  
+  else {
+    fieldWrapper
+      .removeClass('invalid-field invalid-email')
+      .addClass('correct-field')
+    return true 
+  }
 }
 // =========================================================================================== //
 
 
 $(document).ready(function() {
-  onScroll()
-  onClick()
+  initOnClick()
   initFormValidation()
 })
 
