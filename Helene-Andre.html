@@ -23,19 +23,35 @@
 		</ul>
 
 		<section class="home" id="home">
-			<div class="home__block-note">
-				<div class="home__block-note--name">Helene ANDRE</div> 
-				<div class="home__block-note--job">front-end developer</div>
-				<ul class="home__block-note--contact">
-					<li class="home__title--icon-contact-text"><i class="icon icon-phone icon-home"></i> +61 (0) 484 084 650</li>
-					<li><a href="mailto:helene.andre.06@gmail.com" target="_top" class="home__title--icon-contact-text"><i class="icon icon-email icon-home"></i> helene.andre.06@gmail.com</a></li>
-					<li class="home__title--icon-contact-text"><i class="icon icon-location icon-home"></i> Melbourne, VIC - Australia</li>
-				</ul>				
-				<ul class="home__block-note--social-links">
-					<li><a href="https://codepen.io/helene-andre/" target="_blank" class="icon icon-codepen"></a></li>
-					<li><a href="https://github.com/helene-andre" target="_blank" class="icon icon-github"></a></li>
-					<li><a href="https://www.linkedin.com/in/helene-andre/" target="_blank" class="icon icon-linkedin"></a></li>
-				</ul>					
+			
+			<div class="home__notebook">
+				<img class="home__notebook--picture" src="pictures/pictures-background/notebook.png">
+				<div class="home__notebook--text-wrapper">
+					<div class="home__notebook--name">Helene ANDRE</div> 
+					<div class="home__notebook--job">front-end developer</div>
+					<ul class="home__notebook--contact">
+						<li class="home__title--icon-contact-text">
+							<a href="tel:0484084650">
+								<i class="icon icon-phone icon-home"></i>+61 (0) 484 084 650
+							</a>
+						</li>
+						<li class="home__title--icon-contact-text">
+							<a href="mailto:helene.andre.06@gmail.com" target="_top" class="home__title--icon-contact-text">
+								<i class="icon icon-email icon-home"></i>helene.andre.06@gmail.com
+							</a>
+						</li>
+						<li class="home__title--icon-contact-text">
+							<a href="https://www.google.com/maps/place/Melbourne+Victoria/@-37.9712304,144.4913055,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576" target="_blank">
+								<i class="icon icon-location icon-home"></i>Melbourne, VIC - Australia
+							</a>
+						</li>
+					</ul>				
+					<ul class="home__notebook--social-links">
+						<li><a href="https://codepen.io/helene-andre/" target="_blank" class="icon icon-codepen"></a></li>
+						<li><a href="https://github.com/helene-andre" target="_blank" class="icon icon-github"></a></li>
+						<li><a href="https://www.linkedin.com/in/helene-andre/" target="_blank" class="icon icon-linkedin"></a></li>
+					</ul>					
+				</div>
 			</div>
 
 			<div class="home__button-wrapper">
@@ -66,10 +82,13 @@
 
 		<section class="about-me" id="about-me">
 			<div class="section-wrapper">
-	 			<h1 class="about-me__name">Helene ANDRE</h1>
-				<div class="about-me__job-title">Front-end developer</div>		
+				<div class="about-me__title-wrapper">
+						<div class="about-me__name">Helene ANDRE</div>
+						<div class="about-me__job-title">Front-end developer</div>		
+				</div>
 				<img class="about-me__picture" src="pictures/helene-andre-picture.png" alt="Helene Andre's picture">
-				<div class="about-me__text"> Hi there! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus ante velit, quis tristique ex dapibus sed. Pellentesque ut elit at erat bibendum rutrum. In hendrerit velit luctus ligula eleifend, sed rhoncus dolor vestibulum. Sed sed rhoncus ex, et ornare ex. Quisque tempor ullamcorper nibh, vitae malesuada leo imperdiet vitae. Quisque id mollis erat. Vestibulum imperdiet, ipsum quis tempor posuere, augue erat condimentum enim, a malesuada lorem justo eget orci. In mollis vel nisi sed ornare. Donec massa nulla, finibus vitae malesuada vel, ornare eu dolor.
+				<div class="about-me__text"> Hi there! Je suis Webdevelopeur autodidacte. J’étais initialement chef de projet dans l’industrie pharmaceutique. De mes 3 ans et demi d’expérience, j’en ai tiré ceci et cela. J’ai prouvé mon efficacité dans toutes mes expériences de gestion de prouvé, mes managers ont toujours été très satisfaits de mon travail; travail qui m’a valu la place de finaliste d’un concours national au Vietnam visant à mettre en avant ma contribution dans l’entreprise avec laquelle j’ai collaboré. 
+					<br/>J’ai toujours voulu devenir dévelopeur, mais ne me suis jamais lancé parce que j’étais déjà lancé dans mes études. Mais 1 et demi de voyage autour de l’Asie et de l’Australie m’ont laissé le temps de remettre ma vie en perspective. Alors me voilà lancé, j’apprends depuis septembre à être webdevelopeur. Vous lisez d’ailleurs ici un de mes premiers projets de webdevelopeur. 
 				</div>			
 			</div>	
 		</section>
@@ -78,7 +97,7 @@
 			<div class="section-wrapper">
 				<h1 class="projects__title">PROJECTS</h1>
 				<div class="projects__wrapper">
-					<a class="projects__element cat" href="https://codepen.io/Helene-Andre/pen/mQrgZa" target="_blank">
+					<a class="projects__element cat" href="https://codepen.io/Helene-Andre/pen/mQrgZa" target="_blank">	
 						<span class="projects__element--text">A cat in a box</span>
 					</a>
 					<a class="projects__element eye" href="https://codepen.io/Helene-Andre/pen/MzovxP" target="_blank">
@@ -94,38 +113,54 @@
 		<section class="skills" id="skills">
 			<div class="section-wrapper">
 				<h1 class="skills__title">SKILLS</h1>				
-				<div class="skills__block">
-					<div class="skills__computer">
-						<h2>Web Skills</h2>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Javascript</li>
-							<li>JQuery</li>
-							<li>PHP</li>
-						</ul>				
-					</div>	
+				<div class="skills__wrapper">
+					<div class="skills__element--wrapper">
+						<div class="skills__icon">
+							<i class="icon icon-laptop"></i>
+						</div>
+						<div class="skills__text">
+							<h2>Web Skills</h2>
+							<ul>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>Javascript</li>
+								<li>JQuery</li>
+								<li>PHP</li>
+							</ul>				
+						</div>	
+					</div>
+					
+					<div class="skills__element--wrapper">
 
-					<div class="skills__management">
-						<h2>Management Skills</h2>
-						<ul>
-							<li>Experience in working in a fast paced environment under high pressure</li>
-							<li>Strong sense of personal responsibility</li>
-							<li>Excellent communication skills</li>
-							<li>Hungry for challenges</li>
-							<li>keen on making a real difference</li>
-						</ul>	
+						<div class="skills__text skills__text--management">
+							<h2>Management Skills</h2>
+							<ul>
+								<li>Experience in working in a fast paced environment under high pressure</li>
+								<li>Strong sense of personal responsibility</li>
+								<li>Excellent communication skills</li>
+								<li>Hungry for challenges</li>
+								<li>keen on making a real difference</li>
+							</ul>	
+						</div>
+						<div class="skills__icon">
+								<i class="icon icon-management"></i>
+							</div>
 					</div>
 
-					<div class="skills__languages">
-						<h2>Languages</h2>
-						<ul>
-							<li>English</li>
-							<li>French</li>
-							<li>Vietnamese</li>
-							<li>Italian</li>
-						</ul>	
-					</div>				
+					<div class="skills__element--wrapper">
+						<div class="skills__icon">
+							<i class="icon icon-languages"></i>
+						</div>
+						<div class="skills__text">
+							<h2>Languages</h2>
+							<ul>
+								<li>English</li>
+								<li>French</li>
+								<li>Vietnamese</li>
+								<li>Italian</li>
+							</ul>	
+						</div>	
+					</div>
 				</div>			
 			</div>
 		</section>
@@ -133,118 +168,110 @@
 		<section class="xp" id="xp">
 			<div class="section-wrapper">
 				<h1 class="xp__title">EXPERIENCE</h1>
-				<div class="xp__timeline">
-			    <div class="xp__container-left">
-				    <div class="xp__container-left--text">
-				      <div class="xp__container-left--date">Jul. 2015</div>
-				      <div class="xp__container-left--dot"></div>
-				      <h2>Started work at Servier</h2>
-				      <div>Pharmaceutical Company, HCMC, Vietnam</div>
-				      <div>Project Leader - General Management Department</div>
-				      <div>18 months</div>
-				      <ul class="text__details">
-				      	<li>Led and supported the successful relocation of the company: 750 sqm, 60 collaborators</li>
-				      	<li>Marketed 7 pharmaceutical products in the field of diabetes, hypertension & mental health: 5 products in 2015, 7 products in 2016 (turnover growth: + 22% volume for the top 5 products in 2016)</li>
-				      	<li>Led & coordinated marketing activities related to a website to raise patients’ awareness to hypertension: http://ngaydautien.vn, +65,000 visits in August 2016</li>
-				      	<li>Managed other business development projects including working on the company business model.</li>
-				      </ul>			    	
-				    </div>
-				  </div>
+				<div class="xp__wrapper">
+					<div class="xp__container-left">
+						<div class="xp__container-left--text">
+						<div class="xp__container-left--date">Jul. 2015</div>
+						<h2>Started work at Servier</h2>
+						<div>Pharmaceutical Company, HCMC, Vietnam</div>
+						<div>Project Leader - General Management Department</div>
+						<div>18 months</div>
+						<ul class="text__details">
+							<li>Led and supported the successful relocation of the company: 750 sqm, 60 collaborators</li>
+							<li>Marketed 7 pharmaceutical products in the field of diabetes, hypertension & mental health: 5 products in 2015, 7 products in 2016 (turnover growth: + 22% volume for the top 5 products in 2016)</li>
+							<li>Led & coordinated marketing activities related to a website to raise patients’ awareness to hypertension: http://ngaydautien.vn, +65,000 visits in August 2016</li>
+							<li>Managed other business development projects including working on the company business model.</li>
+						</ul>			    	
+						</div>
+					</div>
 
-				  <div class="xp__container-right">
-				    <div class="xp__container-right--text">
-					  	<div class="xp__container-right--date">Sept. 2014</div>
-					  	<div class="xp__container-right--dot"></div>
-				      <h2>Graduated from the Institute of Business Administration</h2>
-				      <div>Montpellier, France</div>
-				      <div>MBA, major in Marketing</div>
-				    </div>
-				  </div>
+					<div class="xp__container-right">
+						<div class="xp__container-right--text">
+							<div class="xp__container-right--date">Sept. 2014</div>
+						<h2>Graduated from the Institute of Business Administration</h2>
+						<div>Montpellier, France</div>
+						<div>MBA, major in Marketing</div>
+						</div>
+					</div>
 
-				  <div class="xp__container-left">
-				    <div class="xp__container-left--text">
-				    	<div class="xp__container-left--date">Apr. 2014</div>
-				    	<div class="xp__container-left--dot"></div>
-				      <h2>Started work at Pierre Fabre</h2>
-				      <div>Pharmaceutical Company, Castres, France</div>
-				      <div>Product Manager, Marketing Department, Smoking Cessation Team</div>
-				      <div>6 months</div>
-			      	<ul class="text__details">
-			      		<li>Led the creation and operational launch of the marketing tools for 2 pharmaceutical products including a showcase and animation in more than 1,200 targeted drugstores</li>
-			      		<li>Extracted / analysed relevant market data to seize opportunities & shared the results to the marketing team on a weekly basis</li>
-			      		<li>Participated in public relation programs and provided support to the sales team.</li>
-			      	</ul>
-				    </div>
-				  </div>
+					<div class="xp__container-left">
+						<div class="xp__container-left--text">
+							<div class="xp__container-left--date">Apr. 2014</div>
+						<h2>Started work at Pierre Fabre</h2>
+						<div>Pharmaceutical Company, Castres, France</div>
+						<div>Product Manager, Marketing Department, Smoking Cessation Team</div>
+						<div>6 months</div>
+						<ul class="text__details">
+							<li>Led the creation and operational launch of the marketing tools for 2 pharmaceutical products including a showcase and animation in more than 1,200 targeted drugstores</li>
+							<li>Extracted / analysed relevant market data to seize opportunities & shared the results to the marketing team on a weekly basis</li>
+							<li>Participated in public relation programs and provided support to the sales team.</li>
+						</ul>
+						</div>
+					</div>
 
-				  <div class="xp__container-right">
-				    <div class="xp__container-right--text">
-					    <div class="xp__container-right--date">Sept. 2012</div>
-					    <div class="xp__container-right--dot"></div>
-				      <h2>Graduated from the Faculty of Medecine</h2>
-				      <div>Montpellier, France</div>
-				      <div>Master's degree in Clinical Trials</div>
-				    </div>
-				  </div>
+					<div class="xp__container-right">
+						<div class="xp__container-right--text">
+							<div class="xp__container-right--date">Sept. 2012</div>
+						<h2>Graduated from the Faculty of Medecine</h2>
+						<div>Montpellier, France</div>
+						<div>Master's degree in Clinical Trials</div>
+						</div>
+					</div>
 
-				  <div class="xp__container-left">
-				    <div class="xp__container-left--text">
-					    <div class="xp__container-left--date">Apr. 2012</div>
-					    <div class="xp__container-left--dot"></div>
-				      <h2>Started work at CDL Pharma</h2>
-				      <div>CRO, Marseille, France</div>
-				      <div>Clinical Research Coordinator, Project Management Department</div>
-				      <div>6 months</div>
-				      <ul class="text__details">
-				      	<li>Monitored national & international clinical trials and coordinated activities </li>
-				      	<li>Wrote business proposals & requests for tenders</li>
-				      	<li>Updated the Trial Master Files and designed operating manuals.</li>
-				      </ul>
-				    </div>
-				  </div>
+					<div class="xp__container-left">
+						<div class="xp__container-left--text">
+							<div class="xp__container-left--date">Apr. 2012</div>
+						<h2>Started work at CDL Pharma</h2>
+						<div>CRO, Marseille, France</div>
+						<div>Clinical Research Coordinator, Project Management Department</div>
+						<div>6 months</div>
+						<ul class="text__details">
+							<li>Monitored national & international clinical trials and coordinated activities </li>
+							<li>Wrote business proposals & requests for tenders</li>
+							<li>Updated the Trial Master Files and designed operating manuals.</li>
+						</ul>
+						</div>
+					</div>
 
-				  <div class="xp__container-right">
-				    <div class="xp__container-right--text">
-					    <div class="xp__container-right--date">Oct. 2011</div>
-					    <div class="xp__container-right--dot"></div>
-				      <h2>Started work at CHU Montpellier</h2>
-				      <div>Hospital, Montpellier, France</div>
-				      <div>Clinical Trial Associate</div>
-				      <div>6 months</div>
-				      <ul class="text__details">
-				      	<li>Clinical Trial Associate, Emergency Department</li>
-				      	<li>Monitored clinical trial logistics and coordinated activities</li>
-				      	<li>Conducted a phone survey (+500 calls).</li>
-				      	<li>Clinical Trial Associate, Hematology Department</li>
-				      	<li>Created a database using ACCESS software from the ground up (still live)
-								<li>Implemented " The Southern French registry of genetic hemochromatosis " (more than 500 patients)</li>
-								<li>Assisted the clinical investigator in monitoring visits</li> 
-								<li>Reviewed monitoring reports and implemented follow-up / corrective action</li>
-								<li>Ensured Investigator Site Files are accurate & updated into the Trial Master File.</li>
-				      </ul>
-				    </div>
-				  </div>
+					<div class="xp__container-right">
+						<div class="xp__container-right--text">
+							<div class="xp__container-right--date">Oct. 2011</div>
+						<h2>Started work at CHU Montpellier</h2>
+						<div>Hospital, Montpellier, France</div>
+						<div>Clinical Trial Associate</div>
+						<div>6 months</div>
+						<ul class="text__details">
+							<li>Clinical Trial Associate, Emergency Department</li>
+							<li>Monitored clinical trial logistics and coordinated activities</li>
+							<li>Conducted a phone survey (+500 calls).</li>
+							<li>Clinical Trial Associate, Hematology Department</li>
+							<li>Created a database using ACCESS software from the ground up (still live)
+									<li>Implemented " The Southern French registry of genetic hemochromatosis " (more than 500 patients)</li>
+									<li>Assisted the clinical investigator in monitoring visits</li> 
+									<li>Reviewed monitoring reports and implemented follow-up / corrective action</li>
+									<li>Ensured Investigator Site Files are accurate & updated into the Trial Master File.</li>
+						</ul>
+						</div>
+					</div>
 
-				  <div class="xp__container-left">
-				    <div class="xp__container-left--text">
-					    <div class="xp__container-left--date">Sept. 2011</div>
-					    <div class="xp__container-left--dot"></div>
-				      <h2>Graduated from Nice Sophia Antipolis University</h2>
-				      <div>Nice, France</div>
-				      <div>Bachelor's degree in Biology</div>
-				    </div>
-				  </div>	
+					<div class="xp__container-left">
+						<div class="xp__container-left--text">
+							<div class="xp__container-left--date">Sept. 2011</div>
+						<h2>Graduated from Nice Sophia Antipolis University</h2>
+						<div>Nice, France</div>
+						<div>Bachelor's degree in Biology</div>
+						</div>
+					</div>	
 
-				  <div class="xp__container-right">
-				    <div class="xp__container-right--text">
-					    <div class="xp__container-right--date">Jan. 2011</div>
-					    <div class="xp__container-right--dot"></div>
-				      <h2>Started work at INSERM</h2>
-				      <div>Research Laboratories, Nice, France</div>
-				      <div>Intern in genetics research, diabetology & obesity department</div>
-				      <div>6 months</div>
-				    </div>
-				  </div>	
+					<div class="xp__container-right">
+						<div class="xp__container-right--text">
+							<div class="xp__container-right--date">Jan. 2011</div>
+						<h2>Started work at INSERM</h2>
+						<div>Research Laboratories, Nice, France</div>
+						<div>Intern in genetics research, diabetology & obesity department</div>
+						<div>6 months</div>
+						</div>
+					</div>	
 				</div>			
 			</div>
 		</section>
@@ -293,7 +320,7 @@
 		</section>
 
 		<section class="contact" id="contact">
-			<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+			<svg id="clouds" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
 				<path d="M-5 100 Q 0 20 5 100 Z
 							M0 100 Q 5 0 10 100
 							M5 100 Q 10 30 15 100
@@ -350,7 +377,9 @@
 						<textarea id="message" class="contact-form__field" name="message" placeholder="Message" rows="6" cols="80"></textarea>		
 						<div class="invalid-field-message">This field is required</div>
 					</div>
-					<input id="send-button" type="submit" value="Send">		
+					<div id="send-button-wrapper">
+						<input id="send-button" type="submit" value="Send">
+					</div>				
 				</form>		
 				<div class="contact__success-message">
 					<i class="icon icon-validated icon-success"></i>
