@@ -511,7 +511,7 @@ section {
   font-family: lemon-milk, arial;
   font-size: 3em;
   color: #ffe082;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -549,7 +549,8 @@ section {
 
 .about-me__text::before {
 	content:"About Me";
-	position: absolute;
+  position: absolute;
+  font-size: 15px;
 	font-family: lemon-milk-light-italic, arial;
 	bottom: 110%;
 }
@@ -581,7 +582,9 @@ section {
   height: auto;
   width: 100%;
   display: flex; 
-  justify-content: center;
+  min-height: 100%;
+  flex-direction: row; 
+  justify-content: space-between;
   position: absolute;
   top: 38%;
   left: 50%;
@@ -591,28 +594,43 @@ section {
 .projects__element {
   height: 221px;
   width: 221px;
-  margin: auto;
   cursor: pointer;
 }
 
 .projects__element--text {
+  display: block;
+  color: white;
+  position: relative;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%,-50%);
+  background-color: transparent;
+  font-family: 'Roboto', arial;
+  font-size: 20px;
+  text-align: center; 
+  z-index: 1;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.cat::after, 
+.eye::after,
+.html-memento::after {
+  content: "";
   display: block;
   height: 100%;
   width: 100%;
   color: white;
   position: relative;
   left: 0%;
-  bottom: 101%; 
-  /* Px problem to be solved. */
-  background-color:rgba(255,224,130, 0.5);
-  line-height: 200px;
-  text-align: center;
-  font-family: 'Roboto', arial;
-  font-size: 20px; 
-  opacity: 0; 
+  bottom: 112%;
+  background-color: rgba(0,0,0, 0.2);
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 
-.projects__element:hover .projects__element--text {
+.projects__element:hover .projects__element--text, 
+ {
   opacity: 1; 
   cursor: pointer;
 }
@@ -672,12 +690,12 @@ section {
   width: 100%;
   color: #757575;
   display: flex;
+  justify-content: space-between;
 }
 
 
 .skills__text {
   width: 70%;
-  position: relative;
   padding-top: 40px;
 }
 
@@ -688,18 +706,18 @@ section {
 .skills__icon {
   font-family: 'helene-resume';
   position: relative;
-  min-width: 30%;
+  width: 200px;
   font-size: 13em;
-  color: #e0e0e0;
+  color: #eeeeee;
 }
 
 .skills__icon:hover .icon {
-  color: #e0e0e0;
+  color: #eeeeee;
   cursor: default; 
 }
 
 .icon-laptop, .icon-languages {
-  margin: 40px;
+  margin-right: 40px;
 }
 
 .icon-management {
@@ -796,20 +814,20 @@ section {
   content: '';
   height: 0px;
   width: 0px;
-  border: 10px solid transparent;
+  border: 12px solid transparent;
   position: absolute;
-  right: 100%;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.xp__container-left::after {
+.xp__container-left--text::after {
   border-left-color: white;
   left: 100%; 
 }
 
-.xp__container-right::after {
+.xp__container-right--text::after {
   border-right-color: white;
+  right: 100%;
 }
 
 /* Arrows on the text boxes. */
@@ -839,11 +857,11 @@ section {
 }
 
 .xp__container-left--date {
-  right: -55%;
+  right: -59%;
 }
 
 .xp__container-right--date {
-  left: -55%;
+  left: -59%;
 }
 
 .text__details {
