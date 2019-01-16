@@ -34,15 +34,6 @@ a {
 li {
   list-style-type: none;
 }
-
-/* i {
-  transition: 0.3s ease-in-out;
-}
-
-.icon:hover {
-	cursor: pointer;
-	color: #ffe082;
-}  */
 /**=====================================================================**/
 
 /**=========================== font-family =============================**/
@@ -266,19 +257,18 @@ section {
   height: 26em;
   width: 20em;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+  left: 7%;
+  top: 12%;
 }
 
 .home__notebook--name {
   position: relative;
-  font-size: 2.3em;
+  font-size: 40px;
 }
 
 .home__notebook--job {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   font-size: 1.9em;
 }
 
@@ -294,6 +284,7 @@ section {
   position: relative;
   top: 0%;
   font-size: 1.2em;
+  line-height: 8px;
 }
 
 .home__notebook--contact li {
@@ -318,7 +309,7 @@ section {
 }
 
 .home__notebook--social-links {
-  margin-top: 5px; 
+  margin-top: 20px; 
 }
 
 .home__notebook--social-links li {
@@ -495,11 +486,10 @@ section {
 
 /**============================= about-me ==============================**/
 .about-me__title-wrapper {
-  height: 100px;
-  width: auto;
+  width: max-content;
   position: absolute;
   top: 20%;
-}
+3}
 .about-me::before {
   content: "";
   position: absolute;
@@ -510,18 +500,17 @@ section {
   border-bottom-color: transparent;
 }
 .about-me__name {
-  font-family: lemon-milk, arial;
-  font-size: 3em;
   color: #ffe082;
-  letter-spacing: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  position: relative;
+  top: 0%; 
+  margin-top: 15px;
 }
 
 .about-me__job-title {
 	color: #757575;
 	font-family: lemon-milk-light-italic, arial;
-	font-size: 2em;
+  font-size: 2em;
+  margin-top: 10px;
 }
 
 .about-me__picture {
@@ -581,14 +570,8 @@ section {
 }
 
 .projects__wrapper {
-  /* height: auto; */
-  width: 100%;
   display: flex; 
   justify-content: space-between;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .project {
@@ -663,69 +646,6 @@ section {
 .project__description--close:hover {
   transform: rotate(360deg) scale(1.2);
 }
-
-/* .projects__element {
-  height: 221px;
-  width: 221px;
-  cursor: pointer;
-}
-
-.projects__element--text {
-  display: block;
-  color: white;
-  position: relative;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%,-50%);
-  background-color: transparent;
-  font-family: 'Roboto', arial;
-  font-size: 20px;
-  text-align: center; 
-  z-index: 1;
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
-
-.cat::after, 
-.eye::after,
-.html-memento::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  color: white;
-  position: relative;
-  left: 0%;
-  bottom: 112%;
-  background-color: rgba(0,0,0, 0.2);
-  opacity: 1;
-  transition: 0.3s ease-in-out;
-}
-
-.projects__element:hover .projects__element--text, 
- {
-  opacity: 1; 
-  cursor: pointer;
-}
-
-.cat::before, 
-.eye::before,
-.html-memento::before {
-  height: 221px; 
-  width: 221px; 
-}
-
-.cat::before {
-  content: url('pictures/pictures-projects/cat-project.png');
-} 
-
-.eye::before {
-  content: url('pictures/pictures-projects/eye-project.png');
-} 
-
-.html-memento::before {
-  content: url('pictures/pictures-projects/html-project.png');
-}  */
 /**=====================================================================**/
 
 /**============================= skills ================================**/
@@ -747,15 +667,6 @@ section {
 
 .skills__title {
 	color: #ffe082;
-}
-
-.skills__wrapper {
-  height: auto; 
-  width: 100%;
-  position: absolute; 
-  top: 20%; 
-  display: inline-block;
-  color: #757575;
 }
 
 .skills__element--wrapper {
@@ -818,17 +729,6 @@ section {
 .xp__title {
 	color: white;
   text-align: right;
-}
-
-.xp__wrapper {
-  height: auto;
-  width: 100%;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translateX(-50%);
-  vertical-align: middle;
 }
 
 /* Timeline.  */
@@ -964,23 +864,12 @@ section {
 }
 
 .hobbies__wrapper {
-  height: 40%;
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 40%;
   display: flex;
-  justify-content: center;
-  transform: translateX(-50%);
-}
-
-.hobbies__element {
-  height: 100%; 
-  width: 20%;   
+  justify-content: space-between;
 }
 
 .hobbies__element--icon {
-  font-size: 110px;
+  font-size: 9vw;
   color: white;
   margin: 0px;
 }
@@ -1260,6 +1149,14 @@ p {
   transition: 1s ease-out 0.5s;
 }
 
+.sub-section-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 200px; 
+  background-color: red; 
+
+}
+
 .scroll {
   opacity: 1;
   transform: translateY(0em);
@@ -1308,10 +1205,6 @@ p {
 }
 
 @media screen and (max-width: 700px) {
-  /* Hobbies section */
-  .hobbies__element--icon {
-    font-size: 75px; 
-  }
 
   /* Contact section. */
   .contact-info__name {
