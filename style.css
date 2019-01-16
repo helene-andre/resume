@@ -77,7 +77,6 @@ li {
     url("fonts/icons/helene-resume.svg#helene-resume") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
@@ -158,6 +157,9 @@ li {
 .icon-blocked:before {
   content: "\6d";
 }
+.icon-close:before {
+  content: "\6c";
+}
 /**=====================================================================**/
 
 /**============================= side menu =============================**/
@@ -187,7 +189,7 @@ li {
 }
 
 .side-menu__text {
-  width: 8em;
+  width: max-content;
   color: grey;
   font-family: lemon-milk-light, arial; 
   text-align: right;
@@ -579,11 +581,9 @@ section {
 }
 
 .projects__wrapper {
-  height: auto;
+  /* height: auto; */
   width: 100%;
   display: flex; 
-  min-height: 100%;
-  flex-direction: row; 
   justify-content: space-between;
   position: absolute;
   top: 38%;
@@ -591,7 +591,80 @@ section {
   transform: translateX(-50%);
 }
 
-.projects__element {
+.project {
+  width: 30%;
+}
+
+.project__button--title {
+  width: 30%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  background-color: rgba(0,0,0, 0.3);
+  opacity: 0; 
+  transition: 0.3s ease-in-out;
+}
+
+.project__button--picture {
+  height: 100%; 
+  width: 100%; 
+  transition: 0.3s ease-in-out;
+}
+
+.project__button:hover .project__button--picture {
+  opacity: 0.6; 
+} 
+
+.project__button:hover .project__button--title {
+  opacity: 1; 
+  z-index: 1; 
+}
+
+.project::before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.2);
+  position: relative;
+}
+
+.project__description {
+  height: auto;
+  width: 225px;
+  padding: 15px;
+  background-color: white;
+  text-align: left;
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.project__description::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: white;
+  position: absolute;
+  bottom: 100%;
+  left: 18%;
+}
+
+.project__description--close {
+  height: 14px;
+  width: 14px; 
+  font-size: 14px;  
+  color: red; 
+  transition: 0.3s ease-in-out;
+}
+
+.project__description--close:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* .projects__element {
   height: 221px;
   width: 221px;
   cursor: pointer;
@@ -652,7 +725,7 @@ section {
 
 .html-memento::before {
   content: url('pictures/pictures-projects/html-project.png');
-} 
+}  */
 /**=====================================================================**/
 
 /**============================= skills ================================**/

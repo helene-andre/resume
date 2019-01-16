@@ -92,3 +92,6 @@
 .icon-blocked:before {
   content: "\6d";
 }
+.icon-close:before {
+  content: "\6c";
+}

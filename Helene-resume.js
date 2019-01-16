@@ -42,6 +42,35 @@ let initOnClick = function() {
 }
 // =========================================================================================== //
 
+// =============================== projects section on click ================================= //  
+let projectsOnClick = function() {
+  $('.project__button').click(function(e) {
+    let projectClicked = $(this).next('.project__description')
+    if (projectClicked.hasClass('show')) {
+      projectClicked.removeClass('show')
+    }
+    else {
+      projectClicked.addClass('show')
+    }
+  })
+}
+
+let isMeteoPopupOpen = false
+
+$(document).click(function (e) {
+	let container = $('#meteo-popup-window')
+
+	if ($(e.target).is('.meteo-btn') && !isMeteoPopupOpen) {
+		container.show()
+		isMeteoPopupOpen = true
+	}
+	else if (!$(e.target).is(container) && !container.has(e.target).length) {
+		container.hide()
+		isMeteoPopupOpen = false
+	}
+})
+// =========================================================================================== //
+
 // ===================================== form validation ===================================== //
 let initFormValidation = function() {
   let fields = $('.contact-form__field')
@@ -117,6 +146,7 @@ function validateField (field) {
 $(document).ready(function() {
   initOnClick()
   initFormValidation()
+  projectsOnClick()
 })
 
 $(window).scroll(onScroll)
