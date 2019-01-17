@@ -27,6 +27,10 @@ h2 {
   color: #ffe082;
 }
 
+h3 {
+  font-size: 15px;
+}
+
 a {
   all: unset;
 }
@@ -361,7 +365,7 @@ section {
   transform: translateX(-50%);
   height: 45%;
   width: 80%;
-  line-height: 23px;
+  /* line-height: 23px; */
 }
 
 .home-about-me-block {
@@ -486,10 +490,11 @@ section {
 
 /**============================= about-me ==============================**/
 .about-me__title-wrapper {
-  width: max-content;
+  width: auto;
   position: absolute;
   top: 20%;
-3}
+}
+
 .about-me::before {
   content: "";
   position: absolute;
@@ -525,8 +530,8 @@ section {
 
 .about-me__text {
   position: absolute;
-  top: 60%;
-  height: 7em;
+  bottom: 8%; 
+  height: auto;
   width: 100%;
   background-color: transparent;
   color: #7c796f;
@@ -550,7 +555,7 @@ section {
 /**============================ projects ===============================**/
 .projects {
   background-color: #ffe082;
-  height: 80vh;
+  height: 90vh;
 }
 
 .projects::before {
@@ -651,7 +656,6 @@ section {
 /**============================= skills ================================**/
 .skills {
   background-color: white;
-  height: 120vh;
 }
 
 .skills::after {
@@ -670,7 +674,7 @@ section {
 }
 
 .skills__element--wrapper {
-  height: 15em;
+  height: 11em;
   width: 100%;
   color: #757575;
   display: flex;
@@ -845,7 +849,7 @@ section {
 /**======================= sports & interests ==========================**/
 .hobbies {
   background-color: #4fc3f7;
-  height: 90vh;
+  height: 80vh;
 }
 
 .hobbies::after {
@@ -1202,6 +1206,10 @@ p {
   .home__button--text {
     font-size: 13px; 
   }
+
+  .home-hobbies-block .home__button--text {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -1223,9 +1231,40 @@ p {
     display: inline-flex;
   }
 
+    /* Hobbies section. */
+    .hobbies__wrapper {
+      flex-direction: column;
+      font-size: 56px;
+      top: 120px; 
+    }
 
+    .hobbies__element--text {
+      /* top: 0px;
+      left: 70px; */
+    }
 
+    .hobbies__element--text::after {
+      border-right-color: white;
+      border-bottom-color: transparent;
+      left: -8%;
+      bottom: 55%;
+    }
+  
 }
+
+
+@media screen and (max-width: 320px) {
+
+  /* Home section. */
+  .home__button {
+    width: 70px;
+    height: 70px;
+    top: 73%;
+  }
+}
+
+
+
 
 @media screen and (max-height: 430px) {
 
@@ -1242,6 +1281,7 @@ p {
   .home__button--text {
     font-size: 13px; 
   }
+
 
 }
 /**=====================================================================**/
