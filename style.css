@@ -489,6 +489,10 @@ section {
 /**=====================================================================**/
 
 /**============================= about-me ==============================**/
+.about-me {
+  height: 90vh; 
+}
+
 .about-me__title-wrapper {
   width: auto;
   position: absolute;
@@ -576,11 +580,14 @@ section {
 
 .projects__wrapper {
   display: flex; 
+  flex-wrap: wrap; 
   justify-content: space-between;
 }
 
 .project {
-  width: 30%;
+  height: 220px; 
+  width: 221px;
+  margin-top: 10px; 
 }
 
 .project__button--title {
@@ -1178,6 +1185,7 @@ p {
 }
 
 @media screen and (max-width: 960px) {
+  
   /* Contact section. */
   .contact-form__field, #send-button-wrapper {
     width: 77%; 
@@ -1194,6 +1202,19 @@ p {
   .contact-info__icons-wrapper {
     letter-spacing: 0px; 
   }
+
+  /* Projects section. */
+  .projects {
+    height: 100vh; 
+  }
+  
+  .projects__wrapper {
+    justify-content: unset; 
+  }
+
+  .project {
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -1203,24 +1224,35 @@ p {
     height: 95px;
   }
 
-  .home__button--text {
+  .home__button--text, .home-hobbies-block .home__button--text {
     font-size: 13px; 
+    top: 50%; 
+    transform: translate(-50%,-50%);
   }
 
-  .home-hobbies-block .home__button--text {
-    font-size: 13px;
-  }
+
 }
 
 @media screen and (max-width: 700px) {
 
+  /* Projects section. */
+  .projects {
+    height: 140vh; 
+  }
+  
   /* Contact section. */
   .contact-info__name {
     width: 8em; 
   }
+
 }
 
 @media screen and (max-width: 620px) {
+  /* Whole page. */
+  h1, .about-me__name, .about-me__job-title {
+    font-size: 20px; 
+  } 
+  
   /* Home section.  */
   .home__button {
     width: 95px;
@@ -1231,25 +1263,23 @@ p {
     display: inline-flex;
   }
 
-    /* Hobbies section. */
-    .hobbies__wrapper {
-      flex-direction: column;
-      font-size: 56px;
-      top: 120px; 
-    }
+  .hobbies__wrapper {
+    flex-direction: column;
+    font-size: 56px;
+    top: 120px; 
+  }
 
-    .hobbies__element--text {
-      /* top: 0px;
-      left: 70px; */
-    }
-
-    .hobbies__element--text::after {
-      border-right-color: white;
-      border-bottom-color: transparent;
-      left: -8%;
-      bottom: 55%;
-    }
+  .hobbies__element--text::after {
+    border-right-color: white;
+    border-bottom-color: transparent;
+    left: -8%;
+    bottom: 55%;
+  }
   
+  /* Projects section. */
+  .projects__wrapper {
+    flex-direction: column; 
+  }
 }
 
 
@@ -1260,6 +1290,18 @@ p {
     width: 70px;
     height: 70px;
     top: 73%;
+  }
+
+  .about-me {
+    height: 120vh; 
+  }
+
+  .about-me__text::before {
+    bottom: 100%;
+  }
+  
+  .about-me__picture {
+    top: 37%; 
   }
 }
 
