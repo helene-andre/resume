@@ -663,6 +663,7 @@ section {
 /**============================= skills ================================**/
 .skills {
   background-color: white;
+  height: 120vh;
 }
 
 .skills::after {
@@ -680,8 +681,12 @@ section {
 	color: #ffe082;
 }
 
+.skills__wrapper {
+  height: auto;
+}
+
 .skills__element--wrapper {
-  height: 11em;
+  height: auto;
   width: 100%;
   color: #757575;
   display: flex;
@@ -1280,6 +1285,17 @@ p {
   .projects__wrapper {
     flex-direction: column; 
   }
+
+  /* Skills section. */
+  .skills__icon {
+    font-size: 10em;
+  }
+
+  /* Contact section. */
+  .contact-form__wrapper, .contact-info__wrapper {
+    /* position: relative; */
+  }  
+
 }
 
 
@@ -1301,7 +1317,17 @@ p {
   }
   
   .about-me__picture {
-    top: 37%; 
+    top: 4%; 
+  }
+
+  /* Projects section. */
+  .projects {
+    height: 160vh;
+  } 
+
+  /* Skills section */
+  .skills {
+    height: 140vh;
   }
 }
 
