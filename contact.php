@@ -10,5 +10,10 @@ $email_body = "Tu as reçu un message de $name, $visitor_email.\n"
             . "Subject: $subject\n"
             . "Message: $message\n";
 
-echo mail($email_to, $email_subject, $email_body) ? 'ok' : '';
+$success = mail($email_to, $email_subject, $email_body);
+
+$return = ['error' => !$success, 'message' => $success ? 'Super ça a marché!' : 'Oh merde!'];
+
+echo json_encode($return);
+
 ?>

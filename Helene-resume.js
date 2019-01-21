@@ -49,11 +49,11 @@ let projectsOnClick = function() {
     let projectDescription = $(this).next('.project__description')
     if (projectDescription.hasClass('show')) {
       projectDescription.removeClass('show')
-      $('.projects__wrapper').removeClass('flex-column')
+      // $('.projects__wrapper').removeClass('flex-column')
     }
     else {
       projectDescription.addClass('show')
-      $('.projects__wrapper').addClass('flex-column')
+      // $('.projects__wrapper').addClass('flex-column')
       $('.project__mask').addClass('show')
       $(this).addClass('z-index-up')
     }
@@ -61,7 +61,7 @@ let projectsOnClick = function() {
 
   $('.project__description--close').click(function(e) {
     $('.project__description').removeClass('show')
-    $('.projects__wrapper').removeClass('flex-column')
+    // $('.projects__wrapper').removeClass('flex-column')
     $('.project__mask').removeClass('show')
     $(this).removeClass('z-index-up')
   })
@@ -85,7 +85,9 @@ let initFormValidation = function() {
         url: 'contact.php',
         data: form.serialize(), 
         success: function(data) {
-          if (data === 'ok') {
+          data = JSON.parse(data)
+
+          if (!data.error) {
             $(fields)
               .removeClass('correct-field')
               .val('')
