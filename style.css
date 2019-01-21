@@ -79,6 +79,7 @@ li {
     url("fonts/icons/helene-resume.svg#helene-resume") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
@@ -88,6 +89,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -100,6 +102,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -126,32 +129,14 @@ li {
 .icon-languages:before {
   content: "\6f";
 }
-.icon-music:before {
-  content: "\71";
-}
-.icon-work:before {
-  content: "\42";
-}
 .icon-laptop:before {
   content: "\69";
-}
-.icon-work-1:before {
-  content: "\6e";
-}
-.icon-cooking:before {
-  content: "\75";
 }
 .icon-validated:before {
   content: "\76";
 }
 .icon-travel:before {
   content: "\67";
-}
-.icon-hiking:before {
-  content: "\68";
-}
-.icon-graduation:before {
-  content: "\6a";
 }
 .icon-management:before {
   content: "\6b";
@@ -160,7 +145,22 @@ li {
   content: "\6d";
 }
 .icon-close:before {
+  content: "\68";
+}
+.icon-cooking:before {
   content: "\6c";
+}
+.icon-music:before {
+  content: "\71";
+}
+.icon-hiking:before {
+  content: "\6e";
+}
+.icon-circle-full:before {
+  content: "\6a";
+}
+.icon-circle-empty:before {
+  content: "\70";
 }
 /**=====================================================================**/
 
@@ -584,15 +584,17 @@ section {
 }
 
 .projects__wrapper {
+  height: auto;
   display: flex; 
   justify-content: space-between;
   left: 50%; 
   transform: translateX(-50%);
+  background-color: red;
 }
 
 .project {
-  height: 30%; 
-  width: 30%;
+  height: 22vw;
+  width: 22vw;
 }
 
 .project__mask {
@@ -642,7 +644,7 @@ section {
 }
 
 .project__description {
-  height: 89%;
+  height: 15vw;
   width: 55%;
   padding: 5%;
   background-color: white;
@@ -684,23 +686,23 @@ section {
 }
 
 .project__description--close {
-  height: 14px;
-  width: 14px; 
-  font-size: 14px;  
+  height: 16px;
+  width: 16px; 
+  font-size: 16px;  
   position: absolute;
   top: 6%;
-  right: 11%;
+  right: 2%;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .project__description--close:hover {
-  transform: rotate(360deg) scale(1.2);
+  transform: rotate(270deg) scale(1.2);
 }
 
-.flex-column {
+/* .flex-column {
   flex-direction: column;
-}
+} */
 /**=====================================================================**/
 
 /**============================= skills ================================**/
@@ -738,7 +740,11 @@ section {
 
 .skills__text {
   width: 70%;
-  padding-top: 40px;
+  padding-top: 45px;
+}
+
+.skills__text--web {
+  padding-top: 27px; 
 }
 
 .skills__text--management {
@@ -948,6 +954,10 @@ section {
   transition: 0.4s ease-in-out;
 }
 
+.hiking-text {
+  right: 0%; 
+}
+
 .hobbies__element--text h3 {
   color: black;
   margin-bottom: 10px;
@@ -963,6 +973,10 @@ section {
   bottom: 100%;
   left: 18%;
 }
+
+.hiking-text::after {
+  left: 77%; 
+}
 /**=====================================================================**/
 
 /**================ div separation hobbies / contact ===================**/
@@ -971,9 +985,10 @@ section {
 }
 
 svg {
-  width: 100%; 
+  min-width: 780px;
   max-height: 100px; 
   left: 0%;
+  overflow-x: hidden;
 }
 
 svg:not(:root) {
@@ -1126,7 +1141,7 @@ input {
 .invalid-email input:focus, 
 .invalid-field textarea:focus,
 .contact__failed-message, 
-.icon-blocked:hover{
+.icon-blocked:hover {
   border-color: #e53935;
 }
 
@@ -1234,10 +1249,6 @@ input {
 }
 
 @media screen and (max-width: 768px) {
-  .about-me {
-    padding-left: 15%; 
-    padding-right: 15%; 
-  }
  
   /* Home section.  */
   .home__button {
@@ -1346,8 +1357,6 @@ input {
     padding-right: 3%; 
   }
 
-
-
   /* Skills section. */
   .skills {
     height: 140vh;
@@ -1368,6 +1377,10 @@ input {
     flex-direction: column;
     font-size: 56px;
     top: 120px; 
+  }
+
+  .hobbies__element--icon {
+    font-size: 40px;
   }
 
   .hobbies__element--text::after {

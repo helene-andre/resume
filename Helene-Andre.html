@@ -103,8 +103,9 @@
 			<div class="section-wrapper">
 				<h1 class="projects__title">PROJECTS</h1>
 				<div class="projects__wrapper sub-section-wrapper">
-					<div class="project__mask"></div>					
 					<div class="project">	
+							<div class="project__mask"></div>					
+
 						<div class="project__button">
 							<div class="project__button--title">A cat in a box</div>						
 							<img class="project__button--picture" src="pictures/pictures-projects/cat-project.png">
@@ -115,6 +116,7 @@
 							<a class="project__link" href="https://codepen.io/Helene-Andre/pen/mQrgZa" target="_blank">https://codepen.io/Helene-Andre/pen/mQrgZa</a>
 							<div class="project__description--close"><i class="icon icon-close"></i></div>
 						</div>
+
 					</div>
 					
 					<div class="project">
@@ -157,11 +159,54 @@
 						<div class="skills__text skills__text--web">
 							<h2>Web Skills</h2>
 							<ul>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>Javascript</li>
-								<li>JQuery</li>
-								<li>PHP</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									HTML
+								</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									CSS
+								</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									Javascript
+								</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									JQuery
+								</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									PHP
+								</li>
+								<li>
+									<i class="icon icon-circle-full"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									<i class="icon icon-circle-empty"></i>
+									Ajax
+								</li>
 							</ul>				
 						</div>	
 					</div>
@@ -186,10 +231,10 @@
 						<div class="skills__text skills__text--languages">
 							<h2>Languages</h2>
 							<ul>
-								<li>English</li>
-								<li>French</li>
-								<li>Vietnamese</li>
-								<li>Italian</li>
+								<li>English, fluent</li>
+								<li>French, mother tongue</li>
+								<li>Vietnamese, mother tongue</li>
+								<li>Italian, intermediate</li>
 							</ul>	
 						</div>	
 					</div>
@@ -342,7 +387,7 @@
 					</div>
 					<div class="hobbies__element">
 						<i class="hobbies__element--icon icon icon-hiking"></i>
-						<div class="hobbies__element--text">
+						<div class="hobbies__element--text hiking-text">
 							<h3>HIKING</h3>
 							<p>I like to disconnect sometimes, go on the top on a mountain.</p>
 						</div>
@@ -376,10 +421,9 @@
 							M95 100 Q 100 15 105 100 Z">
 				</path>
 			</svg>
-			<div class="section-wrapper contact">
+			<div class="section-wrapper contact-wrapper">
 				<div class="contact-info__wrapper">
-					<div class="contact-info">
-						<h1 class="contact-info__title">CONTACT ME</h1>
+					<h1 class="contact-info__title">CONTACT ME</h1>
 						<div class="contact-info__name">Helene ANDRE, front-end developer</div>
 						<div class="contact-info__icons-wrapper">
 							<a href="tel:0484084650"><i class="icon icon-phone contact-info__icon"></i></a>
@@ -388,7 +432,6 @@
 							<a href="https://codepen.io/helene-andre/" target="_blank"><i class="icon icon-codepen contact-info__icon"></i></a>
 							<a href="https://www.linkedin.com/in/helene-andre/" target="_blank"><i class="icon icon-linkedin contact-info__icon"></i></a> 
 						</div>
-					</div>				
 				</div>
 
 				<form class="contact-form__wrapper" action="contact.php" method="post">
@@ -409,7 +452,7 @@
 						<textarea id="message" class="contact-form__field" name="message" placeholder="Message" rows="6" cols="80"></textarea>		
 						<div class="invalid-field-message">This field is required</div>
 					</div>
-					<div id="send-button-wrapper">
+					<div class="contact-form__send-wrapper">
 						<input id="send-button" type="submit" value="Send">
 					</div>				
 				</form>		

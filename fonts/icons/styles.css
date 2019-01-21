@@ -59,32 +59,14 @@
 .icon-languages:before {
   content: "\6f";
 }
-.icon-music:before {
-  content: "\71";
-}
-.icon-work:before {
-  content: "\42";
-}
 .icon-laptop:before {
   content: "\69";
-}
-.icon-work-1:before {
-  content: "\6e";
-}
-.icon-cooking:before {
-  content: "\75";
 }
 .icon-validated:before {
   content: "\76";
 }
 .icon-travel:before {
   content: "\67";
-}
-.icon-hiking:before {
-  content: "\68";
-}
-.icon-graduation:before {
-  content: "\6a";
 }
 .icon-management:before {
   content: "\6b";
@@ -93,5 +75,20 @@
   content: "\6d";
 }
 .icon-close:before {
+  content: "\68";
+}
+.icon-cooking:before {
   content: "\6c";
+}
+.icon-music:before {
+  content: "\71";
+}
+.icon-hiking:before {
+  content: "\6e";
+}
+.icon-circle-full:before {
+  content: "\6a";
+}
+.icon-circle-empty:before {
+  content: "\70";
 }
