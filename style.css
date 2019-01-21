@@ -888,11 +888,11 @@ section {
 }
 
 .xp__container-left--date {
-  right: -59%;
+  left: 130%;
 }
 
 .xp__container-right--date {
-  left: -59%;
+  right: 130%;
 }
 
 .text__details {
@@ -1214,8 +1214,7 @@ input {
 }
 
 @media screen and (max-width: 992px) {
-
-
+  /* Projects section. */
   .projects__wrapper {
     width: 100%;
     min-width: auto;
@@ -1265,17 +1264,30 @@ input {
     transform: translateX(-50%);
   }
 
-
   /* Projects section. */
   .projects {
     height: 140vh; 
   }
   
+  /* Xp section. */
+  .xp {
+    padding-left: 3%; 
+    padding-right: 3%;
+  }
+
+  .xp__container-left--text, 
+  .xp__container-right--text {
+    padding: 12px;
+  }
+
+  .xp h2 {
+    font-size: 14px; 
+  }
+
   /* Contact section. */
   .contact-info__name {
     width: 8em; 
   }
-
 }
 
 @media screen and (max-width: 450px) {
@@ -1339,6 +1351,7 @@ input {
   }
 
 
+
   /* Skills section. */
   .skills {
     height: 140vh;
@@ -1346,6 +1359,12 @@ input {
 
   .skills__icon {
     font-size: 10em;
+  }
+
+  /* Xp section. */
+  .xp {
+    padding-left: 1%; 
+    padding-right: 1%;
   }
   
   /* Hobbies section. */
