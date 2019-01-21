@@ -43,32 +43,29 @@ let initOnClick = function() {
 // =========================================================================================== //
 
 // =============================== projects section on click ================================= //  
+
 let projectsOnClick = function() {
   $('.project__button').click(function(e) {
-    let projectClicked = $(this).next('.project__description')
-    if (projectClicked.hasClass('show')) {
-      projectClicked.removeClass('show')
+    let projectDescription = $(this).next('.project__description')
+    if (projectDescription.hasClass('show')) {
+      projectDescription.removeClass('show')
+      $('.projects__wrapper').removeClass('flex-column')
     }
     else {
-      projectClicked.addClass('show')
+      projectDescription.addClass('show')
+      $('.projects__wrapper').addClass('flex-column')
+      $('.project__mask').addClass('show')
+      $(this).addClass('z-index-up')
     }
   })
+
+  $('.project__description--close').click(function(e) {
+    $('.project__description').removeClass('show')
+    $('.projects__wrapper').removeClass('flex-column')
+    $('.project__mask').removeClass('show')
+    $(this).removeClass('z-index-up')
+  })
 }
-
-let isMeteoPopupOpen = false
-
-$(document).click(function (e) {
-	let container = $('#meteo-popup-window')
-
-	if ($(e.target).is('.meteo-btn') && !isMeteoPopupOpen) {
-		container.show()
-		isMeteoPopupOpen = true
-	}
-	else if (!$(e.target).is(container) && !container.has(e.target).length) {
-		container.hide()
-		isMeteoPopupOpen = false
-	}
-})
 // =========================================================================================== //
 
 // ===================================== form validation ===================================== //

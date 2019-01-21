@@ -31,6 +31,13 @@ h3 {
   font-size: 15px;
 }
 
+p {
+  color: #757575; 
+  font-size: 13px; 
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
 a {
   all: unset;
 }
@@ -231,7 +238,6 @@ section {
   content: "";
   position: absolute;
   top: 100%;
-  left: 15%;
   width: 0em;
   border: 5em solid #f4f4f4;
   border-bottom-color: transparent;
@@ -365,7 +371,7 @@ section {
   transform: translateX(-50%);
   height: 45%;
   width: 80%;
-  /* line-height: 23px; */
+  line-height: 23px;
 }
 
 .home-about-me-block {
@@ -375,10 +381,9 @@ section {
 	left: 22%;
 }
 
-.home-about-me-block::before {
-  content: url('pictures/pictures-home/helene-andre-picture-mini.png');
-  height: 100%;
-  width: 100%;
+.home-button--picture {
+  max-width: 100%;
+  height: auto;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -580,14 +585,25 @@ section {
 
 .projects__wrapper {
   display: flex; 
-  flex-wrap: wrap; 
   justify-content: space-between;
+  left: 50%; 
+  transform: translateX(-50%);
 }
 
 .project {
-  height: 220px; 
-  width: 221px;
-  margin-top: 10px; 
+  height: 30%; 
+  width: 30%;
+}
+
+.project__mask {
+  height: 100%; 
+  width: 100%; 
+  position: absolute;
+  top: 0%; 
+  left: 0%; 
+  background-color: rgba(0,0,0, 0.3); 
+  opacity: 0;
+  z-index: -1; 
 }
 
 .project__button--title {
@@ -626,14 +642,17 @@ section {
 }
 
 .project__description {
-  height: auto;
-  width: 225px;
-  padding: 15px;
+  height: 89%;
+  width: 55%;
+  padding: 5%;
   background-color: white;
   text-align: left;
   position: absolute;
+  top: 0%;
+  right: 0%;
   opacity: 0;
   transition: 0.4s ease-in-out;
+  z-index: -1;
 }
 
 .project__description::before {
@@ -641,22 +660,46 @@ section {
   height: 0px;
   width: 0px;
   border: 10px solid transparent;
-  border-bottom-color: white;
+  border-right-color: white;
   position: absolute;
-  bottom: 100%;
-  left: 18%;
+  right: 100%;
+}
+
+.cat::before {
+  top: 15%; 
+}
+
+.pupil::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.html::before {
+  top: 81%; 
+}
+
+.project__link {
+  color: #4fc3f7; 
+  cursor: pointer;
 }
 
 .project__description--close {
   height: 14px;
   width: 14px; 
   font-size: 14px;  
-  color: red; 
+  position: absolute;
+  top: 6%;
+  right: 11%;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .project__description--close:hover {
   transform: rotate(360deg) scale(1.2);
+}
+
+.flex-column {
+  flex-direction: column;
 }
 /**=====================================================================**/
 
@@ -670,7 +713,6 @@ section {
 	content: "";
 	position: absolute;
 	top: 0%;
-	left: 15%;
 	height: 0em;
 	width: 0em;
 	border: 2em solid #ffe082;
@@ -868,7 +910,6 @@ section {
 	content: "";
 	position: absolute;
 	top: 0%;
-	left: 15%;
 	height: 0em;
 	width: 0em;
 	border: 2em solid white;
@@ -955,49 +996,45 @@ svg:not(:root) {
   background-color: white;
   height: 70vh;
   padding-bottom: 4em;
+  display: flex; 
 }
 
+
 .contact-info__wrapper {
-  width: 25%;
-  height: 25em;
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 20px;
+  height: 31em;
+  width: 24em;
+  background-color: purple;
 }
 
 .contact-info {
   width: 20em;
   height: 15em;
-  position: absolute;
-  top: -7%;
+  position: relative;
+  top: 7%;
   left: 50%;
   transform: translateX(-50%);
-  line-height: 360%;
 }
 
 .contact-info__title {
-	position: relative;
-	color: #4fc3f7;
-	margin-top: 0.1em;
-  margin-bottom: 0.5em;
+  position: relative;
+  color: #4fc3f7;
   letter-spacing: 2px;
-  top: 0%; 
+  top: 0%;
+  margin-bottom: 10px;
 }
 
 .contact-info__name {
 	font-family: 'Roboto', arial;
 	color: #4fc3f7;
   letter-spacing: 1px;
+  margin-bottom: 45px;
 }
 
 .contact-info__icons-wrapper {
-	font-size: 2em;
-	height: 38px;
-	color: #4fc3f7;
-	margin-top: 1em;
-  letter-spacing: 11px;
+  font-size: 2em;
+  height: 38px;
+  color: #4fc3f7;
+  letter-spacing: 11px; 
 }
 
 .contact-info__icon:hover {
@@ -1005,13 +1042,8 @@ svg:not(:root) {
 }
 
 .contact-form__wrapper {
-  width: 24em;
   height: 31em;
-  position: absolute;
-  margin: 20px;
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 24em;  
 }
 
 .contact-form__field-wrapper {
@@ -1028,7 +1060,7 @@ input {
 	color: #190e0b;
 }
 
-.contact-form__field, #send-button-wrapper {
+.contact-form__field {
   width: 94%;
   background-color: #f5f5f5;
   outline: none;
@@ -1038,10 +1070,6 @@ input {
   font-family: 'Roboto', arial;
   font-size: 14px;
   padding: 4%;
-}
-
-#send-button-wrapper {
-  background-color: transparent; 
 }
 
 .contact-form__field:focus {
@@ -1105,12 +1133,6 @@ input {
   transition: 0.3s ease-in-out;
 }
 
-p {
-  color: #757575; 
-  font-size: 13px; 
-  margin-top: 15px;
-}
-
 .icon-blocked,
 .icon-success {
   font-size: 75px;
@@ -1128,12 +1150,16 @@ p {
 
 .show {
   opacity: 1; 
-  z-index: 1;
+  z-index: 2;
+}
+
+.z-index-sup {
+  z-index: 3; 
 }
 
 #send-button {
   width: 4em;
-  font-size: 1em;
+  font-size: 14px;
   font-family: 'Roboto', arial;
   color: #4fc3f7;
   border: 1px solid #4fc3f7;
@@ -1142,7 +1168,7 @@ p {
   transition: 0.3s ease-in-out;
   position: absolute;
   right: -2%;
-  top: 97%;
+  bottom: 0%;
 }
 
 #send-button:hover {
@@ -1169,8 +1195,6 @@ p {
   width: 100%;
   position: absolute;
   top: 200px; 
-  background-color: red; 
-
 }
 
 .scroll {
@@ -1185,12 +1209,20 @@ p {
 /**=====================================================================**/
 
 /**============================ media queries ==========================**/
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1200px) {
 
 }
 
-@media screen and (max-width: 960px) {
-  
+@media screen and (max-width: 992px) {
+
+
+  .projects__wrapper {
+    width: 100%;
+    min-width: auto;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+
   /* Contact section. */
   .contact-form__field, #send-button-wrapper {
     width: 77%; 
@@ -1204,41 +1236,35 @@ p {
     font-size: 2em; 
   }
 
-  .contact-info__icons-wrapper {
-    letter-spacing: 0px; 
-  }
-
   /* Projects section. */
   .projects {
     height: 100vh; 
   }
-  
-  .projects__wrapper {
-    justify-content: unset; 
-  }
-
-  .project {
-    margin-left: 10px;
-  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
+  .about-me {
+    padding-left: 15%; 
+    padding-right: 15%; 
+  }
+ 
   /* Home section.  */
   .home__button {
     width: 95px;
     height: 95px;
-  }
+    position: relative;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    }
 
   .home__button--text, .home-hobbies-block .home__button--text {
-    font-size: 13px; 
-    top: 50%; 
-    transform: translate(-50%,-50%);
+    font-size: 13px;
+    top: 41%;
+    transform: translateX(-50%);
   }
 
-
-}
-
-@media screen and (max-width: 700px) {
 
   /* Projects section. */
   .projects {
@@ -1252,7 +1278,7 @@ p {
 
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 450px) {
   /* Whole page. */
   h1, .about-me__name, .about-me__job-title {
     font-size: 20px; 
@@ -1260,54 +1286,24 @@ p {
   
   /* Home section.  */
   .home__button {
-    width: 95px;
-    height: 95px;
-    position: relative;
-    top: 60%;
-    left: 20%;
-    display: inline-flex;
-  }
-
-  .hobbies__wrapper {
-    flex-direction: column;
-    font-size: 56px;
-    top: 120px; 
-  }
-
-  .hobbies__element--text::after {
-    border-right-color: white;
-    border-bottom-color: transparent;
-    left: -8%;
-    bottom: 55%;
-  }
-  
-  /* Projects section. */
-  .projects__wrapper {
-    flex-direction: column; 
-  }
-
-  /* Skills section. */
-  .skills__icon {
-    font-size: 10em;
-  }
-
-  /* Contact section. */
-  .contact-form__wrapper, .contact-info__wrapper {
-    /* position: relative; */
-  }  
-
-}
-
-
-@media screen and (max-width: 320px) {
-
-  /* Home section. */
-  .home__button {
     width: 70px;
     height: 70px;
     top: 73%;
+    left: 10%;
+    display: inline-flex;
   }
 
+  .home__button--text {
+    top: 50%;
+    transform: translate(-50%,-50%);  
+  }
+
+  .home-hobbies-block .home__button--text {
+    font-size: 10px;
+    top: 10%;
+  }
+
+  /* About-me section. */
   .about-me {
     height: 120vh; 
   }
@@ -1325,31 +1321,50 @@ p {
     height: 160vh;
   } 
 
-  /* Skills section */
+  .projects__wrapper {
+    flex-direction: column; 
+  }
+  .projects::before, .xp::after {
+    right: 3%;
+  }
+
+  .project {
+    height: 150px; 
+    width: 150px;
+  }
+
+  section {
+    padding-left: 3%; 
+    padding-right: 3%; 
+  }
+
+
+  /* Skills section. */
   .skills {
     height: 140vh;
   }
-}
 
+  .skills__icon {
+    font-size: 10em;
+  }
+  
+  /* Hobbies section. */
+  .hobbies__wrapper {
+    flex-direction: column;
+    font-size: 56px;
+    top: 120px; 
+  }
 
+  .hobbies__element--text::after {
+    border-right-color: white;
+    border-bottom-color: transparent;
+    left: -8%;
+    bottom: 55%;
+  }
 
-
-@media screen and (max-height: 430px) {
-
-  /* Home section. */
-  .home__button {
-    width: 95px;
-    height: 95px;
+  /* Contact section. */
+  /* .contact-form__wrapper, .contact-info__wrapper {
     position: relative;
-    top: 78%;
-    left: 10%;
-    display: inline-flex;
-  }
-
-  .home__button--text {
-    font-size: 13px; 
-  }
-
-
+  }   */
 }
 /**=====================================================================**/
