@@ -1224,10 +1224,6 @@ input {
 /**=====================================================================**/
 
 /**============================ media queries ==========================**/
-@media screen and (max-width: 1200px) {
-
-}
-
 @media screen and (max-width: 992px) {
   /* Projects section. */
   .projects__wrapper {
@@ -1237,14 +1233,18 @@ input {
     transform: translateX(-50%);
   }
 
-  /* Contact section. */
-  .contact-info__title {
-    font-size: 2em; 
-  }
-
-  /* Projects section. */
   .projects {
     height: 100vh; 
+  }
+
+  /* Contact section. */
+  .contact {
+    padding-left: 3%; 
+    padding-right: 3%; 
+  }
+
+  .contact-info__title {
+    font-size: 2em; 
   }
 }
 
@@ -1294,6 +1294,24 @@ input {
 
   .contact-wrapper {
     flex-direction: column;
+  }
+
+  .contact-info__wrapper {
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%);
+    text-align: center; 
+  }
+
+  .contact-form__wrapper {
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+
+  #send-button {
+    right: 50%; 
+    transform: translateX(50%);
   }
 }
 
