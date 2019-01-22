@@ -564,7 +564,6 @@ section {
 /**============================ projects ===============================**/
 .projects {
   background-color: #ffe082;
-  height: 90vh;
 }
 
 .projects::before {
@@ -589,7 +588,6 @@ section {
   justify-content: space-between;
   left: 50%; 
   transform: translateX(-50%);
-  background-color: red;
 }
 
 .project {
@@ -606,6 +604,12 @@ section {
   background-color: rgba(0,0,0, 0.3); 
   opacity: 0;
   z-index: -1; 
+}
+
+.project__button {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
 }
 
 .project__button--title {
@@ -665,19 +669,8 @@ section {
   border-right-color: white;
   position: absolute;
   right: 100%;
-}
-
-.cat::before {
-  top: 15%; 
-}
-
-.pupil::before {
-  top: 50%;
+  top: 50%; 
   transform: translateY(-50%);
-}
-
-.html::before {
-  top: 81%; 
 }
 
 .project__link {
@@ -690,7 +683,7 @@ section {
   width: 16px; 
   font-size: 16px;  
   position: absolute;
-  top: 6%;
+  top: 5%;
   right: 2%;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -700,9 +693,13 @@ section {
   transform: rotate(270deg) scale(1.2);
 }
 
-/* .flex-column {
-  flex-direction: column;
-} */
+.z-index-up {
+  left: 0%; 
+  z-index: 3; 
+  width: 33%;
+  display: block;
+  position: absolute;
+}
 /**=====================================================================**/
 
 /**============================= skills ================================**/
@@ -1090,7 +1087,6 @@ input {
 .send-button-wrapper {
   position: absolute;
   top: 0%; 
-  background-color: red; 
 }
 
 #send-button {
@@ -1189,8 +1185,8 @@ input {
   z-index: 2;
 }
 
-.z-index-sup {
-  z-index: 1; 
+.hide {
+  width: 100%; 
 }
 /**=====================================================================**/
 
@@ -1249,7 +1245,7 @@ input {
 }
 
 @media screen and (max-width: 768px) {
- 
+  
   /* Home section.  */
   .home__button {
     width: 95px;
@@ -1266,17 +1262,62 @@ input {
     top: 41%;
     transform: translateX(-50%);
   }
-
-  /* Projects section. */
-  .projects {
-    height: 140vh; 
-  }
   
+  /* Projects section. */
+  .projects__wrapper {
+    height: 450px;
+    width: 100%; 
+    flex-direction: column; 
+  }
+
+  .project {
+    height: 152px;
+    width: 100%; 
+    display: flex;
+  }
+
+  .project__button {
+    position: absolute;
+    left: 0%;
+  }
+
+  .project__button--picture {
+    height: 145px;
+    width: 145px; 
+  }
+
+  .project__description {
+    height: 129px;
+    width: inherit;
+    padding: 8px;
+    background-color: white;
+    text-align: left;
+    position: unset;
+    top: unset; 
+    left: unset;
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+    z-index: 1;
+  }
+
+  .project__description::before, 
+  .project__mask, 
+  .project__description--close, 
+  .project__button:hover .project__button--title,
+  .project::before {
+    z-index: -3; 
+    opacity: 0; 
+  }
+
+  .project__link {
+    font-size: 12px;
+  }
+
   /* Xp section. */
-  .xp {
+  /* .xp {
     padding-left: 3%; 
     padding-right: 3%;
-  }
+  } */
 
   .xp__container-left--text, 
   .xp__container-right--text {
@@ -1323,10 +1364,18 @@ input {
 
 @media screen and (max-width: 450px) {
   /* Whole page. */
+  section {
+    padding-left: 3%; 
+    padding-right: 3%; 
+  }
+  
   h1, .about-me__name, .about-me__job-title {
     font-size: 20px; 
   } 
   
+  .projects::before, .xp::after {
+    right: 3%;
+  }
   /* Home section.  */
   .home__button {
     width: 70px;
@@ -1357,28 +1406,6 @@ input {
   
   .about-me__picture {
     top: 4%; 
-  }
-
-  /* Projects section. */
-  .projects {
-    height: 160vh;
-  } 
-
-  .projects__wrapper {
-    flex-direction: column; 
-  }
-  .projects::before, .xp::after {
-    right: 3%;
-  }
-
-  .project {
-    height: 150px; 
-    width: 150px;
-  }
-
-  section {
-    padding-left: 3%; 
-    padding-right: 3%; 
   }
 
   /* Skills section. */

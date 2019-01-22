@@ -49,21 +49,23 @@ let projectsOnClick = function() {
     let projectDescription = $(this).next('.project__description')
     if (projectDescription.hasClass('show')) {
       projectDescription.removeClass('show')
-      // $('.projects__wrapper').removeClass('flex-column')
+      $('.project__mask').removeClass('show')
+      $('.project__button').removeClass('z-index-up')
+      $('.project__button--title').removeClass('hide')
     }
-    else {
+    else if ($(window).width() >= 768) {
       projectDescription.addClass('show')
-      // $('.projects__wrapper').addClass('flex-column')
       $('.project__mask').addClass('show')
       $(this).addClass('z-index-up')
+      $('.project__button--title').addClass('hide')
     }
   })
 
   $('.project__description--close').click(function(e) {
     $('.project__description').removeClass('show')
-    // $('.projects__wrapper').removeClass('flex-column')
     $('.project__mask').removeClass('show')
-    $(this).removeClass('z-index-up')
+    $('.project__button').removeClass('z-index-up')
+    $('.project__button--title').removeClass('hide')
   })
 }
 // =========================================================================================== //
@@ -110,7 +112,6 @@ let initFormValidation = function() {
     validateField(this)
   })
 }
-
 // ================================== validate form fields =================================== //
 function validateField (field) {
   fieldWrapper = $(field).parent()
