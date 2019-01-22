@@ -931,6 +931,11 @@ section {
   justify-content: space-between;
 }
 
+.hobbies__element {
+  height: 9vw;
+  width: 9vw;
+}
+
 .hobbies__element--icon {
   font-size: 9vw;
   color: white;
@@ -944,23 +949,16 @@ section {
 
 .hobbies__element--text {
   height: auto;
-  width: 225px;
+  width: 180px;
   padding: 15px;
   background-color: white;
   text-align: left;
-  position: absolute;
+  position: relative;
+  left: 50%; 
+  transform: translateX(-50%);
   opacity: 0;
   z-index: -1;
   transition: 0.4s ease-in-out;
-}
-
-.hiking-text {
-  right: 0%; 
-}
-
-.hobbies__element--text h3 {
-  color: black;
-  margin-bottom: 10px;
 }
 
 .hobbies__element--text::after {
@@ -971,11 +969,13 @@ section {
   border-bottom-color: white;
   position: absolute;
   bottom: 100%;
-  left: 18%;
+  left: 50%; 
+  transform: translateX(-50%);
 }
 
-.hiking-text::after {
-  left: 77%; 
+.hobbies__element--text h3 {
+  color: black;
+  margin-bottom: 10px;
 }
 /**=====================================================================**/
 
@@ -1287,6 +1287,12 @@ input {
     font-size: 14px; 
   }
 
+  /* Hobbies section. */
+  .hobbies__element--text {
+    width: 150px; 
+    padding: 5px; 
+  }
+
   /* Contact section. */
   .contact {
     height: 85vh;
@@ -1391,21 +1397,51 @@ input {
   }
   
   /* Hobbies section. */
+  .hobbies {
+    height: 95vh;
+  }
+  
   .hobbies__wrapper {
     flex-direction: column;
     font-size: 56px;
     top: 120px; 
+    width: 303px;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+
+  .hobbies__element {
+    height: 90px;
+    width: 45px; 
   }
 
   .hobbies__element--icon {
     font-size: 40px;
   }
 
+  .hobbies__element--text {
+    height: 70px; 
+    width: 240px;
+    left: 115%;
+    transform: translateX(0%);
+    top: -69%;
+    opacity: 1; 
+    z-index: 1; 
+  }
+
   .hobbies__element--text::after {
-    border-right-color: white;
-    border-bottom-color: transparent;
-    left: -8%;
-    bottom: 55%;
+    opacity: 0; 
+    z-index: -1; 
+  }
+
+  .hobbies__element--text h3 {
+    margin-bottom: 0px;
+    font-size: 12px;
+  }
+
+  .hobbies__element--text p {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 /**=====================================================================**/
