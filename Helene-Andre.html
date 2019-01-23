@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 		<link rel="stylesheet" href="style.css"/>
-		<title>Helene Andre</title>
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="jquery/jquery-3.3.1.js"></script>
+		<script src="fonts/jquery/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="Helene-resume.js"></script>
+		<title>Helene Andre</title>
 	</head>
 	
 	<body>
-
 		<ul class="side-menu">
-				<li><a class="side-menu__circle" href="#home" class="active"><span class="side-menu__text">home</span></a></li>
-				<li><a class="side-menu__circle" href="#about-me"><span class="side-menu__text">about me</span></a></li>
-				<li><a class="side-menu__circle" href="#projects"><span class="side-menu__text">projects</span></a></li>
-				<li><a class="side-menu__circle" href="#skills"><span class="side-menu__text">skills</span></a></li>
-				<li><a class="side-menu__circle" href="#xp"><span class="side-menu__text">xp</span></a></li>
-				<li><a class="side-menu__circle" href="#hobbies"><span class="side-menu__text">sports & interests</span></a></li>
-				<li><a class="side-menu__circle" href="#contact"><span class="side-menu__text">contact</span></a></li>
+			<li>
+				<a class="side-menu__circle" href="#home" class="active">
+					<span class="side-menu__text">home</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#about-me">
+					<span class="side-menu__text">about me</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#projects">
+					<span class="side-menu__text">projects</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#skills">
+					<span class="side-menu__text">skills</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#xp">
+					<span class="side-menu__text">xp</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#hobbies">
+					<span class="side-menu__text">sports & interests</span>
+				</a>
+			</li>
+			<li>
+				<a class="side-menu__circle" href="#contact">
+					<span class="side-menu__text">contact</span>
+				</a>
+			</li>
 		</ul>
 
 		<section class="home" id="home">
-			
 			<div class="home__notebook">
 				<img class="home__notebook--picture" src="pictures/pictures-background/notebook.png">
 				<div class="home__notebook--text-wrapper">
 					<div class="home__notebook--name">Helene ANDRE</div> 
 					<div class="home__notebook--job">front-end developer</div>
 					<ul class="home__notebook--contact">
-						<li class="home__title--icon-contact-text">
+						<li class="home__notebook--contact-icon">
 							<a href="tel:0484084650">
-								<i class="icon icon-phone icon-home"></i>+61 (0) 484 084 650
+								<i class="icon icon-phone"></i>+61 (0) 484 084 650
 							</a>
 						</li>
-						<li class="home__title--icon-contact-text">
-							<a href="mailto:helene.andre.06@gmail.com" target="_top" class="home__title--icon-contact-text">
-								<i class="icon icon-email icon-home"></i>helene.andre.06@gmail.com
+						<li class="home__notebook--contact-icon">
+							<a href="mailto:helene.andre.06@gmail.com" target="_top">
+								<i class="icon icon-email"></i>helene.andre.06@gmail.com
 							</a>
 						</li>
-						<li class="home__title--icon-contact-text">
+						<li class="home__notebook--contact-icon">
 							<a href="https://www.google.com/maps/place/Melbourne+Victoria/@-37.9712304,144.4913055,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576" target="_blank">
-								<i class="icon icon-location icon-home"></i>Melbourne, VIC - Australia
+								<i class="icon icon-location"></i>Melbourne, VIC - Australia
 							</a>
 						</li>
 					</ul>				
 					<ul class="home__notebook--social-links">
-						<li><a href="https://codepen.io/helene-andre/" target="_blank" class="icon icon-codepen"></a></li>
-						<li><a href="https://github.com/helene-andre" target="_blank" class="icon icon-github"></a></li>
-						<li><a href="https://www.linkedin.com/in/helene-andre/" target="_blank" class="icon icon-linkedin"></a></li>
+						<li>
+							<a href="https://codepen.io/helene-andre/" target="_blank" class="icon icon-codepen">
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/helene-andre" target="_blank" class="icon icon-github">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/helene-andre/" target="_blank" class="icon icon-linkedin">
+							</a>
+						</li>
 					</ul>					
 				</div>
 			</div>
@@ -99,47 +134,40 @@
 			</div>	
 		</section>
 
-		<section class="projects" id="projects">
+		<section class="section--projects" id="projects">
 			<div class="section-wrapper">
 				<h1 class="projects__title">PROJECTS</h1>
-				<div class="projects__wrapper sub-section-wrapper">
-					<div class="project">	
-						<div class="project__mask"></div>					
-						<div class="project__button">
-							<div class="project__button--title">A cat in a box</div>						
-							<img class="project__button--picture" src="pictures/pictures-projects/cat-project.png">
-						</div>
-						<div class="project__description cat">
+				<div class="projects-wrapper">
+					<div class="project">											
+						<div class="project__title">A cat in a box</div>						
+						<img class="project__image" src="pictures/pictures-projects/cat-project.png">
+						<div class="project__description">
 							<h3>A cat in a box</h3>
 							<p>A cat in a box, CSS HTML JQuery</p>
 							<a class="project__link" href="https://codepen.io/Helene-Andre/pen/mQrgZa" target="_blank">https://codepen.io/Helene-Andre/pen/mQrgZa</a>
-							<div class="project__description--close"><i class="icon icon-close"></i></div>
+							<div class="project__close"><i class="icon icon-close"></i></div>
 						</div>
 					</div>
 					
 					<div class="project">
-						<div class="project__button">
-							<div class="project__button--title">Pupil track mouse move</div>
-							<img class="project__button--picture" src="pictures/pictures-projects/pupil-project.png">	
-						</div>					
-						<div class="project__description pupil">
+						<div class="project__title">Pupil track mouse move</div>
+						<img class="project__image" src="pictures/pictures-projects/pupil-project.png">	
+						<div class="project__description">
 							<h3>Pupil track mouse move</h3>
 							<p>Pupil track mouse move, CSS HTML JQuery</p>
 							<a class="project__link" href="https://codepen.io/Helene-Andre/pen/MzovxP" target="_blank">https://codepen.io/Helene-Andre/pen/MzovxP</a>
-							<div class="project__description--close"><i class="icon icon-close"></i></div>
+							<div class="project__close"><i class="icon icon-close"></i></div>
 						</div>
 					</div>
 					
 					<div class="project">
-						<div class="project__button">
-							<div class="project__button--title">HTML Memento</div>	
-							<img class="project__button--picture" src="pictures/pictures-projects/html-project.png">					
-						</div>
-						<div class="project__description html">
+						<div class="project__title">HTML Memento</div>	
+						<img class="project__image" src="pictures/pictures-projects/html-project.png">					
+						<div class="project__description">
 							<h3>HTML Memento</h3>
 							<p>HTML Memento</p>
 							<a class="project__link" href="" target="_blank">Website a créer</a>
-							<div class="project__description--close"><i class="icon icon-close"></i></div>
+							<div class="project__close"><i class="icon icon-close"></i></div>
 						</div>
 					</div>
 				</div>
@@ -149,12 +177,12 @@
 		<section class="skills" id="skills">
 			<div class="section-wrapper">
 				<h1 class="skills__title">SKILLS</h1>				
-				<div class="skills__wrapper sub-section-wrapper">
-					<div class="skills__element--wrapper">
-						<div class="skills__icon">
+				<div class="skills__wrapper">
+					<div class="skill__wrapper">
+						<div class="skill__icon">
 							<i class="icon icon-laptop"></i>
 						</div>
-						<div class="skills__text skills__text--web">
+						<div class="skill__text skill__text--web">
 							<h2>Web Skills</h2>
 							<ul>
 								<li>
@@ -208,8 +236,8 @@
 							</ul>				
 						</div>	
 					</div>
-					<div class="skills__element--wrapper">
-						<div class="skills__text skills__text--management">
+					<div class="skill__wrapper">
+						<div class="skill__text skill__text--management">
 							<h2>Management Skills</h2>
 							<ul>
 								<li>Strong sense of personal responsibility</li>
@@ -218,15 +246,15 @@
 								<li>keen on making a real difference</li>
 							</ul>	
 						</div>
-						<div class="skills__icon">
+						<div class="skill__icon">
 							<i class="icon icon-management"></i>
 						</div>
 					</div>
-					<div class="skills__element--wrapper">
-						<div class="skills__icon">
+					<div class="skill__wrapper">
+						<div class="skill__icon">
 							<i class="icon icon-languages"></i>
 						</div>
-						<div class="skills__text skills__text--languages">
+						<div class="skill__text skill__text--languages">
 							<h2>Languages</h2>
 							<ul>
 								<li>English, fluent</li>
@@ -236,22 +264,22 @@
 							</ul>	
 						</div>	
 					</div>
-				</div>			
-			</div>
+				</div>	
+			</div>		
 		</section>
 
 		<section class="xp" id="xp">
 			<div class="section-wrapper">
 				<h1 class="xp__title">EXPERIENCE</h1>
-				<div class="xp__wrapper sub-section-wrapper">
-					<div class="xp__container-left">
-						<div class="xp__container-left--text">
-						<div class="xp__container-left--date">Jul. 2015</div>
+				<div class="xp__wrapper">
+					<div class="xp__text-box left">
+						<div class="xp__text left">
+						<div class="xp__text--date left-date">Jul. 2015</div>
 						<h2>Started work at Servier</h2>
 						<div>Pharmaceutical Company, HCMC, Vietnam</div>
 						<div>Project Leader - General Management Department</div>
 						<div>18 months</div>
-						<ul class="text__details">
+						<ul class="xp__text--missions">
 							<li>Led and supported the successful relocation of the company: 750 sqm, 60 collaborators</li>
 							<li>Marketed 7 pharmaceutical products in the field of diabetes, hypertension & mental health: 5 products in 2015, 7 products in 2016 (turnover growth: + 22% volume for the top 5 products in 2016)</li>
 							<li>Led & coordinated marketing activities related to a website to raise patients’ awareness to hypertension: http://ngaydautien.vn, +65,000 visits in August 2016</li>
@@ -260,91 +288,91 @@
 						</div>
 					</div>
 
-					<div class="xp__container-right">
-						<div class="xp__container-right--text">
-							<div class="xp__container-right--date">Sept. 2014</div>
-						<h2>Graduated from the Institute of Business Administration</h2>
-						<div>Montpellier, France</div>
-						<div>MBA, major in Marketing</div>
+					<div class="xp__text-box">
+						<div class="xp__text right">
+							<div class="xp__text--date right-date">Sept. 2014</div>
+							<h2>Graduated from the Institute of Business Administration</h2>
+							<div>Montpellier, France</div>
+							<div>MBA, major in Marketing</div>
 						</div>
 					</div>
 
-					<div class="xp__container-left">
-						<div class="xp__container-left--text">
-							<div class="xp__container-left--date">Apr. 2014</div>
-						<h2>Started work at Pierre Fabre</h2>
-						<div>Pharmaceutical Company, Castres, France</div>
-						<div>Product Manager, Marketing Department, Smoking Cessation Team</div>
-						<div>6 months</div>
-						<ul class="text__details">
-							<li>Led the creation and operational launch of the marketing tools for 2 pharmaceutical products including a showcase and animation in more than 1,200 targeted drugstores</li>
-							<li>Extracted / analysed relevant market data to seize opportunities & shared the results to the marketing team on a weekly basis</li>
-							<li>Participated in public relation programs and provided support to the sales team.</li>
-						</ul>
+					<div class="xp__text-box left">
+						<div class="xp__text left">
+							<div class="xp__text--date left-date">Apr. 2014</div>
+							<h2>Started work at Pierre Fabre</h2>
+							<div>Pharmaceutical Company, Castres, France</div>
+							<div>Product Manager, Marketing Department, Smoking Cessation Team</div>
+							<div>6 months</div>
+							<ul class="xp__text--missions">
+								<li>Led the creation and operational launch of the marketing tools for 2 pharmaceutical products including a showcase and animation in more than 1,200 targeted drugstores</li>
+								<li>Extracted / analysed relevant market data to seize opportunities & shared the results to the marketing team on a weekly basis</li>
+								<li>Participated in public relation programs and provided support to the sales team.</li>
+							</ul>
 						</div>
 					</div>
 
-					<div class="xp__container-right">
-						<div class="xp__container-right--text">
-							<div class="xp__container-right--date">Sept. 2012</div>
-						<h2>Graduated from the Faculty of Medecine</h2>
-						<div>Montpellier, France</div>
-						<div>Master's degree in Clinical Trials</div>
+					<div class="xp__text-box">
+						<div class="xp__text right">
+							<div class="xp__text--date right-date">Sept. 2012</div>
+							<h2>Graduated from the Faculty of Medecine</h2>
+							<div>Montpellier, France</div>
+							<div>Master's degree in Clinical Trials</div>
 						</div>
 					</div>
 
-					<div class="xp__container-left">
-						<div class="xp__container-left--text">
-							<div class="xp__container-left--date">Apr. 2012</div>
-						<h2>Started work at CDL Pharma</h2>
-						<div>CRO, Marseille, France</div>
-						<div>Clinical Research Coordinator, Project Management Department</div>
-						<div>6 months</div>
-						<ul class="text__details">
-							<li>Monitored national & international clinical trials and coordinated activities </li>
-							<li>Wrote business proposals & requests for tenders</li>
-							<li>Updated the Trial Master Files and designed operating manuals.</li>
-						</ul>
+					<div class="xp__text-box left">
+						<div class="xp__text left">
+							<div class="xp__text--date left-date">Apr. 2012</div>
+							<h2>Started work at CDL Pharma</h2>
+							<div>CRO, Marseille, France</div>
+							<div>Clinical Research Coordinator, Project Management Department</div>
+							<div>6 months</div>
+							<ul class="xp__text--missions">
+								<li>Monitored national & international clinical trials and coordinated activities </li>
+								<li>Wrote business proposals & requests for tenders</li>
+								<li>Updated the Trial Master Files and designed operating manuals.</li>
+							</ul>
 						</div>
 					</div>
 
-					<div class="xp__container-right">
-						<div class="xp__container-right--text">
-							<div class="xp__container-right--date">Oct. 2011</div>
-						<h2>Started work at CHU Montpellier</h2>
-						<div>Hospital, Montpellier, France</div>
-						<div>Clinical Trial Associate</div>
-						<div>6 months</div>
-						<ul class="text__details">
-							<li>Clinical Trial Associate, Emergency Department</li>
-							<li>Monitored clinical trial logistics and coordinated activities</li>
-							<li>Conducted a phone survey (+500 calls).</li>
-							<li>Clinical Trial Associate, Hematology Department</li>
-							<li>Created a database using ACCESS software from the ground up (still live)
-									<li>Implemented " The Southern French registry of genetic hemochromatosis " (more than 500 patients)</li>
-									<li>Assisted the clinical investigator in monitoring visits</li> 
-									<li>Reviewed monitoring reports and implemented follow-up / corrective action</li>
-									<li>Ensured Investigator Site Files are accurate & updated into the Trial Master File.</li>
-						</ul>
+					<div class="xp__text-box">
+						<div class="xp__text right">
+							<div class="xp__text--date right-date">Oct. 2011</div>
+							<h2>Started work at CHU Montpellier</h2>
+							<div>Hospital, Montpellier, France</div>
+							<div>Clinical Trial Associate</div>
+							<div>6 months</div>
+							<ul class="xp__text--missions">
+								<li>Clinical Trial Associate, Emergency Department</li>
+								<li>Monitored clinical trial logistics and coordinated activities</li>
+								<li>Conducted a phone survey (+500 calls).</li>
+								<li>Clinical Trial Associate, Hematology Department</li>
+								<li>Created a database using ACCESS software from the ground up (still live)
+								<li>Implemented " The Southern French registry of genetic hemochromatosis " (more than 500 patients)</li>
+								<li>Assisted the clinical investigator in monitoring visits</li> 
+								<li>Reviewed monitoring reports and implemented follow-up / corrective action</li>
+								<li>Ensured Investigator Site Files are accurate & updated into the Trial Master File.</li>
+							</ul>
 						</div>
 					</div>
 
-					<div class="xp__container-left">
-						<div class="xp__container-left--text">
-							<div class="xp__container-left--date">Sept. 2011</div>
-						<h2>Graduated from Nice Sophia Antipolis University</h2>
-						<div>Nice, France</div>
-						<div>Bachelor's degree in Biology</div>
+					<div class="xp__text-box left">
+						<div class="xp__text left">
+							<div class="xp__text--date left-date">Sept. 2011</div>
+							<h2>Graduated from Nice Sophia Antipolis University</h2>
+							<div>Nice, France</div>
+							<div>Bachelor's degree in Biology</div>
 						</div>
 					</div>	
 
-					<div class="xp__container-right">
-						<div class="xp__container-right--text">
-							<div class="xp__container-right--date">Jan. 2011</div>
-						<h2>Started work at INSERM</h2>
-						<div>Research Laboratories, Nice, France</div>
-						<div>Intern in genetics research, diabetology & obesity department</div>
-						<div>6 months</div>
+					<div class="xp__text-box">
+						<div class="xp__text right">
+							<div class="xp__text--date right-date">Jan. 2011</div>
+							<h2>Started work at INSERM</h2>
+							<div>Research Laboratories, Nice, France</div>
+							<div>Intern in genetics research, diabetology & obesity department</div>
+							<div>6 months</div>
 						</div>
 					</div>	
 				</div>			
@@ -354,38 +382,38 @@
 		<section class="hobbies" id="hobbies">
 			<div class="section-wrapper">
 				<h1 class="hobbies__title">SPORTS & INTERESTS</h1>				
-				<div class="hobbies__wrapper sub-section-wrapper">		
-					<div class="hobbies__element">
-						<i class="hobbies__element--icon icon icon-laptop"></i>
-						<div class="hobbies__element--text">
+				<div class="hobbies__wrapper">		
+					<div class="hobby">
+						<i class="hobby__icon icon icon-laptop"></i>
+						<div class="hobby__text">
 							<h3>PROGRAMMING</h3>
 							<p>I've been programming since September 2018, love it so far!</p>
 						</div>
 					</div>
-					<div class="hobbies__element">
-						<i class="hobbies__element--icon icon icon-travel"></i>
-						<div class="hobbies__element--text">
+					<div class="hobby">
+						<i class="hobby__icon icon icon-travel"></i>
+						<div class="hobby__text">
 							<h3>TRAVELLING</h3>
 							<p>The best way to open your mind to different culture & cuisine.</p>
 						</div>
 					</div>
-					<div class="hobbies__element">
-						<i class="hobbies__element--icon icon icon-music"></i>
-						<div class="hobbies__element--text">
+					<div class="hobby">
+						<i class="hobby__icon icon icon-music"></i>
+						<div class="hobby__text">
 							<h3>PLAYING GUITAR</h3>
 							<p>At first I only picked up guitar because my brother did. But then it helped me to improve my self confidence, playing in a band at uni.</p>
 						</div>
 					</div>
-					<div class="hobbies__element">
-						<i class="hobbies__element--icon icon icon-cooking"></i>
-						<div class="hobbies__element--text">
+					<div class="hobby">
+						<i class="hobby__icon icon icon-cooking"></i>
+						<div class="hobby__text">
 							<h3>COOKING</h3>
 							<p>I love to cook for my friends and it also allows me to travel back to where I've been (especially French, Italian & Vietnamese cuisine).</p>
 						</div>
 					</div>
-					<div class="hobbies__element">
-						<i class="hobbies__element--icon icon icon-hiking"></i>
-						<div class="hobbies__element--text hiking-text">
+					<div class="hobby">
+						<i class="hobby__icon icon icon-hiking"></i>
+						<div class="hobby__text">
 							<h3>HIKING</h3>
 							<p>I like to disconnect sometimes, go on the top on a mountain.</p>
 						</div>
@@ -455,12 +483,12 @@
 					</div>				
 				</form>		
 				<div class="contact__success-message">
-					<i class="icon icon-validated icon-success"></i>
+					<i class="icon icon-validated"></i>
 					<div>Thank you!</div>
 					<p>Your message has been sent.<p>
 				</div>
 				<div class="contact__failed-message">
-					<i class="icon icon-validated icon-blocked"></i>
+					<i class="icon icon-blocked"></i>
 					<div>You message has not been sent.</div>
 					<p>Check your internet connection</p>
 				</div>

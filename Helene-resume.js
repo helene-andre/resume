@@ -45,27 +45,13 @@ let initOnClick = function() {
 // =============================== projects section on click ================================= //  
 
 let projectsOnClick = function() {
-  $('.project__button').click(function(e) {
-    let projectDescription = $(this).next('.project__description')
-    if (projectDescription.hasClass('show')) {
-      projectDescription.removeClass('show')
-      $('.project__mask').removeClass('show')
-      $('.project__button').removeClass('z-index-up')
-      $('.project__button--title').removeClass('hide')
-    }
-    else if ($(window).width() >= 768) {
-      projectDescription.addClass('show')
-      $('.project__mask').addClass('show')
-      $(this).addClass('z-index-up')
-      $('.project__button--title').addClass('hide')
-    }
+  $('.project').click(function(e) {
+    if (!$(this).hasClass('focus')) $(this).addClass('focus')
   })
 
-  $('.project__description--close').click(function(e) {
-    $('.project__description').removeClass('show')
-    $('.project__mask').removeClass('show')
-    $('.project__button').removeClass('z-index-up')
-    $('.project__button--title').removeClass('hide')
+  $('.project__close').click(function(e) {
+    $('.project').removeClass('focus')
+    e.stopPropagation()
   })
 }
 // =========================================================================================== //
