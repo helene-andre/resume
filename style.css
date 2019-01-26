@@ -183,6 +183,18 @@ li {
 .icon-jquery:before {
   content: "\70";
 }
+.icon-roller:before {
+  content: "\75";
+}
+.icon-work:before {
+  content: "\77";
+}
+.icon-graduate:before {
+  content: "\78";
+}
+.icon-sass:before {
+  content: "\79";
+}
 /**=====================================================================**/
 
 /**============================= side menu =============================**/
