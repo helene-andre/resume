@@ -59,9 +59,6 @@
 .icon-languages:before {
   content: "\6f";
 }
-.icon-laptop:before {
-  content: "\69";
-}
 .icon-validated:before {
   content: "\76";
 }
@@ -86,9 +83,21 @@
 .icon-hiking:before {
   content: "\6e";
 }
-.icon-circle-full:before {
+.icon-laptop:before {
+  content: "\72";
+}
+.icon-html:before {
+  content: "\69";
+}
+.icon-css:before {
+  content: "\73";
+}
+.icon-js:before {
+  content: "\74";
+}
+.icon-php:before {
   content: "\6a";
 }
-.icon-circle-empty:before {
+.icon-jquery:before {
   content: "\70";
 }

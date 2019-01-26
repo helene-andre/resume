@@ -101,6 +101,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -113,6 +114,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -139,9 +141,6 @@ li {
 .icon-languages:before {
   content: "\6f";
 }
-.icon-laptop:before {
-  content: "\69";
-}
 .icon-validated:before {
   content: "\76";
 }
@@ -166,10 +165,22 @@ li {
 .icon-hiking:before {
   content: "\6e";
 }
-.icon-circle-full:before {
+.icon-laptop:before {
+  content: "\72";
+}
+.icon-html:before {
+  content: "\69";
+}
+.icon-css:before {
+  content: "\73";
+}
+.icon-js:before {
+  content: "\74";
+}
+.icon-php:before {
   content: "\6a";
 }
-.icon-circle-empty:before {
+.icon-jquery:before {
   content: "\70";
 }
 /**=====================================================================**/
@@ -734,7 +745,7 @@ section {
 /**============================= skills ================================**/
 .skills {
   background-color: white;
-  height: 120vh;
+  min-height: 1050px;
 }
 
 .skills::after {
@@ -762,43 +773,178 @@ section {
   height: auto;
   width: 100%;
   color: #757575;
-  display: flex;
+  margin-bottom: 100px;
+}
+
+
+.skill__title {
+  width: 100%;
+  text-align: center; 
+  margin-bottom: 40px;
+}
+
+.skill__elements {
+  display: flex; 
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
-
-.skill__text {
-  width: 70%;
-  padding-top: 45px;
-}
-
-.skill__text--web {
-  padding-top: 27px; 
-}
-
-.skill__text--management {
-  text-align: right;
-}
-
-.skill__icon {
-  font-family: 'helene-resume';
+.skill__web-language, 
+.skill__management {
+  height: 70px; 
+  width: 70px; 
   position: relative;
-  width: 200px;
-  font-size: 13em;
-  color: #eeeeee;
+  margin-bottom: 20px;
 }
 
-.skill__icon:hover .icon {
-  color: #eeeeee;
-  cursor: default; 
+
+.skill__web-language--icon {
+  height: 27px; 
+  width: 27px; 
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 27px;
 }
 
-.icon-laptop, .icon-languages {
-  margin-right: 40px;
+/* Progress rings computer skills. */
+.progress-ring-web,
+.progress-ring-management {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 0%;
 }
 
-.icon-management {
-  margin-left: 40px;
+.progress-ring__circle--inner {
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-width: 6px; 
+  stroke: #e0e0e0; 
+  fill: transparent; 
+}
+
+.progress-ring__circle, 
+.progress-ring__circle--management {
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  /* Perimeter = 201 px. */
+  stroke-dashoffset: 201; 
+  stroke-dasharray: 201; 
+  stroke-width: 6px; 
+  stroke: #ffd54f; 
+  fill: transparent; 
+  transition: all 1.5s 1s linear;
+}
+
+.animate-circle {
+  stroke-dashoffset: 0; 
+  stroke-dasharray: 163;
+}
+
+/* Progress circles management skills. */
+.animate-circle-management {
+  stroke-dashoffset: 0; 
+  stroke-dasharray: 201;
+}
+
+
+.skill__language {
+  height: 70px; 
+  width: 70px;
+}
+
+.skill__flag, .skill__circle {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease-in-out; 
+}
+
+.english {
+  content: url('pictures/pictures-skills/english.png');
+}
+
+.french {
+  content: url('pictures/pictures-skills/french.png');
+}
+
+.vietnamese {
+  content: url('pictures/pictures-skills/vietnamese.png');
+}
+
+.italian {
+  content: url('pictures/pictures-skills/italian.png');
+}
+
+.english, 
+.french, 
+.vietnamese, 
+.italian {
+  filter: grayscale(50%);
+  opacity: 0.8;
+}
+
+.skill__description {
+  height: auto;
+  width: 100px;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  border: 1px solid #ffecb3;
+  padding: 5px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.skill__description::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-bottom-color: white;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skill__description::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 9px solid transparent;
+  border-bottom-color: #ffecb3;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skill__flag:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.skill__flag:hover ~ .skill__description,
+.skill__circle:hover ~ .skill__description,
+.animate-management-section {
+  transform: translate(-50%,5px);
+  opacity: 1;
+}
+
+.skill__management .skill__description {
+  transition: all 1.5s 1s ease-in-out;
+}
+
+.animate-text {
+  transform: translate(-50%,5px);
+  opacity: 1;
 }
 /**=====================================================================**/
 
@@ -1016,18 +1162,18 @@ section {
 /**=====================================================================**/
 
 /**================ div separation hobbies / contact ===================**/
-.container svg {
+.container .cloud__wrapper {
   display: block;
 }
 
-svg {
+.cloud__wrapper {
   min-width: 780px;
   max-height: 100px; 
   left: 0%;
   overflow-x: hidden;
 }
 
-svg:not(:root) {
+.cloud__wrapper:not(:root) {
   overflow: hidden;
 }
 

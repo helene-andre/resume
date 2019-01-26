@@ -1,21 +1,35 @@
 // ======================================== scroll down ====================================== //
 let onScroll = function() {
   let sections = $('section')
+  let progressCircles = $('.progress-ring__circle')
+  let progressCirclesManagement = $('.progress-ring__circle--management')
+  let skillDescrptionManagement= $('.skill__management').children('.skill__description')
 
   sections.each(function(i, section) {
     let scroll = $(document).scrollTop()
 
     if (scroll > $(section).offset().top - $(window).height()) {  
       $(section).children('.section-wrapper').addClass('scroll')
+      $(progressCircles).addClass('animate-circle')
+      $(progressCirclesManagement).addClass('animate-circle-management')
+      $(skillDescrptionManagement).addClass('animate-text')
     }
+
+    else if (!$('.skills').children('.section-wrapper').hasClass('scroll')) {
+      $(progressCircles).removeClass('animate-circle')
+      $(progressCirclesManagement).removeClass('animate-circle-management')
+      $(skillDescrptionManagement).removeClass('animate-text')
+    }
+
     else {
       $(section).children('.section-wrapper').removeClass('scroll')
     }
   
+    // Animation side menu.
     $('section').each(function(i) {
       if (($(this).offset().top - $(window).height() + 200) <= scroll) {
-          $('.side-menu a.active').removeClass('active')
-          $('.side-menu a').eq(i).addClass('active')
+        $('.side-menu a.active').removeClass('active')
+        $('.side-menu a').eq(i).addClass('active')
       }
     })  
   })
