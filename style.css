@@ -774,18 +774,20 @@ section {
 	color: #ffe082;
 }
 
-.skills__wrapper {
+/* .skills__wrapper {
   height: auto;
   width: 100%;
   position: absolute;
   top: 200px; 
-}
+} */
 
-.skill__wrapper {
+.skills__wrapper {
   height: auto;
   width: 100%;
   color: #757575;
   margin-bottom: 120px;
+  position: relative;
+  top: 200px; 
 }
 
 
@@ -801,8 +803,7 @@ section {
   justify-content: space-between;
 }
 
-.skill__web-language, 
-.skill__management {
+.skill {
   height: 70px; 
   width: 70px; 
   position: relative;
@@ -821,16 +822,14 @@ section {
   font-size: 27px;
 }
 
-/* Progress rings computer skills. */
-.progress-ring-web,
-.progress-ring-management {
+.skill__circle svg {
   height: 70px;
   width: 70px;
   position: absolute;
   top: 0%;
 }
 
-.progress-ring__circle--inner {
+.skill__circle--background {
   transition: 0.35s stroke-dashoffset;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -839,7 +838,7 @@ section {
   fill: transparent; 
 }
 
-.progress-ring__circle {
+.skill__circle--progress {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-width: 6px; 
@@ -854,13 +853,6 @@ section {
 @keyframes circle-chart-fill {
   to { stroke-dasharray: 0 201; }
 }
-
-/* Progress circles management skills. */
-/* .animate-circle-management {
-  stroke-dashoffset: 0; 
-  stroke-dasharray: 201;
-} */
-
 
 .skill__language {
   height: 70px; 
@@ -941,8 +933,7 @@ section {
 }
 
 .skill__flag:hover ~ .skill__description,
-.skill__circle:hover ~ .skill__description,
-.animate-management-section {
+.skill__circle:hover ~ .skill__description {
   transform: translate(-50%,5px);
   opacity: 1;
 }
@@ -951,7 +942,7 @@ section {
   transition: all 1.5s 1s ease-in-out;
 }
 
-.animate-text {
+.animate-description {
   transform: translate(-50%,5px);
   opacity: 1;
 }

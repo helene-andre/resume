@@ -1,7 +1,7 @@
 // ======================================== scroll down ====================================== //
 let onScroll = function() {
   let sections = $('section')
-  let progressCircles = $('.progress-ring__circle')
+  let progressCircles = $('.skill__circle--progress')
   let skillDescrptionManagement= $('.skill__management').children('.skill__description')
 
   sections.each(function(i, section) {
@@ -10,12 +10,12 @@ let onScroll = function() {
     if (scroll > $(section).offset().top - $(window).height()) {  
       $(section).children('.section-wrapper').addClass('scroll')
       $(progressCircles).addClass('show-circle')
-      $(skillDescrptionManagement).addClass('animate-text')
+      $(skillDescrptionManagement).addClass('animate-description')
     }
 
     else if (!$('.skills').children('.section-wrapper').hasClass('scroll')) {
       $(progressCircles).removeClass('show-circle')
-      $(skillDescrptionManagement).removeClass('animate-text')
+      $(skillDescrptionManagement).removeClass('animate-description')
     }
 
     else {
