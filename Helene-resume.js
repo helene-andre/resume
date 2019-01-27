@@ -2,7 +2,6 @@
 let onScroll = function() {
   let sections = $('section')
   let progressCircles = $('.progress-ring__circle')
-  let progressCirclesManagement = $('.progress-ring__circle--management')
   let skillDescrptionManagement= $('.skill__management').children('.skill__description')
 
   sections.each(function(i, section) {
@@ -10,14 +9,12 @@ let onScroll = function() {
 
     if (scroll > $(section).offset().top - $(window).height()) {  
       $(section).children('.section-wrapper').addClass('scroll')
-      $(progressCircles).addClass('animate-circle')
-      $(progressCirclesManagement).addClass('animate-circle-management')
+      $(progressCircles).addClass('show-circle')
       $(skillDescrptionManagement).addClass('animate-text')
     }
 
     else if (!$('.skills').children('.section-wrapper').hasClass('scroll')) {
-      $(progressCircles).removeClass('animate-circle')
-      $(progressCirclesManagement).removeClass('animate-circle-management')
+      $(progressCircles).removeClass('show-circle')
       $(skillDescrptionManagement).removeClass('animate-text')
     }
 

@@ -757,7 +757,7 @@ section {
 /**============================= skills ================================**/
 .skills {
   background-color: white;
-  min-height: 1050px;
+  min-height: 1080px;
 }
 
 .skills::after {
@@ -785,7 +785,7 @@ section {
   height: auto;
   width: 100%;
   color: #757575;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 
@@ -839,30 +839,27 @@ section {
   fill: transparent; 
 }
 
-.progress-ring__circle, 
-.progress-ring__circle--management {
-  transition: 0.35s stroke-dashoffset;
+.progress-ring__circle {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  /* Perimeter = 201 px. */
-  stroke-dashoffset: 201; 
-  stroke-dasharray: 201; 
   stroke-width: 6px; 
   stroke: #ffd54f; 
   fill: transparent; 
-  transition: all 1.5s 1s linear;
 }
 
-.animate-circle {
-  stroke-dashoffset: 0; 
-  stroke-dasharray: 163;
+.show-circle {
+  animation: circle-chart-fill 2s reverse;
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 201; }
 }
 
 /* Progress circles management skills. */
-.animate-circle-management {
+/* .animate-circle-management {
   stroke-dashoffset: 0; 
   stroke-dasharray: 201;
-}
+} */
 
 
 .skill__language {
@@ -963,7 +960,7 @@ section {
 /**============================ experience =============================**/
 .xp {
   background-color: #ffe082;
-  min-height: 1950px;
+  min-height: 2100px;
 }
 
 .xp::after {
@@ -991,7 +988,7 @@ section {
 /* Timeline.  */
 .xp__wrapper::before {
   content: '';
-  height: 124em;
+  height: 138em;
   width: 0.2em;
   background-color: white;
   position: absolute;
