@@ -774,13 +774,6 @@ section {
 	color: #ffe082;
 }
 
-/* .skills__wrapper {
-  height: auto;
-  width: 100%;
-  position: absolute;
-  top: 200px; 
-} */
-
 .skills__wrapper {
   height: auto;
   width: 100%;
@@ -789,7 +782,6 @@ section {
   position: relative;
   top: 200px; 
 }
-
 
 .skill__title {
   width: 100%;
@@ -809,7 +801,6 @@ section {
   position: relative;
   margin-bottom: 20px;
 }
-
 
 .skill__web-language--icon {
   height: 27px; 
@@ -854,15 +845,15 @@ section {
   to { stroke-dasharray: 0 201; }
 }
 
-.skill__language {
-  height: 70px; 
-  width: 70px;
-}
-
 .skill__flag, .skill__circle {
   height: 100%;
   width: 100%;
   transition: 0.3s ease-in-out; 
+}
+
+.skill__flag {
+  filter: grayscale(50%);
+  opacity: 0.8;
 }
 
 .english {
@@ -879,14 +870,6 @@ section {
 
 .italian {
   content: url('pictures/pictures-skills/italian.png');
-}
-
-.english, 
-.french, 
-.vietnamese, 
-.italian {
-  filter: grayscale(50%);
-  opacity: 0.8;
 }
 
 .skill__description {
