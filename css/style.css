@@ -64,12 +64,6 @@ li {
   font-family: lemon-milk-light-italic;
   src: url(../fonts/lemon_milk/LemonMilklightitalic.otf);
 }
-
-@font-face {
-	font-family: 'black-jack';
-	src: url(../fonts/black-jack/black-jack.ttf);
-}
-
 /**=====================================================================**/
 
 /**================================ icons ==============================**/
@@ -195,9 +189,6 @@ li {
 .icon-communication:before {
   content: "\43";
 }
-.icon-challenges:before {
-  content: "\67";
-}
 .icon-responsible:before {
   content: "\41";
 }
@@ -206,7 +197,13 @@ li {
 }
 .icon-love:before {
   content: "\45";
-}  
+}
+.icon-speedometer:before {
+  content: "\67";
+}
+.icon-wand:before {
+  content: "\46";
+}
 /**=====================================================================**/
 
 /**============================= side menu =============================**/
@@ -276,13 +273,8 @@ section.scroll .section-wrapper {
 
 /**=============================== home ================================**/
 .home {
-  /* background: url(../images/pictures-background/home-background-blur.png);
-  background-repeat: no-repeat;
-	background-size: cover;
-  background-position: right top; */
-  /* overflow: hidden; */
   bottom: 8%;
-  height: 90vh;
+  height: 90vh; 
   margin-bottom: 10vh; 
 }
 
@@ -459,13 +451,18 @@ section.scroll .section-wrapper {
 
 .project__title {
   height: auto;
-  width: 100%;
-  padding-top: 20px;
-  text-align: center; 
+  color: #ffffff;
+  padding: 20px;
+  background-color: rgba(128,128,128, 0.5);
 }
 
 .project__title h3 {
+  font-family: lemon-milk-light, arial;
+}
+
+.project__title p {
   color: #ffffff;
+  margin: 0; 
 }
 
 .project__image {
@@ -476,6 +473,7 @@ section.scroll .section-wrapper {
 .project__link {
   color: #4dd0e1; 
   cursor: pointer;
+  font-style: italic; 
 }
 /**=====================================================================**/
 
@@ -745,7 +743,7 @@ section.scroll .section-wrapper {
 }
 
 .xp h2 {
-  color: black;
+  color: #000000;
 }
 
 .xp__text {
@@ -888,7 +886,7 @@ section.scroll .section-wrapper {
 }
 
 .hobby__text h3 {
-  color: black;
+  color: #000000;
   margin-bottom: 10px;
 }
 /**=====================================================================**/
