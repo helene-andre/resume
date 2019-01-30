@@ -1,6 +1,5 @@
 // ======================================== scroll down ====================================== //
 let onScroll = function() {
-
   let windowTopPosition = ($(window).scrollTop())
   let windowHeight = $(window).height()
   let windowBottomPosition = (windowTopPosition + windowHeight)
@@ -12,7 +11,6 @@ let onScroll = function() {
     let elementTopPosition = element.offset().top 
     let elementHeight = element.height()
     let elementBottomPosition = element.offset().top + elementHeight 
-
     if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= (windowBottomPosition)  )) {
       element.addClass('scroll')
     }
@@ -28,6 +26,18 @@ let onScroll = function() {
       $('.top-menu a').eq(i).addClass('active')
     }
   })
+
+  // Animate progress circles.
+  let skillDescriptionManagement = $('.skill__management').children('.skill__description')
+  let progressCircles = $('.skill__circle--progress')
+  if ($('.skills').hasClass('scroll')) {
+    skillDescriptionManagement.addClass('animate-description')
+    progressCircles.addClass('animate-circle')
+  }
+  else {
+    skillDescriptionManagement.removeClass('animate-description')
+    progressCircles.removeClass('animate-circle')
+  }
 }
 // =========================================================================================== //
 
@@ -89,7 +99,6 @@ let initFormValidation = function() {
 function validateField (field) {
   fieldWrapper = $(field).parent()
   let fieldValue = $.trim($(field).val())
-
 
   if (!fieldValue) {
     fieldWrapper

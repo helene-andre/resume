@@ -269,6 +269,19 @@ section.scroll .section-wrapper {
   opacity: 1;
   transform: translateY(0em);
 }
+
+.projects::after, 
+.skills::after, 
+.xp::after, 
+.hobbies::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0em;
+  width: 0em;
+}
 /**=====================================================================**/
 
 /**=============================== home ================================**/
@@ -424,14 +437,7 @@ section.scroll .section-wrapper {
   background-color: #D7CCC8;
 }
 
-.projects::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0em;
-  width: 0em;
+.projects::after {
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -484,13 +490,6 @@ section.scroll .section-wrapper {
 }
 
 .skills::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0em;
-  width: 0em;
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -504,7 +503,8 @@ section.scroll .section-wrapper {
 
 .skills h2 {
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
 }
 
 .skills__wrapper {
@@ -516,9 +516,11 @@ section.scroll .section-wrapper {
   top: 200px; 
 }
 
+/* Management skills div. */
 .management {
   margin-bottom: 170px;
 }
+
 .skill__title {
   width: 100%;
   text-align: center; 
@@ -538,7 +540,7 @@ section.scroll .section-wrapper {
   margin-bottom: 20px;
 }
 
-.skill__web-language--icon, .skill__icon {
+.skill__icon {
   height: 27px; 
   width: 27px; 
   position: relative;
@@ -547,6 +549,13 @@ section.scroll .section-wrapper {
   transform: translate(-50%,-50%);
   text-align: center;
   font-size: 27px;
+}
+
+/* Icon speedometer in management skills. */
+.challenges {
+  height: 38px; 
+  width: 38px;
+  font-size: 38px; 
 }
 
 .skill__circle svg {
@@ -573,7 +582,7 @@ section.scroll .section-wrapper {
   fill: transparent; 
 }
 
-.show-circle {
+.animate-circle {
   animation: circle-chart-fill 2s reverse;
 }
 
@@ -617,7 +626,8 @@ section.scroll .section-wrapper {
   transform: translateX(-50%);
   text-align: center;
   border: 1px solid #b2Ebf2;
-  padding: 5px;
+  padding: 10px;
+  background-color: white;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
@@ -646,6 +656,10 @@ section.scroll .section-wrapper {
   transform: translateX(-50%);
 }
 
+.skill__description p {
+  margin-top: 5px; 
+}
+
 .skill__flag:hover {
   filter: grayscale(0%);
   opacity: 1;
@@ -655,10 +669,11 @@ section.scroll .section-wrapper {
 .skill__circle:hover ~ .skill__description {
   transform: translate(-50%,5px);
   opacity: 1;
+  z-index: 5; 
 }
 
 .skill__management .skill__description {
-  transition: all 1.5s 1s ease-in-out;
+  transition: 0.5s ease-in-out 1.5s; 
 }
 
 .animate-description {
@@ -674,13 +689,6 @@ section.scroll .section-wrapper {
 }
 
 .xp::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0em;
-  width: 0em;
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -815,13 +823,6 @@ section.scroll .section-wrapper {
 }
 
 .hobbies::after {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 0em;
-  width: 0em;
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -1161,6 +1162,22 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  /* Skills section. */
+  .skills__wrapper {
+    margin: 0; 
+  }
+  
+  .animate-description {
+    transform: unset;
+    opacity: 0;
+  }
+
+  .skill__management .skill__description {
+    transition: unset; 
+  }
+  
+}
+ 
   /* Xp section. */
   .xp__text, 
   .xp__container-right--text {
@@ -1206,10 +1223,6 @@ input {
   /* Skills section. */
   .skills {
     height: 140vh;
-  }
-
-  .skill__icon {
-    font-size: 10em;
   }
 
   /* Xp section. */
