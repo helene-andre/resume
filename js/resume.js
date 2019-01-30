@@ -1,51 +1,32 @@
 // ======================================== scroll down ====================================== //
 let onScroll = function() {
-  let sections = $('section')
-  let progressCircles = $('.skill__circle--progress')
-  let skillDescrptionManagement= $('.skill__management').children('.skill__description')
 
-  sections.each(function(i, section) {
-    let scroll = $(document).scrollTop()
-
-    // Animation side menu.
-    $('section').each(function(i) {
-      if (($(this).offset().top - $(window).height() + 200) <= scroll) {
-        $('.top-menu a.active').removeClass('active')
-        $('.top-menu a').eq(i).addClass('active')
-      }
-    })  
-
-    $('section').each(function(i) {
-      if (($(this).offset().top - $(window).height() + 200) <= scroll) {
-        $('section').removeClass('scroll')
-        $(this).addClass('scroll')
-        $(progressCircles).addClass('show-circle')
-        $(skillDescrptionManagement).addClass('animate-description')
-      }
-      
-      else if (!$('.skills').hasClass('scroll')) {
-        $(progressCircles).removeClass('show-circle')
-        $(skillDescrptionManagement).removeClass('animate-description')
-      }
-    })  
-
-    // Animation section wrappers.
-    // if (($(this).offset().top - $(window).height() + 200) <= scroll) {  
-    //   $(section).children('.section-wrapper').addClass('scroll')
-    //   $(progressCircles).addClass('show-circle')
-    //   $(skillDescrptionManagement).addClass('animate-description')
-    // }
-
-    // else if (!$('.skills').children('.section-wrapper').hasClass('scroll')) {
-    //   $(progressCircles).removeClass('show-circle')
-    //   $(skillDescrptionManagement).removeClass('animate-description')
-    // }
-
-    // else if (($(this).offset().top - $(window).height() + 200) > scroll){
-    //   $(section).children('.section-wrapper').removeClass('scroll')
-    // }
+  let windowTopPosition = ($(window).scrollTop())
+  let windowHeight = $(window).height()
+  let windowBottomPosition = (windowTopPosition + windowHeight)
   
+  // Animation sections on scroll.
+  let sections = $('section')
+  sections.each(function(i) {
+    let element = $(this)
+    let elementTopPosition = element.offset().top 
+    let elementHeight = element.height()
+    let elementBottomPosition = element.offset().top + elementHeight 
 
+    if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= (windowBottomPosition)  )) {
+      element.addClass('scroll')
+    }
+    else {
+      element.removeClass('scroll')
+    }
+  })
+
+  // Animation active state top menu.
+  sections.each(function(i) {
+    if ((windowTopPosition + 300) >= $(this).offset().top) {
+      $('.top-menu a.active').removeClass('active')
+      $('.top-menu a').eq(i).addClass('active')
+    }
   })
 }
 // =========================================================================================== //
