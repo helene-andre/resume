@@ -1215,7 +1215,7 @@ input {
 /**============================  animation =============================**/
 .show {
   opacity: 1; 
-  z-index: 2;
+  z-index: 5;
 }
 /**=====================================================================**/
 
@@ -1306,8 +1306,20 @@ input {
     padding: unset;
     flex-direction: column; 
     justify-content: space-between;
-    opacity: 0.5;
-    /* z-index: -1;  */
+    opacity: 0;
+  }
+
+  .top-menu__button.active {
+    border-bottom: 2px solid transparent;
+  }
+
+  .top-menu__text {
+    font-size: 13px; 
+  }
+  
+  .show-menu {
+    opacity: 0.7; 
+    z-index: 5;
   }
 
   .top-menu li {

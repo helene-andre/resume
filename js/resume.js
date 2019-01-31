@@ -39,6 +39,22 @@ let onScroll = function() {
     progressCircles.removeClass('animate-circle')
   }
 }
+
+// Animation top-menu on scroll. s
+let lastScrollTop = 0;
+$(window).scroll(function(event){
+    let windowScrollTop = $(this).scrollTop()
+  //  Scroll to top.
+    if (windowScrollTop < lastScrollTop) {
+      $('.top-menu').addClass('show-menu')
+    } 
+
+  // Scroll to bottom.
+    else {
+      $('.top-menu').removeClass('show-menu')
+    }
+    lastScrollTop = windowScrollTop;
+})
 // =========================================================================================== //
 
 // ====================================== scroll to on click ================================= //  
