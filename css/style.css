@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', arial;
   font-size: 13px;
   color: #757575;
+  overflow-x: hidden; 
 }
 
 h1 {
@@ -288,7 +289,7 @@ section.scroll .section-wrapper {
 /**=============================== home ================================**/
 .home {
   bottom: 8%;
-  height: 90vh; 
+  height: 92vh; 
   margin-bottom: 10vh; 
 }
 
@@ -345,19 +346,20 @@ section.scroll .section-wrapper {
 }
 
 .home__title--job {
-  font-size: 34px;
-  height: 33px; 
-  width: auto; 
+  font-size: 30px;
+  width: auto;
+  margin-top: 14px;
   position: relative;
-  font-style: italic; 
+  font-weight: 300;
+  font-style: italic;
 }
 
 .home__title--job::before {
   content: '';
-  height: 3px;
-  width: 26px;
+  height: 2px;
+  width: 35px;
   position: absolute;
-  left: 92%;
+  right: 90%;
   top: 50%;
   transform: translateY(-50%);
   background-color: #ffffff;
@@ -365,10 +367,10 @@ section.scroll .section-wrapper {
 
 .home__title--job::after {
   content: '';
-  height: 3px;
-  width: 26px;
+  height: 2px;
+  width: 35px;
   position: absolute;
-  right: 92%;
+  left: 90%;
   top: 50%;
   transform: translateY(-50%);
   background-color: #ffffff;
@@ -391,7 +393,7 @@ section.scroll .section-wrapper {
 .about-me {
   /* Padding for scroll animation. */
   padding-top: 15vh;
-  height: 80vh; 
+  height: 50vh; 
 }
 
 .about-me .section-wrapper {
@@ -401,7 +403,7 @@ section.scroll .section-wrapper {
   position: absolute;
   margin-left: 15%;
   margin-right: 15%;
-  bottom: 0%;
+  bottom: 14%;
 }
 
 .about-me__title {
@@ -1301,13 +1303,9 @@ input {
   } 
 
   /* About-me section. */
-  .about-me {
+  /* .about-me {
     height: 120vh; 
-  }
-
-  .about-me__text::before {
-    bottom: 100%;
-  }
+  } */
 
   /* Skills section. */
   .skills {
