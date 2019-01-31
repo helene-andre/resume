@@ -223,29 +223,25 @@ li {
 }
 
 .top-menu__button {
-  position: relative;
-  top: 0%;
-  left: 0%;
-  height: 12px;
-  width: auto;
-  padding: 4px;
+  padding: 10px;
   margin: 7px;
-}
-
-.top-menu__button {
   color: #808080;
   font-family: lemon-milk-light, arial; 
   text-align: center;
   position: relative;
   top: 30%;
   cursor: pointer;
+  border-bottom: 2px solid transparent;
   transition: 0.3s ease-in-out;
 }
 
+.top-menu__button:hover .top-menu__text {
+ color: #4dd0e1; 
+}
 
-.top-menu__button:hover .top-menu__text,
 .active {
  color: #4dd0e1; 
+ border-bottom-color: #4dd0e1;
 }
 /**=============================== section =============================**/
 section {
@@ -272,10 +268,10 @@ section.scroll .section-wrapper {
   transform: translateY(0em);
 }
 
-.projects::after, 
-.skills::after, 
-.xp::after, 
-.hobbies::after {
+.section-projects::after, 
+.section-skills::after, 
+.section-xp::after, 
+.section-hobbies::after {
   content: "";
   position: absolute;
   top: 0%;
@@ -287,7 +283,7 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**=============================== home ================================**/
-.home {
+.section-home{
   bottom: 8%;
   height: 92vh; 
   margin-bottom: 10vh; 
@@ -387,13 +383,13 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================= about-me ==============================**/
-.about-me {
+.section-about-me {
   /* Padding for scroll animation. */
   padding-top: 15vh;
   height: 50vh; 
 }
 
-.about-me .section-wrapper {
+.section-about-me .section-wrapper {
   height: 80%;
   width: 70%;
   top: unset;
@@ -433,11 +429,11 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================ projects ===============================**/
-.projects {
+.section-projects {
   background-color: #D7CCC8;
 }
 
-.projects::after {
+.section-projects::after {
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -484,12 +480,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================= skills ================================**/
-.skills {
+.section-skills {
   background-color: #ffffff;
   min-height: 1080px;
 }
 
-.skills::after {
+.section-skills::after {
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -497,11 +493,11 @@ section.scroll .section-wrapper {
 }
 
 .skills__title, 
-.skills h2 {
+.section-skills h2 {
 	color: #4dd0e1;
 }
 
-.skills h2 {
+.section-skills h2 {
   text-align: left;
   padding-bottom: 5px;
   border-bottom: 1px solid #eee;
@@ -683,12 +679,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================ experience =============================**/
-.xp {
+.section-xp {
   background-color: #D7CCC8;
   min-height: 2100px;
 }
 
-.xp::after {
+.section-xp::after {
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -750,7 +746,7 @@ section.scroll .section-wrapper {
   text-align: right; 
 }
 
-.xp h2 {
+.section-xp h2 {
   color: #000000;
 }
 
@@ -816,12 +812,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**======================= hobbies & interests ==========================**/
-.hobbies {
+.section-hobbies {
   background-color: #4dd0e1;
   min-height: 840px; 
 }
 
-.hobbies::after {
+.section-hobbies::after {
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -893,7 +889,7 @@ section.scroll .section-wrapper {
 }
 /**=====================================================================**/
 
-/**================ div separation hobbies / contact ===================**/
+/**================ div separation hobbies /.section-contact ===================**/
 .container .cloud__wrapper {
   display: block;
 }
@@ -920,9 +916,9 @@ section.scroll .section-wrapper {
 }
 /**=====================================================================**/
 
-/**============================== contact ==============================**/
+/**==============================.section-contact ==============================**/
 /* Contact section wrapper. */
-.contact {
+.section-contact {
   padding-top: 3em; 
   height: 65vh; 
 
@@ -1106,7 +1102,7 @@ input {
   border: 6px solid transparent;
   border-top-color: #ffffff;
   position: absolute;
-  top: 98%; 
+  top: 97%; 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1118,7 +1114,7 @@ input {
   border: 6px solid transparent;
   border-top-color: #eee;
   position: absolute;
-  top: 98%; 
+  top: 100%; 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1226,7 +1222,7 @@ input {
 /**============================ media queries ==========================**/
 @media screen and (max-width: 992px) {
   /* Contact section. */
-  .contact {
+  .section-contact {
     padding-left: 3%; 
     padding-right: 3%; 
   }
@@ -1252,13 +1248,13 @@ input {
     transition: unset; 
   } 
  
-  /* Xp section. */
+  /*.section-xp section. */
   .xp__text, 
   .xp__container-right--text {
     padding: 12px;
   }
 
-  .xp h2 {
+  .section-xp h2 {
     font-size: 14px; 
   }
 
@@ -1340,23 +1336,24 @@ input {
   }
 
   /* Skills section. */
-  .skills {
+  .section-skills {
     height: 140vh;
   }
 
-  /* Xp section. */
-  .xp {
+  /*.section-xp section. */
+  .section-xp {
     padding-left: 1%; 
     padding-right: 1%;
   }
 
   /* Contact section. */
-  .contact {
+  .section-contact {
     height: auto;
   }
   
   .contact-info__title {
     font-size: 3em; 
+    text-align: center; 
   }
 
   .contact-wrapper {
