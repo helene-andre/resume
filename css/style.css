@@ -301,7 +301,6 @@ section.scroll .section-wrapper {
   right: 0;
   bottom: 0;
   background-size: cover;
-  overflow: hidden; 
 }
 
 .home__background::before {
@@ -377,15 +376,13 @@ section.scroll .section-wrapper {
 }
 
 .home__picture {
+  width: 17em;
   position: absolute;
   bottom: -18%;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 25em;
-  border: 8px solid #ffffff;
-  width: 30%;
-  min-width: 6em;
-  max-width: 17em;
+  border: 8px solid #ffffff; 
 }
 /**=====================================================================**/
 
@@ -1236,6 +1233,11 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  /* Top-menu section. */
+  .top-menu__text {
+    font-size: 12px; 
+  }
+
   /* Skills section. */
   .skills__wrapper {
     margin: 0; 
@@ -1302,10 +1304,40 @@ input {
     font-size: 20px; 
   } 
 
+  /* Top-menu section. */
+  .top-menu {
+    height: 120px; 
+    padding: unset;
+    flex-direction: column; 
+    justify-content: space-between;
+    opacity: 0.5;
+    /* z-index: -1;  */
+  }
+
+  .top-menu li {
+    text-align: center; 
+  }
+
+
+  /* Home section. */
+  .home__title--name {
+    font-size: 13vw;
+  }
+
+  .home__title--job {
+    font-size: 7vw; 
+  }
+
+  .home__title--job::before, 
+  .home__title--job::after {
+    opacity: 0;
+    z-index: -1; 
+  } 
+
   /* About-me section. */
-  /* .about-me {
-    height: 120vh; 
-  } */
+  .about-me__text {
+    top: 54%; 
+  }
 
   /* Skills section. */
   .skills {
