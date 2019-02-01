@@ -84,11 +84,13 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\4b';
+    font-family: helene-resume; 
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\4b';
+    font-family: helene-resume; 
 }
 
 .slick-next
@@ -102,11 +104,13 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\4c';
+    font-family: helene-resume; 
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\4c';
+    font-family: helene-resume; 
 }
 
 /* Dots */
@@ -174,7 +178,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 10px;
+    font-size: 12px;
     line-height: 20px;
 
     position: absolute;

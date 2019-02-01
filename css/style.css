@@ -77,7 +77,6 @@ li {
     url("../fonts/icons/helene-resume.svg#helene-resume") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 [data-icon]:before {
@@ -206,9 +205,15 @@ li {
 .icon-volleyball:before {
   content: "\48";
 }
+.icon-previous:before {
+  content: "\4b";
+}
+.icon-next:before {
+  content: "\4c";
+}
 /**=====================================================================**/
 
-/**============================= side menu =============================**/
+/**============================= top menu =============================**/
 .top-menu {
   height: 40px;
   width: 100%;
@@ -218,7 +223,7 @@ li {
   z-index: 4;
   display: flex; 
   background-color: #ffffff;
-  opacity: 0.7;
+  opacity: 0.85;
   box-shadow: 0px 0px 7px rgba(128,128,128, 0.5);
 }
 
@@ -237,6 +242,59 @@ li {
 
 .top-menu__button:hover .top-menu__text {
  color: #4dd0e1; 
+}
+
+.top-menu__description {
+  height: auto;
+  width: 76px;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  font-family: arial;
+  border: 1px solid #b2Ebf2;
+  padding: 5px;
+  background-color: white;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.top-menu__description::after {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-bottom-color: #ffffff;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-menu__description::before {
+  content: "";
+  height: 0;
+  width: 0;
+  border: 9px solid transparent;
+  border-bottom-color: #b2Ebf2;
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-download {
+  font-size: 20px; 
+  position: absolute;
+  top: 19%;
+  left: 0%;
+}
+
+.icon-download:hover ~ .top-menu__description {
+  opacity: 1; 
+  transform: translate(-50%,5px);
 }
 
 .active {
@@ -431,6 +489,7 @@ section.scroll .section-wrapper {
 /**============================ projects ===============================**/
 .section-projects {
   background-color: #D7CCC8;
+  height: 120vh; 
 }
 
 .section-projects::after {
@@ -460,11 +519,13 @@ section.scroll .section-wrapper {
 
 .project__title h3 {
   font-family: lemon-milk-light, arial;
+  margin-bottom: 4px;
 }
 
 .project__title p {
   color: #ffffff;
   margin: 0; 
+  margin-bottom: 3px;
 }
 
 .project__image {
@@ -476,6 +537,7 @@ section.scroll .section-wrapper {
   color: #4dd0e1; 
   cursor: pointer;
   font-style: italic; 
+  margin-top: 5px;
 }
 /**=====================================================================**/
 
@@ -760,6 +822,7 @@ section.scroll .section-wrapper {
   top: 50%;
   transform: translateY(-50%);
   left: 0%;
+  transition: 0.3s ease-in-out; 
 }
 
 .right {
@@ -796,6 +859,7 @@ section.scroll .section-wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1; 
 }
 
 .left-date {
@@ -806,8 +870,20 @@ section.scroll .section-wrapper {
   right: 130%;
 }
 
-.xp__text--missions {
-  display: none;
+.xp__description {
+  height: 0; 
+  font-size: 12px; 
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 2; 
+}
+
+.xp__text:hover .xp__description {
+  height: auto; 
+}
+
+ul.xp__description li {
+  list-style-type: circle;
 }
 /**=====================================================================**/
 
@@ -846,6 +922,7 @@ section.scroll .section-wrapper {
   font-size: 9vw;
   color: #ffffff;
   margin: 0px;
+  transition: 0.3s ease-in-out;
 }
 
 .hobby__icon:hover {
@@ -853,6 +930,7 @@ section.scroll .section-wrapper {
 }
 
 .hobby__icon:hover ~ .hobby__text {
+  transform: translate(-50%,5px);
   opacity: 1;
   z-index: 5;
 }
@@ -868,7 +946,7 @@ section.scroll .section-wrapper {
   transform: translateX(-50%);
   opacity: 0;
   z-index: -1;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .hobby__text::after {
@@ -895,19 +973,14 @@ section.scroll .section-wrapper {
 }
 
 .cloud__wrapper {
-  min-width: 780px;
-  max-height: 100px; 
+  min-width: 1200px;
+  max-height: 150px;
   left: 0%;
-  overflow-x: hidden;
-}
-
-.cloud__wrapper:not(:root) {
-  overflow: hidden;
 }
 
 #clouds {
   position: absolute;
-  bottom: 100%; 
+  bottom: 100%;
 }
 
 #clouds path {
@@ -1030,12 +1103,12 @@ input {
 .footnote {
   height: 18px;
   position: absolute; 
-  right: 20px;
-  bottom: -17px;
+  right: 9px;
+  padding-bottom: 9px;
   display: flex; 
   justify-content: end;
   font-style: italic; 
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 
 .footnote div {
@@ -1077,7 +1150,7 @@ input {
 
 .footnote__icon:hover ~ .footnote__description {
   opacity: 1;
-  z-index: 5; 
+  transform: translate(-50%,-2px);
 }
 
 .footnote__description {
@@ -1111,7 +1184,7 @@ input {
   content: "";
   height: 0;
   width: 0;
-  border: 6px solid transparent;
+  border: 7px solid transparent;
   border-top-color: #eee;
   position: absolute;
   top: 100%; 
@@ -1302,7 +1375,7 @@ input {
 
   /* Top-menu section. */
   .top-menu {
-    height: 120px; 
+    height: 230px;
     padding: unset;
     flex-direction: column; 
     justify-content: space-between;
@@ -1316,9 +1389,9 @@ input {
   .top-menu__text {
     font-size: 13px; 
   }
-  
+
   .show-menu {
-    opacity: 0.7; 
+    opacity: 0.85; 
     z-index: 5;
   }
 
@@ -1345,6 +1418,10 @@ input {
   /* About-me section. */
   .about-me__text {
     top: 54%; 
+  }
+
+  .about-me__description {
+    padding-top: 0px;
   }
 
   /* Skills section. */
@@ -1387,8 +1464,16 @@ input {
   }
 
   #send-button {
+    width: fit-content;
     right: 50%; 
     transform: translateX(50%);
+  } 
+
+  /* Footnote. */
+  .footnote {
+    left: 50%; 
+    transform: translateX(-50%);
+    width: fit-content;
   }
 }
 /**=====================================================================**/
