@@ -809,7 +809,12 @@ section.scroll .section-wrapper {
 }
 
 .section-xp h2 {
-  color: #000000;
+  color: #4dd0e1;
+  font-size: 16px;
+}
+
+.section-xp h3 {
+  font-size: 14px; 
 }
 
 .xp__text {
@@ -870,20 +875,16 @@ section.scroll .section-wrapper {
   right: 130%;
 }
 
+.xp__text--location {
+  padding-top: 5px; 
+}
+
+.xp__text--duration {
+  color: #bdbdbd;
+}
+
 .xp__description {
-  height: 0; 
-  font-size: 12px; 
-  overflow: hidden;
-  transition: 0.3s ease-in-out;
-  z-index: 2; 
-}
-
-.xp__text:hover .xp__description {
-  height: auto; 
-}
-
-ul.xp__description li {
-  list-style-type: circle;
+  display: none; 
 }
 /**=====================================================================**/
 
