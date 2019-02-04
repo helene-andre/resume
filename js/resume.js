@@ -81,28 +81,29 @@ let initFormValidation = function() {
     })
     // If no error, send form via ajax.
     if (!formErrors) {
-      $.ajax({
-        type: 'POST',
-        url: 'https://formspree.io/helene.andre.06@gmail.com',
-        data: form.serialize(), 
-        success: function(data) {
-          data = JSON.parse(data)
+      // $.ajax({
+      //   type: 'POST',
+      //   url: 'https://formspree.io/helene.andre.06@gmail.com',
+      //   data: form.serialize(), 
+      //   success: function(data) {
+      //     data = JSON.parse(data)
 
-          if (!data.error) {
-            $(fields)
-              .removeClass('correct-field')
-              .val('')
+      //     if (!data.error) {
+      //       $(fields)
+      //         .removeClass('correct-field')
+      //         .val('')
 
-            $('.contact__success-message').addClass('show')
-            setTimeout(function() {$('.contact__success-message').removeClass('show')}, 3000);
-          }
-        },  
-        error: function() {
-          $('.contact__failed-message').addClass('show')
-          setTimeout(function() {$('.contact__failed-message').removeClass('show')}, 4000);
-        }  
-      })
-      e.preventDefault()
+      //       $('.contact__success-message').addClass('show')
+      //       setTimeout(function() {$('.contact__success-message').removeClass('show')}, 3000);
+      //     }
+      //   },  
+      //   error: function() {
+      //     $('.contact__failed-message').addClass('show')
+      //     setTimeout(function() {$('.contact__failed-message').removeClass('show')}, 4000);
+      //   }  
+      // })
+      // e.preventDefault()
+      return true;
     } 
     return false
   })  
