@@ -30,7 +30,7 @@ let onScroll = function() {
   // Animate progress circles.
   let skillDescriptionManagement = $('.skill__management').children('.skill__description')
   let progressCircles = $('.skill__circle--progress')
-  if ($('.section-skills').hasClass('scroll')) {
+  if ($('.section--skills').hasClass('scroll')) {
     skillDescriptionManagement.addClass('animate-description')
     progressCircles.addClass('animate-circle')
   }

@@ -86,6 +86,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -98,6 +99,7 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
+  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -121,14 +123,8 @@ li {
 .icon-phone:before {
   content: "\66";
 }
-.icon-languages:before {
-  content: "\6f";
-}
 .icon-validated:before {
   content: "\76";
-}
-.icon-management:before {
-  content: "\6b";
 }
 .icon-blocked:before {
   content: "\6d";
@@ -187,7 +183,7 @@ li {
 .icon-communication:before {
   content: "\43";
 }
-.icon-responsible:before {
+.icon-list:before {
   content: "\41";
 }
 .icon-difference:before {
@@ -211,6 +207,12 @@ li {
 .icon-next:before {
   content: "\4c";
 }
+.icon-responsible:before {
+  content: "\49";
+}
+.icon-award:before {
+  content: "\6b";
+}
 /**=====================================================================**/
 
 /**============================= top menu =============================**/
@@ -221,20 +223,25 @@ li {
   top: 0%;
   left: 0%;
   z-index: 4;
-  display: flex; 
   background-color: #ffffff;
   opacity: 0.85;
-  box-shadow: 0px 0px 7px rgba(128,128,128, 0.5);
+  box-shadow: 0 0 7px rgba(128,128,128, 0.5);
+}
+
+.top-menu-wrapper {
+  height: 68%;
+  position: absolute;
+  bottom: 0%;
+  display: flex;
 }
 
 .top-menu__button {
   padding: 10px;
-  margin: 7px;
-  color: #808080;
-  font-family: lemon-milk-light, arial; 
+  padding-left: 13px;
+  padding-right: 13px;
+  font-family: lemon-milk-light, arial;
   text-align: center;
   position: relative;
-  top: 30%;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: 0.3s ease-in-out;
@@ -310,7 +317,7 @@ section {
 }
 
 /* Section wrapper to animate on scrolldown. */
-.section-wrapper {
+.section--wrapper {
   position: relative;
   top: 0%;
   left: 0%;
@@ -321,15 +328,15 @@ section {
   transition: 0.3s ease-in-out 0.5s;
 }
 
-section.scroll .section-wrapper {
+section.scroll .section--wrapper {
   opacity: 1;
   transform: translateY(0em);
 }
 
-.section-projects::after, 
-.section-skills::after, 
-.section-xp::after, 
-.section-hobbies::after {
+.section--projects::after, 
+.section--skills::after, 
+.section--xp::after, 
+.section--hobbies::after {
   content: "";
   position: absolute;
   top: 0%;
@@ -341,7 +348,7 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**=============================== home ================================**/
-.section-home{
+.section--home{
   bottom: 8%;
   height: 92vh; 
   margin-bottom: 10vh; 
@@ -444,10 +451,10 @@ section.scroll .section-wrapper {
 .section-about-me {
   /* Padding for scroll animation. */
   padding-top: 15vh;
-  height: 50vh; 
+  height: 60vh; 
 }
 
-.section-about-me .section-wrapper {
+.section-about-me .section--wrapper {
   height: 80%;
   width: 70%;
   top: unset;
@@ -484,15 +491,23 @@ section.scroll .section-wrapper {
   color: #7c796f;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.about-me__icon {
+  cursor: pointer; 
+}
+
+.about-me__icon:hover {
+  color: #4dd0e1; 
+}
 /**=====================================================================**/
 
 /**============================ projects ===============================**/
-.section-projects {
+.section--projects {
   background-color: #D7CCC8;
   height: 120vh; 
 }
 
-.section-projects::after {
+.section--projects::after {
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -542,12 +557,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================= skills ================================**/
-.section-skills {
+.section--skills {
   background-color: #ffffff;
   min-height: 1080px;
 }
 
-.section-skills::after {
+.section--skills::after {
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -555,11 +570,11 @@ section.scroll .section-wrapper {
 }
 
 .skills__title, 
-.section-skills h2 {
+.section--skills h2 {
 	color: #4dd0e1;
 }
 
-.section-skills h2 {
+.section--skills h2 {
   text-align: left;
   padding-bottom: 5px;
   border-bottom: 1px solid #eee;
@@ -599,14 +614,14 @@ section.scroll .section-wrapper {
 }
 
 .skill__icon {
-  height: 27px; 
-  width: 27px; 
+  height: 30px; 
+  width: 30px; 
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
-  font-size: 27px;
+  font-size: 30px;
 }
 
 /* Icon speedometer in management skills. */
@@ -614,6 +629,7 @@ section.scroll .section-wrapper {
   height: 38px; 
   width: 38px;
   font-size: 38px; 
+  top: 45%;
 }
 
 .skill__circle svg {
@@ -741,12 +757,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**============================ experience =============================**/
-.section-xp {
+.section--xp {
   background-color: #D7CCC8;
   min-height: 2100px;
 }
 
-.section-xp::after {
+.section--xp::after {
   border: 4em solid #ffffff;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -808,12 +824,12 @@ section.scroll .section-wrapper {
   text-align: right; 
 }
 
-.section-xp h2 {
+.section--xp h2 {
   color: #4dd0e1;
   font-size: 16px;
 }
 
-.section-xp h3 {
+.section--xp h3 {
   font-size: 14px; 
 }
 
@@ -838,8 +854,8 @@ section.scroll .section-wrapper {
 /* Arrows on the text boxes. */ 
 .xp__text::after {
   content: '';
-  height: 0px;
-  width: 0px;
+  height: 0;
+  width: 0;
   border: 12px solid transparent;
   position: absolute;
   top: 50%;
@@ -889,12 +905,12 @@ section.scroll .section-wrapper {
 /**=====================================================================**/
 
 /**======================= hobbies & interests ==========================**/
-.section-hobbies {
+.section--hobbies {
   background-color: #4dd0e1;
-  min-height: 840px; 
+  min-height: 640px; 
 }
 
-.section-hobbies::after {
+.section--hobbies::after {
   border: 4em solid #D7CCC8;
   border-bottom-color: transparent;
   border-left-color: transparent;
@@ -920,9 +936,9 @@ section.scroll .section-wrapper {
 }
 
 .hobby__icon {
-  font-size: 9vw;
+  font-size: 8vw;
   color: #ffffff;
-  margin: 0px;
+  margin: 0;
   transition: 0.3s ease-in-out;
 }
 
@@ -931,7 +947,7 @@ section.scroll .section-wrapper {
 }
 
 .hobby__icon:hover ~ .hobby__text {
-  transform: translate(-50%,5px);
+  transform: translate(-50%, 5px);
   opacity: 1;
   z-index: 5;
 }
@@ -952,8 +968,8 @@ section.scroll .section-wrapper {
 
 .hobby__text::after {
   content: "";
-  height: 0px; 
-  width: 0px; 
+  height: 0; 
+  width: 0; 
   border: 10px solid transparent; 
   border-bottom-color: #ffffff;
   position: absolute;
@@ -968,7 +984,7 @@ section.scroll .section-wrapper {
 }
 /**=====================================================================**/
 
-/**================ div separation hobbies /.section-contact ===================**/
+/**================ div separation hobbies /.section--contact ===================**/
 .container .cloud__wrapper {
   display: block;
 }
@@ -990,9 +1006,9 @@ section.scroll .section-wrapper {
 }
 /**=====================================================================**/
 
-/**==============================.section-contact ==============================**/
+/**==============================.section--contact ==============================**/
 /* Contact section wrapper. */
-.section-contact {
+.section--contact {
   padding-top: 3em; 
   height: 65vh; 
 
@@ -1026,13 +1042,22 @@ section.scroll .section-wrapper {
 	color: #4dd0e1;
   letter-spacing: 1px;
   margin-bottom: 45px;
+  font-size: 14px;
 }
 
 .contact-info__icons-wrapper {
-  font-size: 2em;
+  font-size: 36px;
   height: 38px;
   color: #4dd0e1;
-  letter-spacing: 11px; 
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: left;
+  letter-spacing: 17px;
+}
+
+.contact-info__icon {
+  transition: 0.3s;
+  cursor: pointer; 
 }
 
 .contact-info__icon:hover {
@@ -1139,6 +1164,10 @@ input {
   transform: scale(1.2);
 }
 
+.footnote__icon .icon-php {
+  font-size: 15px;
+}
+
 /* Animation icon ninja star. */
 .ninja:hover {
   transform: rotate(-360deg) scale(1.2); 
@@ -1146,7 +1175,7 @@ input {
 
 /* Animation icon heart. */
 .love:hover {
-  animation: beat .25s infinite alternate;
+  animation: beat 1s infinite;
 }
 
 .footnote__icon:hover ~ .footnote__description {
@@ -1194,8 +1223,23 @@ input {
 }
 
 @keyframes beat {
-  to { 
-    transform: scale(1.4); 
+  0% {
+    transform: scale( .75 );
+  }
+  20% {
+    transform: scale( 1 );
+  }
+  40% {
+    transform: scale( .75 );
+  }
+  60% {
+    transform: scale( 1 );
+  }
+  80% {
+    transform: scale( .75 );
+  }
+  100% {
+    transform: scale( .75 );
   }
 }
 /**=====================================================================**/
@@ -1296,7 +1340,7 @@ input {
 /**============================ media queries ==========================**/
 @media screen and (max-width: 992px) {
   /* Contact section. */
-  .section-contact {
+  .section--contact {
     padding-left: 3%; 
     padding-right: 3%; 
   }
@@ -1322,13 +1366,13 @@ input {
     transition: unset; 
   } 
  
-  /*.section-xp section. */
+  /*.section--xp section. */
   .xp__text, 
   .xp__container-right--text {
     padding: 12px;
   }
 
-  .section-xp h2 {
+  .section--xp h2 {
     font-size: 14px; 
   }
 
@@ -1356,88 +1400,11 @@ input {
   .hobby__icon {
     font-size: 69px; 
   }
-
-  /* Contact section. */
-  .contact-info__title {
-    font-size: 16px; 
-  }
 }
 
-@media screen and (max-width: 450px) {
-  /* Whole page. */
-  section {
-    padding-left: 3%; 
-    padding-right: 3%; 
-  }
-  
-  h1 {
-    font-size: 20px; 
-  } 
-
-  /* Top-menu section. */
-  .top-menu {
-    height: 230px;
-    padding: unset;
-    flex-direction: column; 
-    justify-content: space-between;
-    opacity: 0;
-  }
-
-  .top-menu__button.active {
-    border-bottom: 2px solid transparent;
-  }
-
-  .top-menu__text {
-    font-size: 13px; 
-  }
-
-  .show-menu {
-    opacity: 0.85; 
-    z-index: 5;
-  }
-
-  .top-menu li {
-    text-align: center; 
-  }
-
-
-  /* Home section. */
-  .home__title--name {
-    font-size: 13vw;
-  }
-
-  .home__title--job {
-    font-size: 7vw; 
-  }
-
-  .home__title--job::before, 
-  .home__title--job::after {
-    opacity: 0;
-    z-index: -1; 
-  } 
-
-  /* About-me section. */
-  .about-me__text {
-    top: 54%; 
-  }
-
-  .about-me__description {
-    padding-top: 0px;
-  }
-
-  /* Skills section. */
-  .section-skills {
-    height: 140vh;
-  }
-
-  /*.section-xp section. */
-  .section-xp {
-    padding-left: 1%; 
-    padding-right: 1%;
-  }
-
+@media screen and (max-width: 600px) {
   /* Contact section. */
-  .section-contact {
+  .section--contact {
     height: auto;
   }
   
@@ -1464,11 +1431,103 @@ input {
     transform: translateX(-50%);
   }
 
+  .contact-info__icons-wrapper {
+    justify-content: space-between;
+    letter-spacing: unset;
+  }
+
   #send-button {
     width: fit-content;
     right: 50%; 
     transform: translateX(50%);
   } 
+}
+
+@media screen and (max-width: 450px) {
+  p {
+    font-size: 12px; 
+  }
+
+  /* Whole page. */
+  section {
+    padding-left: 3%; 
+    padding-right: 3%; 
+  }
+  
+  h1 {
+    font-size: 20px; 
+  } 
+
+  /* Top-menu section. */
+  .top-menu {
+    height: 230px;
+    padding: 5px; 
+    opacity: 0;
+  }
+
+  .top-menu-wrapper {
+    height: 90%;
+    flex-direction: column; 
+    justify-content: space-between;
+    bottom: unset;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+  }
+
+  .top-menu__button.active {
+    border-bottom: 2px solid transparent;
+  }
+
+  .top-menu__text {
+    font-size: 13px; 
+  }
+
+  .show-menu {
+    opacity: 0.85; 
+    z-index: 5;
+  }
+
+  .top-menu li {
+    height: 30px;
+    text-align: center; 
+  }
+
+
+  /* Home section. */
+  .home__title--name {
+    font-size: 13vw;
+  }
+
+  .home__title--job {
+    font-size: 7vw; 
+  }
+
+  .home__title--job::before, 
+  .home__title--job::after {
+    opacity: 0;
+    z-index: -1; 
+  } 
+
+  /* About-me section. */
+  .about-me__text {
+    top: 54%; 
+  }
+
+  .about-me__description {
+    padding-top: 0;
+  }
+
+  /* Skills section. */
+  .section--skills {
+    height: 140vh;
+  }
+
+  /*.section--xp section. */
+  .section--xp {
+    padding-left: 1%; 
+    padding-right: 1%;
+  }
 
   /* Footnote. */
   .footnote {
