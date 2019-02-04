@@ -83,7 +83,7 @@ let initFormValidation = function() {
     if (!formErrors) {
       $.ajax({
         type: 'POST',
-        url: 'contact.php',
+        url: 'https://formspree.io/helene.andre.06@gmail.com',
         data: form.serialize(), 
         success: function(data) {
           data = JSON.parse(data)
