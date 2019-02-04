@@ -448,13 +448,13 @@ section.scroll .section--wrapper {
 /**=====================================================================**/
 
 /**============================= about-me ==============================**/
-.section-about-me {
+.section--about-me {
   /* Padding for scroll animation. */
   padding-top: 15vh;
   height: 60vh; 
 }
 
-.section-about-me .section--wrapper {
+.section--about-me .section--wrapper {
   height: 80%;
   width: 70%;
   top: unset;
@@ -759,7 +759,7 @@ section.scroll .section--wrapper {
 /**============================ experience =============================**/
 .section--xp {
   background-color: #D7CCC8;
-  min-height: 2100px;
+  min-height: 2200px;
 }
 
 .section--xp::after {
@@ -782,7 +782,7 @@ section.scroll .section--wrapper {
 /* Timeline.  */
 .xp__wrapper::before {
   content: '';
-  height: 138em;
+  height: 152em;
   width: 0.2em;
   background-color: #ffffff;
   position: absolute;
@@ -791,14 +791,9 @@ section.scroll .section--wrapper {
   transform: translateX(-50%);
 }
 
-.xp__text-box, 
-.xp__text-box {
-  height: auto;
-  width: 100%;
-  background-color: transparent;
+.xp-item {
   position: relative;
   padding-bottom: 15em;
-  color: #757575;
 }
 
 .xp__icon {
@@ -806,8 +801,8 @@ section.scroll .section--wrapper {
 }
 
 /* Dots on the timeline boxes. */
-.xp__text-box::before, 
-.xp__text-box::before {
+.xp-item::before, 
+.xp-item::before {
   content: '';
   height: 1.3em;
   width: 1.3em;
@@ -833,8 +828,7 @@ section.scroll .section--wrapper {
   font-size: 14px; 
 }
 
-.xp__text {
-  height: auto;
+.xp-item-box {
   width: 38%;
   float: left;
   background-color: #ffffff;
@@ -842,17 +836,15 @@ section.scroll .section--wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0%;
   transition: 0.3s ease-in-out; 
 }
 
 .right {
-  left: unset;
   right: 0%;
 }
 
 /* Arrows on the text boxes. */ 
-.xp__text::after {
+.xp-item-box::after {
   content: '';
   height: 0;
   width: 0;
@@ -872,7 +864,7 @@ section.scroll .section--wrapper {
   right: 100%;
 }
 
-.xp__text--date {
+.xp-item-box__date {
   color: #ffffff;
   font-family: lemon-milk;
   font-size: 1.5em; 
@@ -880,7 +872,6 @@ section.scroll .section--wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1; 
 }
 
 .left-date {
@@ -891,16 +882,12 @@ section.scroll .section--wrapper {
   right: 130%;
 }
 
-.xp__text--location {
+.xp-item-box__location {
   padding-top: 5px; 
 }
 
-.xp__text--duration {
+.xp-item-box__duration {
   color: #bdbdbd;
-}
-
-.xp__description {
-  display: none; 
 }
 /**=====================================================================**/
 
@@ -1129,8 +1116,8 @@ input {
 .footnote {
   height: 18px;
   position: absolute; 
-  right: 9px;
-  padding-bottom: 9px;
+  right: 10px;
+  padding-bottom: 10px;
   display: flex; 
   justify-content: end;
   font-style: italic; 
