@@ -247,49 +247,12 @@ li {
   transition: 0.3s ease-in-out;
 }
 
-.top-menu__button:hover .top-menu__text {
- color: #4dd0e1; 
-}
-
-.top-menu__description {
-  height: auto;
-  width: 76px;
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-size: 12px;
-  font-family: arial;
-  border: 1px solid #b2Ebf2;
-  padding: 5px;
-  background-color: white;
-  opacity: 0;
+.top-menu__text {
   transition: 0.3s ease-in-out;
 }
 
-.top-menu__description::after {
-  content: "";
-  height: 0;
-  width: 0;
-  border: 8px solid transparent;
-  border-bottom-color: #ffffff;
-  position: absolute;
-  bottom: 100%; 
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.top-menu__description::before {
-  content: "";
-  height: 0;
-  width: 0;
-  border: 9px solid transparent;
-  border-bottom-color: #b2Ebf2;
-  position: absolute;
-  bottom: 100%; 
-  left: 50%;
-  transform: translateX(-50%);
+.top-menu__button:hover .top-menu__text {
+ color: #4dd0e1; 
 }
 
 .icon-download {
@@ -297,11 +260,6 @@ li {
   position: absolute;
   top: 19%;
   left: 0%;
-}
-
-.icon-download:hover ~ .top-menu__description {
-  opacity: 1; 
-  transform: translate(-50%,5px);
 }
 
 .active {
@@ -323,6 +281,7 @@ section {
   left: 0%;
   height: 100%;
   width: 100%;
+  max-width: 1200px;
   opacity: 0;
   transform: translateY(2em);
   transition: 0.3s ease-in-out 0.5s;
@@ -993,19 +952,17 @@ section.scroll .section--wrapper {
 }
 /**=====================================================================**/
 
-/**==============================.section--contact ==============================**/
+/**======================.section--contact =============================**/
 /* Contact section wrapper. */
 .section--contact {
   padding-top: 3em; 
-  height: 65vh; 
-
+  height: 70vh; 
 }
 
 /* Contact sub-section wrapper. */
 .contact-wrapper {
   background-color: #ffffff;
   height: auto;
-  padding-bottom: 3em;
   display: flex; 
   justify-content: center;
 }
@@ -1113,14 +1070,20 @@ input {
   border-color: #757575;
 } 
 
+/**=====================================================================**/
+
+/**======================.section--contact =============================**/
+footer {
+  height: 9vh;
+  position: relative; 
+}
+
 .footnote {
-  height: 18px;
-  position: absolute; 
+  position: absolute;
   right: 10px;
-  padding-bottom: 10px;
-  display: flex; 
-  justify-content: end;
-  font-style: italic; 
+  bottom: 6px;
+  display: flex;
+  font-style: italic;
   opacity: 0.5;
 }
 
@@ -1300,21 +1263,6 @@ input {
 .contact__failed-message div {
   color: #e53935;
 }
-
-/* .project__close {
-  height: 16px;
-  width: 16px; 
-  font-size: 16px;  
-  position: absolute;
-  top: 5%;
-  right: 2%;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.project__close:hover {
-  transform: rotate(270deg) scale(1.2);
-} */
 /**=====================================================================**/
 
 /**============================  animation =============================**/
@@ -1324,7 +1272,7 @@ input {
 }
 /**=====================================================================**/
 
-/**============================ media queries ==========================**/
+/**========================== media queries width ======================**/
 @media screen and (max-width: 992px) {
   /* Contact section. */
   .section--contact {
@@ -1521,6 +1469,16 @@ input {
     left: 50%; 
     transform: translateX(-50%);
     width: fit-content;
+  }
+}
+
+/**=====================================================================**/
+
+/**========================== media queries width ======================**/
+
+@media screen and (max-height: 625px) {
+  .section--contact {
+    height: 90vh;
   }
 }
 /**=====================================================================**/
