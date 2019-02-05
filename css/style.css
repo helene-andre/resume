@@ -315,7 +315,7 @@ section.scroll .section--wrapper {
 }
 
 .home__background {
-  background: url('../images/pictures-background/home-background-blur.jpg');
+  background: url('../images/home/home-background-blur.jpg');
   position: absolute;
   top: 0;
   left: 0;
@@ -636,19 +636,19 @@ section.scroll .section--wrapper {
 }
 
 .english {
-  content: url('../images/pictures-skills/english.png');
+  content: url('../images/skills/english.png');
 }
 
 .french {
-  content: url('../images/pictures-skills/french.png');
+  content: url('../images/skills/french.png');
 }
 
 .vietnamese {
-  content: url('../images/pictures-skills/vietnamese.png');
+  content: url('../images/skills/vietnamese.png');
 }
 
 .italian {
-  content: url('../images/pictures-skills/italian.png');
+  content: url('../images/skills/italian.png');
 }
 
 .skill__description {
