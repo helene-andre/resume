@@ -12,7 +12,7 @@ $email_body = "Tu as reçu un message de $name, $visitor_email.\n"
 
 $success = mail($email_to, $email_subject, $email_body);
 
-$return = ['error' => !$success, 'message' => $success ? 'Super ça a marché!' : 'Oh merde!'];
+$return = ['error' => !$success, 'message' => $success ? 'Super ça a marché!' : 'Oooops!'];
 
 echo json_encode($return);
 
