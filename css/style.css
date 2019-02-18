@@ -52,6 +52,11 @@ li {
   list-style-type: none;
 }
 
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
 /**=====================================================================**/
 
 /**=========================== font-family =============================**/
