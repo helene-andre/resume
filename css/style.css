@@ -52,9 +52,9 @@ li {
   list-style-type: none;
 }
 
-input, textarea {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+input[type=submit] {
+  border-radius: 0px; 
+  -webkit-border-radius:0px;
 }
 
 /**=====================================================================**/
