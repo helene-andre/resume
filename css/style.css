@@ -7,6 +7,11 @@ body {
   font-family: 'Roboto', arial;
   font-size: 13px;
   color: #757575;
+}
+
+.page-wrapper {
+  height: 100%; 
+  width: 100%; 
   overflow-x: hidden; 
 }
 
@@ -85,7 +90,6 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -98,7 +102,6 @@ li {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1432,6 +1435,10 @@ footer {
 
 
   /* Home section. */
+  .home__title {
+    width: 275px; 
+  }
+
   .home__title--name {
     font-size: 13vw;
   }
@@ -1487,9 +1494,9 @@ footer {
 
 /**========================== media queries width ======================**/
 
-@media screen and (max-height: 625px) {
+/* @media screen and (max-height: 625px) {
   .section--contact {
     height: 90vh;
   }
-}
+} */
 /**=====================================================================**/
