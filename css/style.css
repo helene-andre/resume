@@ -55,6 +55,8 @@ li {
 input[type=submit] {
   border-radius: 0px; 
   -webkit-border-radius:0px;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 /**=====================================================================**/
@@ -1381,7 +1383,6 @@ footer {
   }
 
   #send-button {
-    width: fit-content;
     right: 50%; 
     transform: translateX(50%);
   } 
