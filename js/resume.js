@@ -1,4 +1,4 @@
-// ======================================== scroll down ====================================== //
+// ===================================== animations on scroll ================================ //
 let onScroll = function() {
   let windowTopPosition = ($(window).scrollTop())
   let windowHeight = $(window).height()
@@ -57,7 +57,7 @@ $(window).scroll(function(event){
 })
 // =========================================================================================== //
 
-// ====================================== scroll to on click ================================= //  
+// =============== scroll to a section on click of the top bar button ======================== //  
 let initOnClick = function() {
   $('.top-menu__button').click(function(e) {      
     let position = $($(this).attr('href')).offset().top
@@ -112,6 +112,8 @@ let initFormValidation = function() {
     validateField(this)
   })
 }
+// =========================================================================================== //
+
 // ================================== validate form fields =================================== //
 function validateField (field) {
   fieldWrapper = $(field).parent()
