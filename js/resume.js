@@ -74,35 +74,13 @@ let initFormValidation = function() {
   let fields = $('.contact-form__field')
   let form = $('.contact-form__wrapper')
 
-  form.submit(function(e) {
+  form.submit(function() {
     let formErrors = 0
     fields.each(function(i) {
       formErrors += validateField(fields[i]) ? 0 : 1 
     })
     // If no error, send form via ajax.
     if (!formErrors) {
-      // $.ajax({
-      //   type: 'POST',
-      //   url: 'https://formspree.io/helene.andre.06@gmail.com',
-      //   data: form.serialize(), 
-      //   success: function(data) {
-      //     data = JSON.parse(data)
-
-      //     if (!data.error) {
-      //       $(fields)
-      //         .removeClass('correct-field')
-      //         .val('')
-
-      //       $('.contact__success-message').addClass('show')
-      //       setTimeout(function() {$('.contact__success-message').removeClass('show')}, 3000);
-      //     }
-      //   },  
-      //   error: function() {
-      //     $('.contact__failed-message').addClass('show')
-      //     setTimeout(function() {$('.contact__failed-message').removeClass('show')}, 4000);
-      //   }  
-      // })
-      // e.preventDefault()
       return true;
     } 
     return false
