@@ -953,7 +953,7 @@ section.scroll .section--wrapper {
 
 #clouds {
   position: absolute;
-  bottom: 100%;
+  bottom: 99%;
 }
 
 #clouds path {
